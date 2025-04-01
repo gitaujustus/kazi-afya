@@ -57,7 +57,7 @@ const Navbar = () => {
 
   const authItems = [
     { href: '/sign_in', label: 'Login', className: 'border border-white px-4 py-1 rounded-full text-center' },
-    { href: '/sign_up', label: 'Get Started', className: 'bg-red_shimmer text-red_reign px-4 py-1 rounded-full text-center' },
+    { href: '/sign_up', label: 'Get Started', className: 'bg-blue-leviathan text-red_reign px-4 py-1 rounded-full text-center' },
   ];
 
   return (
@@ -94,7 +94,7 @@ const Navbar = () => {
     {pathname === item.href && (
       <motion.div
         layoutId="nav-highlight"
-        className="absolute inset-0 bg-baragon_brown rounded-full "
+        className="absolute inset-0 bg-blue-leviathan rounded-full "
         style={{ zIndex: -1 }}
         transition={{ duration: 0.8, ease: 'easeInOut' }}
       />
@@ -125,7 +125,7 @@ const Navbar = () => {
           href="/sign_up"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
-          className="bg-red_shimmer text-red_reign py-1 2xl:py-2  rounded-full text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"
+          className="bg-blue-leviathan text-red_reign py-1 2xl:py-2  rounded-full text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"
         >
           Get Started
         </MotionLink>
@@ -140,7 +140,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
             ref={menuRef}
-            className="absolute top-full left-0 right-0 mt-2 bg-red_reign rounded-xl px-2 py-6 md:p-4 flex flex-col gap-4 md:hidden shadow-lg"
+            className="absolute top-full left-0 right-0 mt-2 bg-blue-leviathan rounded-xl px-2 py-6 md:p-4 flex flex-col gap-4 md:hidden shadow-lg"
           >
             <div className="flex flex-col gap-4">
               {menuItems.map((item, index) => (
