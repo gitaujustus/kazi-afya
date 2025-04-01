@@ -11,5 +11,16 @@
   --color-primary-white: #ffffff;
   --color-sky-blue: #47b1f6;
 
+  /* Helvetica Fonts */
+  --font-helvetica-regular: var(--font-helvetica-regular);
+  --font-helvetica-semibold: var(--font-helvetica-semibold);
+  --font-helvetica-bold: var(--font-helvetica-bold);
+  --font-helvetica-light: var(--font-helvetica-light);
+  --font-helvetica-thin: var(--font-helvetica-thin);
+  --font-helvetica-regular-italic: var(--font-helvetica-regular-italic);
+  --font-helvetica-bold-italic: var(--font-helvetica-bold-italic);
+  --font-helvetica-light-italic: var(--font-helvetica-light-italic);
+  --font-helvetica-thin-italic: var(--font-helvetica-thin-italic);
+
 }
 

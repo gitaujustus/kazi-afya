@@ -1,5 +1,72 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
+
+// HelveticaNeue Fonts
+const helveticaRegular = localFont({
+  src: "../public/fonts/HelveticaNeue-Roman.woff2",
+  weight: "400",
+  style: "normal",
+  variable: "--font-helvetica-regular",
+});
+
+const helveticaBold = localFont({
+  src: "../public/fonts/HelveticaNeue-Bold.woff2",
+  weight: "700",
+  style: "normal",
+  variable: "--font-helvetica-bold",
+});
+
+const helveticaSemiBold = localFont({
+  src: "../public/fonts/HelveticaNeue-Medium.woff2",
+  weight: "600",
+  style: "normal",
+  variable: "--font-helvetica-semibold",
+});
+
+const helveticaLight = localFont({
+  src: "../public/fonts/HelveticaNeue-Light.woff2",
+  weight: "300",
+  style: "normal",
+  variable: "--font-helvetica-light",
+});
+
+const helveticaThin = localFont({
+  src: "../public/fonts/HelveticaNeue-Thin.woff2",
+  weight: "200",
+  style: "normal",
+  variable: "--font-helvetica-thin",
+});
+
+// Italic Variants
+const helveticaRegularItalic = localFont({
+  src: "../public/fonts/HelveticaNeueItalic.woff2",
+  weight: "400",
+  style: "italic",
+  variable: "--font-helvetica-regular-italic",
+});
+
+const helveticaBoldItalic = localFont({
+  src: "../public/fonts/HelveticaNeueBoldItalic.woff2",
+  weight: "700",
+  style: "italic",
+  variable: "--font-helvetica-bold-italic",
+});
+
+const helveticaLightItalic = localFont({
+  src: "../public/fonts/HelveticaNeueLightItalic.woff2",
+  weight: "300",
+  style: "italic",
+  variable: "--font-helvetica-light-italic",
+});
+
+const helveticaThinItalic = localFont({
+  src: "../public/fonts/HelveticaNeueThinItalic.woff2",
+  weight: "200",
+  style: "italic",
+  variable: "--font-helvetica-thin-italic",
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +85,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en"  className={` ${helveticaRegular.variable} ${helveticaBold.variable} ${helveticaSemiBold.variable} ${helveticaLight.variable} ${helveticaThin.variable} ${helveticaRegularItalic.variable} ${helveticaBoldItalic.variable} ${helveticaLightItalic.variable} ${helveticaThinItalic.variable}`}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

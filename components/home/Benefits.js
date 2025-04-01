@@ -54,7 +54,7 @@ const Benefits = () => {
       <div className="w-[676px] h-[766px] flex flex-col gap-[33px]">
 
         {/* Heading */}
-        <h1 className="text-wizard-white text-[48px]"> Benefits of Kazi Afya</h1>
+        <h1 className="text-wizard-white text-[48px] font-helvetica-regular"> Benefits of Kazi Afya</h1>
 
         {/* List Container  */}
         <div className="w-full h-[591px] flex flex-col gap-[15px]">
@@ -62,7 +62,7 @@ const Benefits = () => {
             <div key={item.id} className="flex gap-[10px] p-[10px]">
                 <HeartIcon />
                <div className="flex flex-col text-[20px]">
-                  <h2 className="text-sky-blue font-bold">{item.title}</h2>
+                  <h2 className="text-sky-blue font-bold font-helvetica-semibold">{item.title}</h2>
                   <p className="text-white ">{item.description}</p>
                </div>
             </div>
@@ -72,7 +72,7 @@ const Benefits = () => {
 
         {/* Button  */}
 
-        <button className="bg-wizard-white w-[203px] h-[44px] rounded-[30px] pr-[37px] py-[10px] flex items-center gap-[15px] ">
+        <button className="bg-wizard-white w-[203px] h-[44px] rounded-[30px] pr-[37px] py-[10px] flex items-center gap-[15px] font-helvetica-regular ">
           <ArrowTopRightIcon />
           <p>Request Demo</p>
 
