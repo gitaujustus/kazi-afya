@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+
+  /* Color variables  */
+  --color-wizard-white: #e1f0ff;
+  --color-blue-leviathan: #022c61;
+  --color-private-jet: #879bb4;
+  --color-cosmic-void: #070734;
+  --color-london-rain: #0057b8;
+  --color-primary-white: #ffffff;
+  --color-sky-blue: #47b1f6;
+
+
+
+
+}
