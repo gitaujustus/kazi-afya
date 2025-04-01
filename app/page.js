@@ -1,17 +1,24 @@
 import Benefits from "@/components/home/Benefits";
-import QuestionsAnswered from "@/components/home/Questions";
-import Image from "next/image";
+import CTASection from "@/components/home/CTA";
+import FAQs from "@/components/home/Questions";
+
 
 export default function Home() {
   return (
     <main>
       <h1>Home</h1>
 
-      {/* Section 4 - Benefits */}
+      {/* Section 4 - Benefits */}CTASection={}
       <Benefits />
 
       {/* Section 5 - Questions */}
-      <QuestionsAnswered />
+      <FAQs />
+
+      {/* Section 6 - CTA */}
+      <CTASection />
+
+
+
     </main>
   );
 }

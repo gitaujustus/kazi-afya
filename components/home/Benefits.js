@@ -77,7 +77,7 @@ const Benefits = () => {
         {/* Button - keeping exact values from your version */}
         <button className="bg-wizard-white w-[180px] xl:w-[203px] 2xl:w-[260px] h-[40px] xl:h-[44px] 2xl:h-[56px] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular">
           <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
-          <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap">Request Demo</p>
+          <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular text-london-rain">Request Demo</p>
         </button>
       </div>
     </section>

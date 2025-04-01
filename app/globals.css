@@ -22,5 +22,8 @@
   --font-helvetica-light-italic: var(--font-helvetica-light-italic);
   --font-helvetica-thin-italic: var(--font-helvetica-thin-italic);
 
+  /* Figtree Fonts */
+  --font-figtree: var(--font-figtree);
+  
 }
 
