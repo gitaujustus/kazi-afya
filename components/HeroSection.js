@@ -101,10 +101,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-10 top-[512px]">
         <div className='bg-[#070734]/35 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[20px] sm:backdrop-blur-[25px] xl:backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[15px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
           <div className="text-center">
-            <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] text-sky-blue font-bold font-700 leading-[120%] mx-auto w-[90%] sm:w-[85%] md:w-[80%] lg:w-[75%] xl:w-[1177px] 2xl:w-[1300px]">
+            <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] xl:text-[64px] 2xl:text-[72px] text-sky-blue font-helvetica-bold leading-[120%] mx-auto w-full sm:w-[90%] md:w-[85%] lg:w-[1177px] xl:w-[1177px] 2xl:w-[1300px]">
               Powering Hospitals, Empowering Care
             </h1>
-            <p className="text-[14px] sm:text-[16px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] text-white p-[5px] sm:p-[8px] xl:p-[10px] mt-[20px] sm:mt-[25px] md:mt-[30px] xl:mt-[40px] font-500 mx-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] xl:w-[819px] 2xl:w-[900px] mb-[20px] sm:mb-[30px] xl:mb-[40px]">
+            <p className="text-[14px] sm:text-[16px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] text-white p-[5px] sm:p-[8px] xl:p-[10px] mt-[20px] sm:mt-[25px] md:mt-[30px] xl:mt-[40px] font-figtree font-500 mx-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] xl:w-[819px] 2xl:w-[900px] mb-[20px] sm:mb-[30px] xl:mb-[40px]">
               A Complete Hospital Management System Designed to Automate Workflows, Enhance Patient Care, and Optimize Operations—All in One Powerful Platform
             </p>
             <button className='flex items-center gap-[5px] sm:gap-[8px] xl:gap-[10px] mx-auto text-white text-[14px] sm:text-[16px] xl:text-[18px] 2xl:text-[20px]'>

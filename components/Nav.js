@@ -83,33 +83,19 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-
-<div className="hidden md:flex items-center justify-center gap-3 lg:gap-6 2xl:gap-8">
-  {menuItems.map((item) => (
-    <MotionLink
-    key={item.href}
-    href={item.href}
-    className="relative flex items-center justify-center"
-  >
-    {pathname === item.href && (
-      <motion.div
-        layoutId="nav-highlight"
-        className="absolute inset-0 bg-blue-leviathan rounded-full "
-        style={{ zIndex: -1 }}
-        transition={{ duration: 0.8, ease: 'easeInOut' }}
-      />
-    )}
-    <span
-      className={`relative z-10 px-2 lg:px-4 py-2 text-nowrap 2xl:text-[1.8rem] ${
-        pathname === item.href ? '' : ''
-      }`}
-    >
-      {item.label}
-    </span>
-  </MotionLink>
-  ))}
-</div>
-
+      <div className="hidden md:flex items-center justify-center gap-3 lg:gap-6 2xl:gap-8">
+        {menuItems.map((item) => (
+          <MotionLink
+            key={item.href}
+            href={item.href}
+            className={`relative flex items-center justify-center ${pathname === item.href ? 'active' : ''}`}
+          >
+            <span className="relative z-10 px-2 lg:px-4 py-2 text-nowrap text-[16px] 2xl:text-[1.8rem]">
+              {item.label}
+            </span>
+          </MotionLink>
+        ))}
+      </div>
 
       {/* Desktop Auth Buttons */}
       <div className="hidden md:flex items-center justify-between gap-4">
@@ -147,7 +133,9 @@ const Navbar = () => {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`${pathname === item.href ? 'active' : ''} flex px-3 items-center gap-2`}
+                  className={`flex px-3 items-center gap-2 transition-all duration-300 ${
+                    pathname === item.href ? 'active !bg-[#070734]/90' : 'hover:bg-[#070734]/20'
+                  }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.isIcon ? (
