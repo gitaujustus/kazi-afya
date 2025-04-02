@@ -1,4 +1,4 @@
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/home/HeroSection";
 import Benefits from "@/components/home/Benefits";
 import CTASection from "@/components/home/CTA";
 import FAQs from "@/components/home/Questions";
@@ -9,7 +9,6 @@ export default function Home() {
     <main className="min-h-screen">
       {/* Section 1 */}
       <HeroSection />
-      
       
       {/* Section 2 */}
       <section className="w-full bg-cosmic-void flex justify-center items-center py-[100px] px-[24px] sm:py-[150px] sm:px-[48px] md:py-[180px] md:px-[64px] lg:py-[200px] lg:px-[80px] xl:py-[221px] xl:px-[10.57vw]">
@@ -36,7 +35,6 @@ export default function Home() {
           <h2 className="font-helvetica-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[120%] text-cosmic-void max-w-[900px] text-center mx-auto">
             Discover hospital management redefined. Experience seamless efficiency at every step
           </h2>
-
           {/* content */}
           <div className="mt-[80px] lg:mt-[147px] px-5 lg:px-[75px]  lg:mb-[119px] space-y-[60px] md:space-y-[80px]">
             {/* Step 1 */}
