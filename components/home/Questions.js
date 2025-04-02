@@ -237,7 +237,7 @@ const FAQs = () => {
           variants={cardVariants}
           initial="hidden"
           animate={cardControls}
-          whileHover="hover"
+          // whileHover="hover"
           className="w-full mt-10 lg:mt-0 lg:w-2/5 xl:w-[468px] bg-[#F2F4F5] rounded-[20px] flex flex-col items-center gap-3 sm:gap-[14px] px-4 sm:px-[21px] py-6 sm:py-[30px]"
         >
           <motion.div
@@ -268,20 +268,20 @@ const FAQs = () => {
             custom={2}
           >
             <p className="font-figtree text-sm sm:text-base xl:text-[16px] text-center">
-              Let&apos;s optimize your hospital operations with Kazi Afya. Call to
+              Let&aposs optimize your hospital operations with Kazi Afya. Call to
               explore how our HMS can streamline workflows, enhance patient
               care, and drive efficiency for your health institution.
             </p>
           </motion.div>
           <motion.button
             whileHover={{ 
-              scale: 1.05,
+              scale: 1.0,
               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)"
             }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 1.0 }}
             variants={cardContentVariants}
             custom={3}
-            className="w-[171px] h-[44px] rounded-[30px] bg-wizard-white pr-[37px] py-[10px] flex justify-between items-center gap-[15px]"
+            className="w-[171px] h-[44px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px]"
           >
             <motion.div
               animate={{ 
@@ -292,10 +292,11 @@ const FAQs = () => {
                   repeatDelay: 3
                 }
               }}
+              className="group-hover:rotate-45 group-hover:transition-transform duration-300"
             >
               <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
             </motion.div>
-            <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular text-london-rain">
+            <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular text-london-rain group-hover:text-white">
               Book Now
             </p>
           </motion.button>

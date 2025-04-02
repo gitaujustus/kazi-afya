@@ -58,9 +58,13 @@ const CTASection = () => {
   };
 
   const buttonAnimation = {
-    rest: { scale: 1 },
+    rest: { 
+      scale: 1,
+      boxShadow: "0px 0px 0px rgba(0,0,0,0)"
+    },
     hover: { 
       scale: 1.05,
+      boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
       transition: { 
         type: "spring", 
         stiffness: 400, 
@@ -118,21 +122,14 @@ const CTASection = () => {
                 initial="rest"
                 whileHover="hover"
                 variants={buttonAnimation}
-                className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]"
+                className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:bg-london-rain hover:text-white group"
               >
                 <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ 
-                    duration: 2,
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    ease: "linear",
-                    repeatDelay: 5
-                  }}
+                  className="group-hover:rotate-45 group-hover:transition-transform duration-300"
                 >
                   <ArrowTopRightIcon width="44" height="44" />
                 </motion.div>
-                <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap">Book Now</span>
+                <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white">Book Now</span>
               </motion.button>
             </motion.div>
           </motion.div>
@@ -144,9 +141,16 @@ const CTASection = () => {
             {/* Icon 1 - Red Clock */}
             <motion.div 
               custom={0}
-              initial="hidden"
-              animate="visible"
+              initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+              whileInView={{
+                left: "70%", top: "15%", transform:"translate(0%, 0%)",
+                opacity: 1,
+                transition: {
+                  duration: 1.2
+                }
+              }}
               variants={iconAnimation}
+viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-red-600 rounded-md flex items-center justify-center">
@@ -161,9 +165,16 @@ const CTASection = () => {
             {/* Icon 2 - Blue Document */}
             <motion.div 
               custom={1}
-              initial="hidden"
-              animate="visible"
+              initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+              whileInView={{
+                left: "70%", top: "15%", transform:"translate(0%, 0%)",
+                opacity: 1,
+                transition: {
+                  duration: 1.2
+                }
+              }}
               variants={iconAnimation}
+viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-blue-600 rounded-md flex items-center justify-center">
@@ -182,6 +193,7 @@ const CTASection = () => {
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
+viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#006655] rounded-md flex items-center justify-center">
@@ -204,6 +216,7 @@ const CTASection = () => {
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
+viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-green-600 rounded-md flex items-center justify-center">
@@ -221,6 +234,7 @@ const CTASection = () => {
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
+viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#6E0000] rounded-md flex items-center justify-center">
@@ -238,6 +252,7 @@ const CTASection = () => {
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
+viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#1E1E1E] rounded-md flex items-center justify-center">
@@ -264,6 +279,7 @@ const CTASection = () => {
             }
           }}
           variants={iconAnimation}
+viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[10%] md:top-[15%] lg:left-[15%] lg:top-[18%] xl:left-[198px] xl:top-[179px]"
         >
@@ -293,6 +309,7 @@ const CTASection = () => {
             }
           }}
           variants={iconAnimation}
+viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:top-[5%] lg:left-[60%] xl:left-[729px] xl:top-[65px]"
         >
@@ -318,6 +335,7 @@ const CTASection = () => {
             }
           }}
           variants={iconAnimation}
+viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[10%] md:top-[40%] lg:right-[15%] xl:left-[1181px] xl:top-[430px]"
         >
@@ -342,6 +360,7 @@ const CTASection = () => {
             }
           }}
           variants={iconAnimation}
+viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:bottom-[10%] lg:left-[60%] xl:left-[730px] xl:top-[780px]"
         >
@@ -366,6 +385,7 @@ const CTASection = () => {
             }
           }}
           variants={iconAnimation}
+viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[20%] md:bottom-[10%] lg:left-[25%] xl:left-[277px] xl:top-[772px]"
         >
@@ -390,6 +410,7 @@ const CTASection = () => {
             }
           }}
           variants={iconAnimation}
+viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[20%] md:top-[80%] lg:right-[15%] xl:left-[993px] xl:top-[850px]"
         >
