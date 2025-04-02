@@ -67,7 +67,7 @@ const Navbar = () => {
         <LogoIcon className="text-red_shimmer" />
 
 
-        <span className="lg:text-small 2xl:text-[3rem]">Kazipos</span>
+        <span className="lg:text-small 2xl:text-[3rem]">KaziAfya</span>
       </div>
 
       {/* Mobile Menu Button */}
