@@ -1,52 +1,144 @@
 "use client";
 import React from "react";
 import { ArrowTopRightIcon } from "@/icons";
+import { motion } from "framer-motion";
 
 const CTASection = () => {
+  // Animation variants
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.6 } }
+  };
+
+  const slideUp = {
+    hidden: { y: 50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
+  };
+
+  const popIn = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 260, damping: 20 } }
+  };
+
+  const iconAnimation = {
+    hidden: { scale: 0, opacity: 0 },
+    visible: index => ({
+      scale: 1,
+      opacity: 1,
+      transition: { 
+        delay: 0.2 * index,
+        type: "spring",
+        stiffness: 200,
+        damping: 15
+      }
+    })
+  };
+
+  const buttonAnimation = {
+    rest: { scale: 1 },
+    hover: { 
+      scale: 1.05,
+      transition: { 
+        type: "spring", 
+        stiffness: 400, 
+        damping: 10 
+      }
+    }
+  };
+  
   return (
     <section className="relative w-full min-h-screen bg-[#f2f4f5] flex items-center justify-center overflow-hidden">
       {/* Container that preserves the 1440x1024 design on large screens */}
       <div className="relative w-full max-w-[1440px] min-h-[1024px] mx-auto">
         {/* Radial gradient background - responsive but maintains original size on xl */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] md:w-[700px] md:h-[700px] xl:w-[800px] xl:h-[800px] rounded-full bg-[radial-gradient(circle,#0031CB_0%,#F2F4F5_70%)]">
+        <motion.div 
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] md:w-[700px] md:h-[700px] xl:w-[800px] xl:h-[800px] rounded-full bg-[radial-gradient(circle,#0031CB_0%,#F2F4F5_70%)]"
+        >
           {/* White card container - responsive with preserved original size on xl */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto md:w-[600px] lg:w-[700px] xl:w-[756px] xl:h-[448px] bg-white rounded-[20px] md:rounded-[30px] shadow-lg p-6 md:p-8 lg:p-10 xl:p-[60px] flex flex-col items-center gap-4 md:gap-6 lg:gap-[30px]">
+          <motion.div 
+            initial="hidden"
+            animate="visible"
+            variants={popIn}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto md:w-[600px] lg:w-[700px] xl:w-[756px] xl:h-[448px] bg-white rounded-[20px] md:rounded-[30px] shadow-lg p-6 md:p-8 lg:p-10 xl:p-[60px] flex flex-col items-center gap-4 md:gap-6 lg:gap-[30px]"
+          >
             {/* Heading - responsive text size */}
-            <h2 className="text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-helvetica-semibold text-center text-cosmic-void">
+            <motion.h2 
+              initial="hidden"
+              animate="visible"
+              variants={slideUp}
+              className="text-[28px] md:text-[36px] lg:text-[42px] xl:text-[48px] font-helvetica-semibold text-center text-cosmic-void"
+            >
               What are you waiting for?
               <span className="block text-london-rain mb-2 md:mb-4">
                 Your success starts here!
               </span>
-            </h2>
+            </motion.h2>
             
             {/* Subtext - responsive text size */}
-            <p className="text-[14px] md:text-[15px] xl:text-[16px] font-figtree font-medium text-center">
-              Let's transform healthcare together. Bring your vision to life with Kazi Afya and build a smarter, more efficient hospital system.
-            </p>
+            <motion.p 
+              initial="hidden"
+              animate="visible"
+              variants={slideUp}
+              transition={{ delay: 0.2 }}
+              className="text-[14px] md:text-[15px] xl:text-[16px] font-figtree font-medium text-center"
+            >
+              Let&apos;s transform healthcare together. Bring your vision to life with Kazi Afya and build a smarter, more efficient hospital system.
+            </motion.p>
             
             {/* Book Now button - responsive size */}
-            <button className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]">
-              <ArrowTopRightIcon width="44" height="44" />
+            <motion.button 
+              initial="rest"
+              whileHover="hover"
+              variants={buttonAnimation}
+              className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]"
+            >
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ 
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  ease: "linear",
+                  repeatDelay: 5
+                }}
+              >
+                <ArrowTopRightIcon width="44" height="44" />
+              </motion.div>
               <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap">Book Now</span>
-            </button>
-          </div>
-        </div>
+            </motion.button>
+          </motion.div>
+        </motion.div>
         
         {/* SMALL SCREEN ICONS - Only visible on small screens */}
         <div className="block md:hidden absolute top-[20%] left-0 w-full flex justify-center">
           <div className="w-[90%] flex justify-between">
             {/* Icon 1 - Red Clock */}
-            <div className="w-[32px] h-[32px] flex items-center justify-center">
+            <motion.div 
+              custom={0}
+              initial="hidden"
+              animate="visible"
+              variants={iconAnimation}
+              className="w-[32px] h-[32px] flex items-center justify-center"
+            >
               <div className="w-full h-full bg-red-600 rounded-md flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M12 6V12L16 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </div>
+            </motion.div>
 
             {/* Icon 2 - Blue Document */}
-            <div className="w-[32px] h-[32px] flex items-center justify-center">
+            <motion.div 
+              custom={1}
+              initial="hidden"
+              animate="visible"
+              variants={iconAnimation}
+              className="w-[32px] h-[32px] flex items-center justify-center"
+            >
               <div className="w-full h-full bg-blue-600 rounded-md flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -56,10 +148,16 @@ const CTASection = () => {
                   <path d="M10 9H9H8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </div>
+            </motion.div>
             
             {/* Icon 3 - Teal Question */}
-            <div className="w-[32px] h-[32px] flex items-center justify-center">
+            <motion.div 
+              custom={2}
+              initial="hidden"
+              animate="visible"
+              variants={iconAnimation}
+              className="w-[32px] h-[32px] flex items-center justify-center"
+            >
               <div className="w-full h-full bg-[#006655] rounded-md flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -67,7 +165,7 @@ const CTASection = () => {
                   <path d="M12 17H12.01" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         
@@ -75,7 +173,13 @@ const CTASection = () => {
         <div className="block md:hidden absolute bottom-[20%] left-0 w-full flex justify-center">
           <div className="w-[90%] flex justify-between">
             {/* Icon 4 - Green File */}
-            <div className="w-[32px] h-[32px] flex items-center justify-center">
+            <motion.div 
+              custom={3}
+              initial="hidden"
+              animate="visible"
+              variants={iconAnimation}
+              className="w-[32px] h-[32px] flex items-center justify-center"
+            >
               <div className="w-full h-full bg-green-600 rounded-md flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -85,43 +189,69 @@ const CTASection = () => {
                   <path d="M13 17H15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </div>
+            </motion.div>
             
             {/* Icon 5 - Dark Red User */}
-            <div className="w-[32px] h-[32px] flex items-center justify-center">
+            <motion.div 
+              custom={4}
+              initial="hidden"
+              animate="visible"
+              variants={iconAnimation}
+              className="w-[32px] h-[32px] flex items-center justify-center"
+            >
               <div className="w-full h-full bg-[#6E0000] rounded-md flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </div>
+            </motion.div>
             
             {/* Icon 6 - Black Award */}
-            <div className="w-[32px] h-[32px] flex items-center justify-center">
+            <motion.div 
+              custom={5}
+              initial="hidden"
+              animate="visible"
+              variants={iconAnimation}
+              className="w-[32px] h-[32px] flex items-center justify-center"
+            >
               <div className="w-full h-full bg-[#1E1E1E] rounded-md flex items-center justify-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
         
         {/* LARGE SCREEN ICONS - Original positions preserved for md and up */}
         {/* Clock icon - red */}
-        <div className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[10%] md:top-[15%] lg:left-[15%] lg:top-[18%] xl:left-[198px] xl:top-[179px]">
+        <motion.div 
+          custom={0}
+          initial="hidden"
+          animate="visible"
+          variants={iconAnimation}
+          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[10%] md:top-[15%] lg:left-[15%] lg:top-[18%] xl:left-[198px] xl:top-[179px]"
+        >
           <div className="w-full h-full bg-red-600 rounded-md flex items-center justify-center">
             <svg className="md:w-[20px] md:h-[20px] xl:w-[24px] xl:h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M12 6V12L16 14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-        </div>
+        </motion.div>
         
         {/* Document icon - blue */}
-        <div className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:top-[5%] lg:left-[60%] xl:left-[729px] xl:top-[65px]">
+        <motion.div 
+          custom={1}
+          initial="hidden"
+          animate="visible"
+          variants={iconAnimation}
+          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:top-[5%] lg:left-[60%] xl:left-[729px] xl:top-[65px]"
+        >
           <div className="w-full h-full bg-blue-600 rounded-md flex items-center justify-center">
             <svg className="md:w-[20px] md:h-[20px] xl:w-[24px] xl:h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -131,10 +261,17 @@ const CTASection = () => {
               <path d="M10 9H9H8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-        </div>
+        </motion.div>
         
         {/* File icon - green */}
-        <div className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[10%] md:top-[40%] lg:right-[15%] xl:left-[1181px] xl:top-[430px]">
+        <motion.div 
+          custom={2}
+          initial="hidden"
+          animate="visible"
+          variants={iconAnimation}
+          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[10%] md:top-[40%] lg:right-[15%] xl:left-[1181px] xl:top-[430px]"
+        >
           <div className="w-full h-full bg-green-600 rounded-md flex items-center justify-center">
             <svg className="md:w-[20px] md:h-[20px] xl:w-[24px] xl:h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14 3V7C14 7.26522 14.1054 7.51957 14.2929 7.70711C14.4804 7.89464 14.7348 8 15 8H19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -144,30 +281,51 @@ const CTASection = () => {
               <path d="M13 17H15" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-        </div>
+        </motion.div>
         
         {/* User icon - dark red */}
-        <div className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:bottom-[10%] lg:left-[60%] xl:left-[730px] xl:top-[780px]">
+        <motion.div 
+          custom={3}
+          initial="hidden"
+          animate="visible"
+          variants={iconAnimation}
+          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:bottom-[10%] lg:left-[60%] xl:left-[730px] xl:top-[780px]"
+        >
           <div className="w-full h-full bg-[#6E0000] rounded-md flex items-center justify-center">
             <svg className="md:w-[20px] md:h-[20px] xl:w-[24px] xl:h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-        </div>
+        </motion.div>
         
         {/* Award icon - black */}
-        <div className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[20%] md:bottom-[10%] lg:left-[25%] xl:left-[277px] xl:top-[772px]">
+        <motion.div 
+          custom={4}
+          initial="hidden"
+          animate="visible"
+          variants={iconAnimation}
+          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[20%] md:bottom-[10%] lg:left-[25%] xl:left-[277px] xl:top-[772px]"
+        >
           <div className="w-full h-full bg-[#1E1E1E] rounded-md flex items-center justify-center">
             <svg className="md:w-[20px] md:h-[20px] xl:w-[24px] xl:h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 15C15.866 15 19 11.866 19 8C19 4.13401 15.866 1 12 1C8.13401 1 5 4.13401 5 8C5 11.866 8.13401 15 12 15Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M8.21 13.89L7 23L12 20L17 23L15.79 13.88" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-        </div>
+        </motion.div>
         
         {/* Question icon - teal */}
-        <div className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[20%] md:top-[10%] lg:right-[15%] xl:left-[993px] xl:bottom-[900px]">
+        <motion.div 
+          custom={5}
+          initial="hidden"
+          animate="visible"
+          variants={iconAnimation}
+          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[20%] md:top-[10%] lg:right-[15%] xl:left-[993px] xl:bottom-[900px]"
+        >
           <div className="w-full h-full bg-[#006655] rounded-md flex items-center justify-center">
             <svg className="md:w-[20px] md:h-[20px] xl:w-[24px] xl:h-[24px]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -175,7 +333,7 @@ const CTASection = () => {
               <path d="M12 17H12.01" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -38,7 +38,7 @@ const Benefits = () => {
 
   return (
     // container div - using xl for 1280+ which is closer to 1440px design
-    <section className="bg-cosmic-void flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 xl:gap-[10px] w-full xl:w-[1440px] 2xl:w-[1920px] mx-auto h-auto xl:h-[1024px] 2xl:h-[1080px] px-4 sm:px-6 md:px-8 lg:px-[48px] xl:px-[64px] 2xl:px-[96px] py-10 md:py-16 xl:py-[82px] 2xl:py-[100px]">
+    <section className="bg-cosmic-void flex flex-col md:flex-row justify-between items-center gap-6 md:gap-8 xl:gap-[10px] w-full mx-auto h-auto xl:h-[1024px] 2xl:h-[1080px] px-4 sm:px-6 md:px-8 lg:px-[48px] xl:px-[64px] 2xl:px-[96px] py-10 md:py-16 xl:py-[82px] 2xl:py-[100px]">
       {/* Left side - Image */}
       <div className="w-full md:w-1/2 flex justify-center md:justify-start">
         <Image

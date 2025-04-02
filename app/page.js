@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+// import Benefits from "@/components/home/Benefits";
 import Benefits from "@/components/home/Benefits";
 import CTASection from "@/components/home/CTA";
 import FAQs from "@/components/home/Questions";
@@ -96,6 +97,8 @@ export default function Home() {
           </div>
         </div>  
      </section>
+
+     {/* Section 4 - Benefits  */}
       <Benefits />
 
       {/* Section 5 - Questions */}
