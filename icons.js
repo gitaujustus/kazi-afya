@@ -29,5 +29,21 @@ export const HeartIcon = ({ width = "30", height = "30", className = "" }) => {
     )
   }
 
+  export const ChevronDownIcon = ({ width = "18", height = "11", className = "" }) => {
+    return (
+      <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 2.0001L16.5 0.600098L9 8.0001L1.5 0.600098L0 2.0001L9 11.0001L18 2.0001Z" fill="#0057B8"/>
+      </svg>
+
+    )
+  }
+
+  export const ChevronUpIcon = ({ width = "18", height = "11", className = "" }) => {
+    return (
+      <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 9.0001L1.5 10.4001L9 3.0001L16.5 10.4001L18 9.0001L9 0.0001L0 9.0001Z" fill="#0057B8"/>
+      </svg>
+    );
+  };
 
 
