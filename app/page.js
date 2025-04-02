@@ -74,7 +74,7 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                 initial={{opacity:0, y:40}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
-                viewport={{once:false}}
+                viewport={{once:true}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] 78vw]text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
                   Provide key details about your hospital, including departments, staff roles, and operational needs. Our system will tailor the best configuration for you.
                 </motion.p>
@@ -105,7 +105,7 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                 initial={{opacity:0, y: 40}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
-                viewport={{once:false}}
+                viewport={{once:true}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
                   Seamlessly integrate Kazi Afya with your existing systems. Our experts will guide you through data migration, user training, and workflow optimization.
                 </motion.p>
@@ -133,7 +133,7 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                 initial={{opacity:0, y:40}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
-                viewport={{once:false}}
+                viewport={{once:true}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 pt-[30px] tracking-[0.15px]">
                   Go live with Kazi Afya and experience smooth hospital management. Monitor real-time analytics, automate processes, and enhance patient care from day one.
                 </motion.p>
