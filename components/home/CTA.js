@@ -326,14 +326,9 @@ viewport={{ once: true }}
         {/* File icon - green */}
         <motion.div 
           custom={2}
-          initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
-          whileInView={{
-            left: "85%", top: "40%", transform:"translate(0%, 0%)",
-            opacity: 1,
-            transition: {
-              duration: 1.2
-            }
-          }}
+          // initial="hidden"
+          initial={{ scale: 1, opacity: 1, left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
+          whileInView={{ transform: 'none', x:10, y:10}}
           variants={iconAnimation}
 viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}

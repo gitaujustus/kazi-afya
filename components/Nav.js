@@ -56,18 +56,18 @@ const Navbar = () => {
   ];
 
   const authItems = [
-    { href: '/sign_in', label: 'Login', className: 'border border-white px-4 py-1 rounded-full text-center' },
-    { href: '/sign_up', label: 'Get Started', className: 'bg-blue-leviathan text-red_reign px-4 py-1 rounded-full text-center' },
+    { href: '/sign_in', label: 'Login', className: 'border border-white px-4 py-1 rounded-[50px] text-center' },
+    { href: '/sign_up', label: 'Get Started', className: 'bg-blue-leviathan text-red_reign px-4 py-1 rounded-[50px] text-center' },
   ];
 
   return (
-    <div className="flex items-center justify-between bg-blue-leviathan text-white w-[90vw] rounded-full px-4 py-2 2xl:py-4 2xl:px-10   mx-auto mt-5 absolute left-[50%] transform -translate-x-[50%] z-20 font-inter">
+    <div className="flex items-center justify-between bg-blue-leviathan text-white w-[90vw] rounded-[25px] px-4 py-2 2xl:py-4 2xl:px-10   mx-auto mt-5 absolute left-[50%] transform -translate-x-[50%] z-20 font-inter">
       {/* Logo */}
       <div className="flex items-center justify-between gap-1 md:gap-2 2xl:gap-4">
         <LogoIcon className="text-red_shimmer" />
 
 
-        <span className="lg:text-small 2xl:text-[3rem]">Kazipos</span>
+        <span className="lg:text-small 2xl:text-[2.0rem]">KaziAfya</span>
       </div>
 
       {/* Mobile Menu Button */}
@@ -103,7 +103,7 @@ const Navbar = () => {
           href="/sign_in"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
-          className="border border-white py-1 2xl:py-2  rounded-full text-tiny 2xl:text-[1.8rem] w-32 2xl:w-38 text-center"
+          className="border border-white py-1 2xl:py-2  rounded-[50px] text-tiny 2xl:text-[1.8rem] w-32 2xl:w-38 text-center"
         >
           Login
         </MotionLink>
@@ -111,7 +111,7 @@ const Navbar = () => {
           href="/sign_up"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
-          className="bg-blue-leviathan text-red_reign py-1 2xl:py-2  rounded-full text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"
+          className="text-blue-leviathan bg-white py-1 2xl:py-2  rounded-[50px] text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"
         >
           Get Started
         </MotionLink>
@@ -126,7 +126,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.9, ease: 'easeOut' }}
             ref={menuRef}
-            className="absolute top-full left-0 right-0 mt-2 bg-blue-leviathan rounded-xl px-2 py-6 md:p-4 flex flex-col gap-4 md:hidden shadow-lg"
+            className="absolute top-full left-0 right-0 mt-2 bg-blue-leviathan rounded-[25px] px-2 py-6 md:p-4 flex flex-col gap-4 md:hidden shadow-lg"
           >
             <div className="flex flex-col gap-4">
               {menuItems.map((item, index) => (
