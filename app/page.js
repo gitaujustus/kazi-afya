@@ -89,7 +89,7 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
              initial={{ opacity: 0.7, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="text-london-rain text-[80px] md:text-[120px] lg:text-[200px] font-helvetica-semibold leading-none">
                 02
@@ -105,7 +105,7 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                 initial={{opacity:0, y: 40}}
                 whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
-                viewport={{once:true}}
+                viewport={{once:false}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
                   Seamlessly integrate Kazi Afya with your existing systems. Our experts will guide you through data migration, user training, and workflow optimization.
                 </motion.p>
