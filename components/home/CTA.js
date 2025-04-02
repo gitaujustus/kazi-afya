@@ -216,7 +216,7 @@ viewport={{ once: true }}
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
-viewport={{ once: true }}
+            viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-green-600 rounded-md flex items-center justify-center">
@@ -272,7 +272,7 @@ viewport={{ once: true }}
           custom={0}
           initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
           whileInView={{
-            left: "10%", top: "15%", transform:"translate(0%, 0%)",
+            left: "15%", top: "17%", transform:"translate(0%, 0%)",
             opacity: 1,
             transition: {
               duration: 1.2
@@ -302,7 +302,7 @@ viewport={{ once: true }}
           custom={1}
           initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
           whileInView={{
-            left: "55%", top: "5%", transform:"translate(0%, 0%)",
+            left: "55%", top: "10%", transform:"translate(0%, 0%)",
             opacity: 1,
             transition: {
               duration: 1.2
@@ -328,7 +328,13 @@ viewport={{ once: true }}
           custom={2}
           // initial="hidden"
           initial={{ scale: 1, opacity: 1, left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
-          whileInView={{ transform: 'none', x:10, y:10}}
+          whileInView={{
+            left: "80%", top: "40%", transform:"translate(0%, 0%)",
+            opacity: 1,
+            transition: {
+              duration: 1.2
+            }
+          }}
           variants={iconAnimation}
 viewport={{ once: true }}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
