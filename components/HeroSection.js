@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Arrow, RighArrow } from '../Icons';
+import { Arrow, RighArrow } from './Icons';
 
 const images = [
   '/assets/hero-image.jpg',
@@ -62,7 +62,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-[900px] lg:min-h-[1024px] w-full overflow-hidden">
+    <div className="relative min-h-[900px] lg:min-h-[1100px] w-full overflow-hidden">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentImageIndex}
@@ -99,9 +99,9 @@ const HeroSection = () => {
       </AnimatePresence>
       
       <div className="absolute inset-0 z-10 top-[512px]">
-        <div className='bg-[#070734]/35 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[20px] sm:backdrop-blur-[25px] xl:backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[15px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
+        <div className='bg-[#070734]/35 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[15px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
           <div className="text-center">
-            <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] xl:text-[64px] 2xl:text-[72px] text-sky-blue font-helvetica-bold leading-[120%] mx-auto w-full sm:w-[90%] md:w-[85%] lg:w-[1177px] xl:w-[1177px] 2xl:w-[1300px]">
+            <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] xl:text-[64px] 2xl:text-[72px] text-sky-blue font-helvetica-bold leading-[120%] mx-auto ">
               Powering Hospitals, Empowering Care
             </h1>
             <p className="text-[14px] sm:text-[16px] md:text-[16px] lg:text-[17px] xl:text-[18px] 2xl:text-[20px] text-white p-[5px] sm:p-[8px] xl:p-[10px] mt-[20px] sm:mt-[25px] md:mt-[30px] xl:mt-[40px] font-figtree font-500 mx-auto w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] xl:w-[819px] 2xl:w-[900px] mb-[20px] sm:mb-[30px] xl:mb-[40px]">
