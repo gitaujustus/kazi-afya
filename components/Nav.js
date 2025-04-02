@@ -83,19 +83,19 @@ const Navbar = () => {
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex items-center justify-center gap-3 lg:gap-6 2xl:gap-8">
-        {menuItems.map((item) => (
-          <MotionLink
-            key={item.href}
-            href={item.href}
+<div className="hidden md:flex items-center justify-center gap-3 lg:gap-6 2xl:gap-8">
+  {menuItems.map((item) => (
+    <MotionLink
+    key={item.href}
+    href={item.href}
             className={`relative flex items-center justify-center ${pathname === item.href ? 'active' : ''}`}
           >
             <span className="relative z-10 px-2 lg:px-4 py-2 text-nowrap text-[16px] 2xl:text-[1.8rem]">
-              {item.label}
-            </span>
-          </MotionLink>
-        ))}
-      </div>
+      {item.label}
+    </span>
+  </MotionLink>
+  ))}
+</div>
 
       {/* Desktop Auth Buttons */}
       <div className="hidden md:flex items-center justify-between gap-4">
