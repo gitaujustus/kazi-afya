@@ -4,6 +4,8 @@ import Image from "next/image";
 import { ArrowTopRightIcon } from "@/icons";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 
+import { ChevronDownIcon, ChevronUpIcon } from "@/icons";
+
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const controls = useAnimation();
@@ -92,7 +94,7 @@ const FAQs = () => {
   };
 
   // Animated chevron (arrow) for FAQ items
-  const chevronVariants = {
+  const ChevronVariants = {
     open: { rotate: 180, transition: { duration: 0.3 } },
     closed: { rotate: 0, transition: { duration: 0.3 } }
   };
@@ -166,17 +168,15 @@ const FAQs = () => {
                 className="flex flex-col gap-2 sm:gap-[11px]"
               >
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="flex justify-between w-full text-left text-blue-leviathan font-semibold text-base sm:text-lg md:text-xl xl:text-[20px] font-figtree"
                   onClick={() => toggleFAQ(index)}
                 >
                   {faq.question}
                   <motion.span
-                    variants={chevronVariants}
                     animate={openIndex === index ? "open" : "closed"}
                   >
-                    ▼
+                    {openIndex === index ? <ChevronUpIcon /> : <motion.div variants={ChevronVariants}><ChevronDownIcon /></motion.div>}
                   </motion.span>
                 </motion.button>
                 <AnimatePresence>
