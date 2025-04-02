@@ -89,6 +89,7 @@ const CTASection = () => {
               variants={popIn}
               className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto md:w-[600px] lg:w-[700px] xl:w-[756px] xl:h-[448px] bg-white rounded-[20px] md:rounded-[30px] shadow-lg p-6 md:p-8 lg:p-10 xl:p-[60px] flex flex-col items-center gap-4 md:gap-6 lg:gap-[30px]"
             >
+              
               {/* Heading - responsive text size */}
               <motion.h2 
                 initial="hidden"
@@ -136,6 +137,7 @@ const CTASection = () => {
               </motion.button>
             </motion.div>
           </motion.div>
+          
         </div>
         
         {/* SMALL SCREEN ICONS - Only visible on small screens */}

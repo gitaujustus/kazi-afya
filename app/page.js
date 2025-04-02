@@ -43,10 +43,10 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
       <section>
         <div className=" py-[80px] lg:py-[119px] px-[2vw] md:px-[3vw] lg:px-[5.21vw]  max-w-[1440px] mx-auto">
           <motion.h2 
-          initial={{opacity:0.7}}
-          whileInView={{opacity:1}}
+          initial={{opacity:0.7, y:-20}}
+          whileInView={{opacity:1, y:0}}
           transition={{duration: 1, delay: 0.2}}
-          viewport={{once:true}}
+          viewport={{once:false}}
           className="font-helvetica-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[120%] text-cosmic-void max-w-[98vw] md:max-w-[90vw] lg:max-w-[78vw] text-center mx-auto">
             Discover hospital management redefined. Experience seamless efficiency at every step
           </motion.h2>
@@ -54,10 +54,10 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
           <div className="mt-[80px] lg:mt-[147px] px-5 lg:px-[75px]  lg:mb-[119px] space-y-[60px] md:space-y-[80px]">
             {/* Step 1 */}
             <motion.div className="flex flex-col md:flex-row gap-6 "
-              initial={{ opacity: 0.7, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0.7, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="text-london-rain text-[80px] md:text-[120px] lg:text-[200px] font-helvetica-semibold leading-none">
                 01
@@ -71,8 +71,8 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                   Customize Your Hospital Setup
                 </h3>
                 <motion.p 
-                initial={{opacity:0, x:40}}
-                whileInView={{opacity:1, x:0}}
+                initial={{opacity:0, y:40}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
                 viewport={{once:false}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] 78vw]text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
@@ -86,8 +86,8 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
 
             {/* Step 2 */}
             <motion.div className="flex flex-col md:flex-row gap-6 "
-             initial={{ opacity: 0.7, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+             initial={{ opacity: 0.7, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
@@ -102,8 +102,8 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                   Integrate & Onboard Effortlessly
                 </h3>
                 <motion.p 
-                initial={{opacity:0, x:40}}
-                whileInView={{opacity:1, x:0}}
+                initial={{opacity:0, y: 40}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
                 viewport={{once:false}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
@@ -114,10 +114,10 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
 
             {/* Step 3 */}
             <motion.div className="flex flex-col md:flex-row gap-6 "
-             initial={{ opacity: 0.7, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+             initial={{ opacity: 0.7, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
             >
               <div className="text-london-rain text-[80px] md:text-[120px] lg:text-[200px] font-helvetica-semibold leading-none">
                 03
@@ -130,8 +130,8 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                   Launch & Optimize
                 </h3>
                 <motion.p 
-                initial={{opacity:0, x:40}}
-                whileInView={{opacity:1, x:0}}
+                initial={{opacity:0, y:40}}
+                whileInView={{opacity:1, y:0}}
                 transition={{duration: 1, delay: 0.5}}
                 viewport={{once:false}}
                 className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 pt-[30px] tracking-[0.15px]">
