@@ -69,7 +69,7 @@ const FAQs = () => {
 
   // Card hover animations
   const cardVariants = {
-    rest: { scale: 1, boxShadow: "0px 0px 0px rgba(0,0,0,0)" },
+    rest: { scale: 1},
     hover: { 
       scale: 1.02, 
       boxShadow: "0px 5px 15px rgba(0,0,0,0.1)",
@@ -155,7 +155,7 @@ const FAQs = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <div className="w-full flex flex-col justify-between gap-4 sm:gap-6 md:gap-8 xl:gap-[35px]">
+          <div className="w-full flex flex-col justify-between gap-4 sm:gap-6 md:gap-8 xl:gap-[35px] ">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -192,12 +192,12 @@ const FAQs = () => {
                     </motion.p>
                   )}
                 </AnimatePresence>
-                <motion.div 
+                {/* <motion.div 
                   className="h-px w-full bg-gray-200"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
-                />
+                /> */}
               </motion.div>
             ))}
           </div>
