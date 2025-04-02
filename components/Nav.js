@@ -67,7 +67,7 @@ const Navbar = () => {
         <LogoIcon className="text-red_shimmer" />
 
 
-        <span className="lg:text-small 2xl:text-[3rem]">KaziAfya</span>
+        <span className="lg:text-small 2xl:text-[2.0rem]">KaziAfya</span>
       </div>
 
       {/* Mobile Menu Button */}
@@ -111,7 +111,7 @@ const Navbar = () => {
           href="/sign_up"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
-          className="bg-blue-leviathan text-red_reign py-1 2xl:py-2  rounded-[50px] text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"
+          className="text-blue-leviathan bg-white py-1 2xl:py-2  rounded-[50px] text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"
         >
           Get Started
         </MotionLink>

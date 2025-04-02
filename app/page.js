@@ -20,7 +20,7 @@ whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0.5 }}
 viewport={{ once: true }}
 className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-[150px] sm:px-[48px] md:py-[180px] md:px-[64px] lg:py-[200px] lg:px-[80px] xl:py-[221px] xl:px-[10.57vw]">
-  <motion.div className="max-w-[95%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[1078px] gap-[10px]"
+  <motion.div className="max-w-[95%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[1078px] 2xl:max-w-[1338px] gap-[10px]"
   
   >
     <div className="text-center mb-10 sm:mb-8 md:mb-10 lg:mb-[15px] xl:mb-[20px]">
@@ -43,10 +43,10 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
       <section>
         <div className=" py-[80px] lg:py-[119px] px-[2vw] md:px-[3vw] lg:px-[5.21vw]  max-w-[1440px] mx-auto">
           <motion.h2 
-          initial={{opacity:0.2}}
+          initial={{opacity:0.7}}
           whileInView={{opacity:1}}
           transition={{duration: 1, delay: 0.2}}
-          viewport={{once:false}}
+          viewport={{once:true}}
           className="font-helvetica-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[120%] text-cosmic-void max-w-[98vw] md:max-w-[90vw] lg:max-w-[78vw] text-center mx-auto">
             Discover hospital management redefined. Experience seamless efficiency at every step
           </motion.h2>
@@ -57,13 +57,13 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
               initial={{ opacity: 0.7, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <div className="text-london-rain text-[80px] md:text-[120px] lg:text-[200px] font-helvetica-semibold leading-none">
                 01
               </div>
               <div className="flex-1 relative before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:bg-gradient-to-r before:from-london-rain before:to-wizard-white">
-                <div className="mb-3 pt-[20px] text-[20px] tracking-wider text-blue-leviathan">
+                <div className="mb-3 pt-[20px] text-[20px] tracking-wider text-blue-leviathan font-helvetica-bold">
                   Step 1
                 </div>
                 
@@ -89,13 +89,13 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
              initial={{ opacity: 0.7, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <div className="text-london-rain text-[80px] md:text-[120px] lg:text-[200px] font-helvetica-semibold leading-none">
                 02
               </div>
               <div className="flex-1 border-t-2 border-wizard-white">
-                <div className="mb-3 pt-[20px] text-[20px] tracking-wider text-blue-leviathan">
+                <div className="mb-3 pt-[20px] text-[20px] tracking-wider text-blue-leviathan font-helvetica-bold">
                   Step 2
                 </div>
                 <h3 className="text-[24px] md:text-[32px] lg:text-[48px] font-helvetica-semibold tracking-[0.15px] text-london-rain mb-4 leading-[120%]">
@@ -117,13 +117,13 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
              initial={{ opacity: 0.7, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
             >
               <div className="text-london-rain text-[80px] md:text-[120px] lg:text-[200px] font-helvetica-semibold leading-none">
                 03
               </div>
               <div className="flex-1 border-t-2 border-wizard-white">
-                <div className="mb-3 pt-[20px] text-[20px] tracking-wider text-blue-leviathan">
+                <div className="mb-3 pt-[20px] text-[20px] tracking-wider text-blue-leviathan font-helvetica-bold">
                   Step 3
                 </div>
                 <h3 className="text-[24px] md:text-[32px] lg:text-[48px] font-helvetica-semibold tracking-[0.15px] text-london-rain mb-4 leading-[120%]">
@@ -134,7 +134,7 @@ className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-
                 whileInView={{opacity:1, x:0}}
                 transition={{duration: 1, delay: 0.5}}
                 viewport={{once:false}}
-                className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
+                className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 pt-[30px] tracking-[0.15px]">
                   Go live with Kazi Afya and experience smooth hospital management. Monitor real-time analytics, automate processes, and enhance patient care from day one.
                 </motion.p>
               </div>

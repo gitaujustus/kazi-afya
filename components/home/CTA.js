@@ -248,6 +248,7 @@ const CTASection = () => {
           custom={1}
           initial="hidden"
           animate="visible"
+          
           variants={iconAnimation}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:top-[5%] lg:left-[60%] xl:left-[729px] xl:top-[65px]"
@@ -266,8 +267,9 @@ const CTASection = () => {
         {/* File icon - green */}
         <motion.div 
           custom={2}
-          initial="hidden"
-          animate="visible"
+          // initial="hidden"
+          initial={{ scale: 1, opacity: 1, left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
+          whileInView={{ transform: 'none', x:10, y:10}}
           variants={iconAnimation}
           whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[10%] md:top-[40%] lg:right-[15%] xl:left-[1181px] xl:top-[430px]"
