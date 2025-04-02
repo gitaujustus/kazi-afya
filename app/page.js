@@ -10,29 +10,30 @@ export default function Home() {
       {/* Section 1 */}
       <HeroSection />
       
-      {/* Section 2 */}
-      <section className="w-full bg-cosmic-void flex justify-center items-center py-[100px] px-[24px] sm:py-[150px] sm:px-[48px] md:py-[180px] md:px-[64px] lg:py-[200px] lg:px-[80px] xl:py-[221px] xl:px-[10.57vw]">
-        <div className="max-w-[90%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[1078px] gap-[10px]">
-          <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-[15px] xl:mb-[20px]">
-            <span className="text-white text-[18px] sm:text-[22px] md:text-[26px] lg:text-[30px] xl:text-[32px] tracking-wider leading-[120%] font-helvetica-bold">
-              who we are
-            </span>
-          </div>
-          <div className="relative text-center">
-            <h2 className="text-[32px] sm:text-[50px] md:text-[75px] lg:text-[110px] xl:text-[140px] 2xl:text-[160px] font-helvetica-bold font-700 leading-[120%]">
-              <span className="block text-sky-blue mb-2 sm:mb-3 md:mb-4">Critical thinkers</span>
-              <span className="block text-blue-leviathan mb-2 sm:mb-3 md:mb-4">Analysts</span>
-              <span className="block text-private-jet">Weavers</span>
-            </h2>
-          </div>
-        </div>
-      </section>
+     
+
+<section className="w-full bg-cosmic-void flex justify-center items-center  px-[20px] py-[150px] sm:px-[48px] md:py-[180px] md:px-[64px] lg:py-[200px] lg:px-[80px] xl:py-[221px] xl:px-[10.57vw]">
+  <div className="max-w-[95%] md:max-w-[80%] lg:max-w-[70%] xl:max-w-[1078px] gap-[10px]">
+    <div className="text-center mb-10 sm:mb-8 md:mb-10 lg:mb-[15px] xl:mb-[20px]">
+      <span className="text-white text-[22px] sm:text-[22px] md:text-[26px] lg:text-[30px] xl:text-[32px] tracking-wider leading-[120%] font-helvetica-bold">
+        who we are
+      </span>
+    </div>
+    <div className="relative text-center">
+      <h2 className="text-[40px] sm:text-[50px] md:text-[75px] lg:text-[110px] xl:text-[140px] 2xl:text-[160px] font-helvetica-bold font-700 leading-[120%]">
+        <span className="block text-sky-blue mb-6 sm:mb-3 md:mb-4">Critical thinkers</span>
+        <span className="block text-blue-leviathan mb-6 sm:mb-3 md:mb-4">Analysts</span>
+        <span className="block text-private-jet">Weavers</span>
+      </h2>
+    </div>
+  </div>
+</section>
 
 
       {/* Section 3 */}
       <section>
-        <div className=" pt-[80px] lg:pt-[119px]  max-w-[1440px] mx-auto">
-          <h2 className="font-helvetica-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[120%] text-cosmic-void max-w-[900px] text-center mx-auto">
+        <div className=" py-[80px] lg:py-[119px] px-[2vw] md:px-[3vw] lg:px-[5.21vw]  max-w-[1440px] mx-auto">
+          <h2 className="font-helvetica-semibold text-[32px] md:text-[40px] lg:text-[48px] leading-[120%] text-cosmic-void max-w-[98vw] md:max-w-[90vw] lg:max-w-[78vw] text-center mx-auto">
             Discover hospital management redefined. Experience seamless efficiency at every step
           </h2>
           {/* content */}
@@ -50,7 +51,7 @@ export default function Home() {
                 <h3 className="text-[24px] md:text-[32px] lg:text-[48px] font-helvetica-semibold tracking-[0.15px] text-london-rain mb-4 leading-[120%]">
                   Customize Your Hospital Setup
                 </h3>
-                <p className="text-[14px] md:text-[16px] lg:text-[20px] text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
+                <p className="text-[14px] md:text-[16px] lg:text-[20px] 78vw]text-[#000000] leading-[160%] max-w-[906px] font-figtree font-400 py-[30px] tracking-[0.15px]">
                   Provide key details about your hospital, including departments, staff roles, and operational needs. Our system will tailor the best configuration for you.
                 </p>
                 <button className="px-[20px] py-[10px] bg-london-rain text-white rounded-[30px] text-[14px] md:text-[16px] hover:bg-opacity-90 transition-all">

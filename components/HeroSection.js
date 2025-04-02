@@ -99,8 +99,10 @@ const HeroSection = () => {
       </AnimatePresence>
       
       <div className="absolute inset-0 z-10 top-[512px]">
-        <div className='bg-[#070734]/35 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[15px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
-          <div className="text-center">
+
+        
+        <div className='bg-[#070734]/35 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[15px] sm:px-[25px] md:px-[35px] xl:px-[45px] '>
+          <div className="text-center ">
             <h1 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[64px] xl:text-[64px] 2xl:text-[72px] text-sky-blue font-helvetica-bold leading-[120%] mx-auto ">
               Powering Hospitals, Empowering Care
             </h1>
