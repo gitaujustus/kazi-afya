@@ -268,7 +268,7 @@ const FAQs = () => {
             custom={2}
           >
             <p className="font-figtree text-sm sm:text-base xl:text-[16px] text-center">
-              Let's optimize your hospital operations with Kazi Afya. Call to
+              Let&apos;s optimize your hospital operations with Kazi Afya. Call to
               explore how our HMS can streamline workflows, enhance patient
               care, and drive efficiency for your health institution.
             </p>
