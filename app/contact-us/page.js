@@ -94,7 +94,7 @@ const Contacts = () => {
                 
                 {submitSuccess && (
                     <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                        <p className="font-helvetica-regular text-[14px] sm:text-[15px]">Thank you for contacting us! We'll get back to you soon.</p>
+                        <p className="font-helvetica-regular text-[14px] sm:text-[15px]">Thank you for contacting us! We&apos;ll get back to you soon.</p>
                     </div>
                 )}
                 
