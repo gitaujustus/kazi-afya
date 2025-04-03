@@ -10,7 +10,7 @@ const Contacts = () => {
         <div className="bg-blue-leviathan w-full h-[30vh] md:h-auto md:w-1/3 lg:w-full hidden lg:block">
             {/* overlay */}
             <Image 
-                src="/assets/hero-image.jpg" 
+                src="/assets/contacts.jpg" 
                 width={1000} 
                 height={5200} 
                 alt="contacts" 

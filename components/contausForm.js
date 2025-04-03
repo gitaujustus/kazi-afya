@@ -3,6 +3,8 @@
 import { SendIcon } from "@/components/Icons";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import countriesData from '@/lib/countries.json';
+import regions from '@/lib/regions.json';
 
 const ContactForm = () => {
     // const [isSubmitting, setIsSubmitting] = useState(false);
@@ -52,7 +54,7 @@ const ContactForm = () => {
             
             {submitSuccess && (
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
-                    <p className="font-helvetica-regular text-[14px] sm:text-[15px]">Thank you for contacting us! We'll get back to you soon.</p>
+                    <p className="font-helvetica-regular text-[14px] sm:text-[15px]">Thank you for contacting us! We&apos;ll get back to you soon.</p>
                 </div>
             )}
             
@@ -130,43 +132,52 @@ const ContactForm = () => {
 
                 {/* Country and Region */}
                 <div className="flex flex-col sm:flex-row gap-[16px] sm:gap-[18px] w-full">
-                    <div className="w-full">
-                        <select 
-                            className={`p-[15px] sm:p-[18px] xl:p-[20px] w-full text-[14px] sm:text-[15px] xl:text-[16px] rounded-[10px] border ${errors.country ? 'border-red-500' : 'border-private-jet'} font-helvetica-regular bg-white`}
-                            {...register("country", { required: "Country is required" })}
-                        >
-                            <option value="" disabled>Country*</option>
-                            <option value="us">United States</option>
-                            <option value="uk">United Kingdom</option>
-                            <option value="ke">Kenya</option>
-                        </select>
-                        {errors.country && <p className="text-red-500 text-[12px] mt-1">{errors.country.message}</p>}
+                <div className="w-full relative">
+                    <select 
+                        className={`p-[15px] sm:p-[18px] xl:p-[20px] w-full text-[14px] sm:text-[15px] xl:text-[16px] rounded-[10px] border ${errors.country ? 'border-red-500' : 'border-private-jet'} font-helvetica-regular bg-white appearance-none`}
+                        {...register("country", { required: "Country is required" })}
+                    >
+                       {countriesData.map((option) => (
+                        <option key={option.code} value={option.code}>
+                            {option.name}
+                        </option>
+                    ))}
+                    </select>
+                    <div className="absolute inset-y-0 right-5   flex items-center pointer-events-none">
+                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2.0001L16.5 0.600098L9 8.0001L1.5 0.600098L0 2.0001L9 11.0001L18 2.0001Z" fill="#879BB4"/>
+                        </svg>
                     </div>
-                    <div className="w-full">
+                    {errors.country && <p className="text-red-500 text-[12px] mt-1">{errors.country.message}</p>}
+                </div>
+                    <div className="w-full relative ">
                         <select 
-                            className={`p-[15px] sm:p-[18px] xl:p-[20px] w-full text-[14px] sm:text-[15px] xl:text-[16px] rounded-[10px] border ${errors.region ? 'border-red-500' : 'border-private-jet'} font-helvetica-regular bg-white`}
+                            className={`p-[15px] sm:p-[18px] xl:p-[20px] w-full text-[14px] sm:text-[15px]  xl:text-[16px] rounded-[10px] border ${errors.region ? 'border-red-500' : 'border-private-jet'} font-helvetica-regular bg-white appearance-none`}
                             {...register("region", { required: "Region is required" })}
                         >
-                            <option value="" disabled>Region*</option>
-                            <option value="ny">New York</option>
-                            <option value="ldn">London</option>
-                            <option value="nai">Nairobi</option>
+                             {regions.map((option) => (
+                        <option key={option.code} value={option.code}>
+                            {option.name}
+                        </option>
+                    ))}
                         </select>
+                        <div className="absolute inset-y-0 right-5   flex items-center pointer-events-none">
+                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 2.0001L16.5 0.600098L9 8.0001L1.5 0.600098L0 2.0001L9 11.0001L18 2.0001Z" fill="#879BB4"/>
+                        </svg>
+                    </div>
                         {errors.region && <p className="text-red-500 text-[12px] mt-1">{errors.region.message}</p>}
                     </div>
                 </div>
 
                 {/* Health Facility Name */}
                 <div className="w-full">
-                    <select 
-                        className={`p-[15px] sm:p-[18px] xl:p-[20px] w-full text-[14px] sm:text-[15px] xl:text-[16px] rounded-[10px] border ${errors.facilityName ? 'border-red-500' : 'border-private-jet'} font-helvetica-regular bg-white`}
-                        {...register("facilityName", { required: "Facility name is required" })}
-                    >
-                        <option value="" disabled>Health Facility Name*</option>
-                        <option value="f1">Facility 1</option>
-                        <option value="f2">Facility 2</option>
-                        <option value="f3">Facility 3</option>
-                    </select>
+                    <input 
+                        type="text" 
+                        className={`p-[15px] sm:p-[18px] xl:p-[20px] w-full text-[14px] sm:text-[15px] xl:text-[16px] rounded-[10px] border ${errors.facilityName ? 'border-red-500' : 'border-private-jet'} font-helvetica-regular`}
+                        placeholder="Health Facility Name*"
+                        {...register("facilityName", { required: "Health facility name is required" })}
+                    />
                     {errors.facilityName && <p className="text-red-500 text-[12px] mt-1">{errors.facilityName.message}</p>}
                 </div>
 
@@ -186,7 +197,7 @@ const ContactForm = () => {
                     <input 
                         type="checkbox" 
                         id="terms" 
-                        className={`w-4 sm:w-5 h-4 sm:h-5 cursor-pointer border ${errors.agreeToTerms ? 'border-red-500' : 'border-london-rain'} mt-1`}
+                        className={`w-4 sm:w-5 h-4 sm:h-5  cursor-pointer border ${errors.agreeToTerms ? 'border-red-500' : 'border-london-rain'} mt-1`}
                         {...register("agreeToTerms", { required: "You must agree to receive communications" })}
                     />
                     <div>
