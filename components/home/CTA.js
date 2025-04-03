@@ -1,100 +1,104 @@
 "use client";
 import React from "react";
-import { ArrowTopRightIcon } from "@/icons";
+import { ArrowTopRightIcon, BlackIcon, BlueIcon, BrownIcon, GreenIcon, RedIcon, TealIcon } from "@/icons";
 import { motion } from "framer-motion";
 
 const CTASection = () => {
   // Animation variants
   const fadeIn = {
     hidden: { opacity: 0 },
-    visible: { opacity: 1, transition: { duration: 0.6 } }
+    visible: { opacity: 1, transition: { duration: 0.6 } },
   };
 
   const slideUp = {
     hidden: { y: 50, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } }
+    visible: { y: 0, opacity: 1, transition: { duration: 0.6 } },
   };
 
   const popIn = {
     hidden: { scale: 0, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { type: "spring", stiffness: 260, damping: 20 } }
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: { type: "spring", stiffness: 260, damping: 20 },
+    },
   };
 
   const iconAnimation = {
-    hidden: { 
-      scale: 0, 
+    hidden: {
+      scale: 0,
       opacity: 0,
       x: "50%",
-      y: "50%"
+      y: "50%",
     },
     visible: (index) => {
       // Calculate the final position based on the icon's current position
       const positions = {
-        0: { x: "10%", y: "15%" },    // Top left
-        1: { x: "55%", y: "5%" },     // Top right
-        2: { x: "90%", y: "40%" },    // Middle right
-        3: { x: "55%", y: "90%" },    // Bottom right
-        4: { x: "20%", y: "90%" },    // Bottom left
-        5: { x: "80%", y: "80%" }     // Middle left
+        0: { x: "10%", y: "15%" }, // Top left
+        1: { x: "55%", y: "5%" }, // Top right
+        2: { x: "90%", y: "40%" }, // Middle right
+        3: { x: "55%", y: "90%" }, // Bottom right
+        4: { x: "20%", y: "90%" }, // Bottom left
+        5: { x: "80%", y: "80%" }, // Middle left
       };
-      
+
       const finalPos = positions[index] || { x: "50%", y: "50%" };
-      
+
       return {
         scale: 1,
         opacity: 1,
         x: ["50%", finalPos.x],
         y: ["50%", finalPos.y],
-        transition: { 
+        transition: {
           delay: 0.1 * index,
           duration: 0.8,
           type: "spring",
           stiffness: 200,
           damping: 15,
-          mass: 1
-        }
+          mass: 1,
+        },
       };
-    }
+    },
   };
 
   const buttonAnimation = {
-    rest: { 
+    rest: {
       scale: 1,
-      boxShadow: "0px 0px 0px rgba(0,0,0,0)"
+      boxShadow: "0px 0px 0px rgba(0,0,0,0)",
     },
-    hover: { 
+    hover: {
       scale: 1.05,
       boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
-      transition: { 
-        type: "spring", 
-        stiffness: 400, 
-        damping: 10 
-      }
-    }
+      transition: {
+        type: "spring",
+        stiffness: 400,
+        damping: 10,
+      },
+    },
   };
-  
+
   return (
     <section className="relative w-full min-h-screen bg-[#f2f4f5] flex items-center justify-center overflow-hidden">
       {/* Container that preserves the 1440x1024 design on large screens */}
       <div className="relative w-full max-w-[1440px] min-h-[1024px] mx-auto">
         {/* Center point reference */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 h-0">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 h-0 ">
           {/* Radial gradient background - responsive but maintains original size on xl */}
-          <motion.div 
+          <motion.div
             initial="hidden"
             animate="visible"
             variants={fadeIn}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] md:w-[700px] md:h-[700px] xl:w-[800px] xl:h-[800px] rounded-full bg-[radial-gradient(circle,#0031CB_0%,#F2F4F5_70%)]"
           >
             {/* White card container - responsive with preserved original size on xl */}
-            <motion.div 
+            <motion.div
               initial="hidden"
               animate="visible"
               variants={popIn}
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto md:w-[600px] lg:w-[700px] xl:w-[756px] xl:h-[448px] bg-white rounded-[20px] md:rounded-[30px] shadow-lg p-6 md:p-8 lg:p-10 xl:p-[60px] flex flex-col items-center gap-4 md:gap-6 lg:gap-[30px]"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto md:w-[600px] lg:w-[700px] xl:w-[756px] xl:h-[448px] bg-white rounded-[20px] md:rounded-[30px] shadow-lg p-6 md:p-8 lg:p-10 xl:p-[60px] flex flex-col items-center gap-4 md:gap-6 lg:gap-[30px] "
             >
               {/* Heading - responsive text size */}
-              <motion.h2 
+              <motion.h2
                 initial="hidden"
                 animate="visible"
                 variants={slideUp}
@@ -105,322 +109,344 @@ const CTASection = () => {
                   Your success starts here!
                 </span>
               </motion.h2>
-              
+
               {/* Subtext - responsive text size */}
-              <motion.p 
+              <motion.p
                 initial="hidden"
                 animate="visible"
                 variants={slideUp}
                 transition={{ delay: 0.2 }}
                 className="text-[14px] md:text-[15px] xl:text-[16px] font-figtree font-medium text-center"
               >
-                Let&apos;s transform healthcare together. Bring your vision to life with Kazi Afya and build a smarter, more efficient hospital system.
+                Let&apos;s transform healthcare together. Bring your vision to
+                life with Kazi Afya and build a smarter, more efficient hospital
+                system.
               </motion.p>
-              
+
               {/* Book Now button - responsive size */}
-              <motion.button 
+              <motion.button
                 initial="rest"
                 whileHover="hover"
                 variants={buttonAnimation}
                 className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:bg-london-rain hover:text-white group"
               >
-                <motion.div
-                  className="group-hover:rotate-45 group-hover:transition-transform duration-300"
-                >
+                <motion.div className="group-hover:rotate-45 group-hover:transition-transform duration-300">
                   <ArrowTopRightIcon width="44" height="44" />
                 </motion.div>
-                <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white">Book Now</span>
+                <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white">
+                  Book Now
+                </span>
               </motion.button>
             </motion.div>
           </motion.div>
         </div>
-        
+
         {/* SMALL SCREEN ICONS - Only visible on small screens */}
         <div className="md:hidden absolute top-[20%] left-0 w-full flex justify-center">
           <div className="w-[90%] flex justify-between">
             {/* Icon 1 - Red Clock */}
-            <motion.div 
+            <motion.div
               custom={0}
-              initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+              initial={{
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                opacity: 0,
+              }}
               whileInView={{
-                left: "70%", top: "15%", transform:"translate(0%, 0%)",
+                left: "70%",
+                top: "15%",
+                transform: "translate(0%, 0%)",
                 opacity: 1,
                 transition: {
-                  duration: 1.2
-                }
+                  duration: 1.2,
+                },
               }}
               variants={iconAnimation}
-viewport={{ once: true }}
+              viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-red-600 rounded-md flex items-center justify-center">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="10" fill="#D80027"/>
-                <path d="M40 23.75C41.5625 25.8375 42.5 28.4375 42.5 31.25C42.5 38.15 36.9 43.75 30 43.75C23.1 43.75 17.5 38.15 17.5 31.25C17.5 24.35 23.1 18.75 30 18.75M30 16.25V31.25L42 22.25C39.2625 18.6125 34.9 16.25 30 16.25Z" stroke="white" stroke-width="2"/>
-              </svg>
-
+                <RedIcon />
               </div>
             </motion.div>
 
             {/* Icon 2 - Blue Document */}
-            <motion.div 
+            <motion.div
               custom={1}
-              initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+              initial={{
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                opacity: 0,
+              }}
               whileInView={{
-                left: "70%", top: "15%", transform:"translate(0%, 0%)",
+                left: "70%",
+                top: "15%",
+                transform: "translate(0%, 0%)",
                 opacity: 1,
                 transition: {
-                  duration: 1.2
-                }
+                  duration: 1.2,
+                },
               }}
               variants={iconAnimation}
-viewport={{ once: true }}
+              viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-blue-600 rounded-md flex items-center justify-center">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="10" fill="#0057B8"/>
-                <path d="M23.9625 19.0625H31.0375C31.7063 19.0625 32.2625 19.0625 32.7188 19.1C33.1938 19.1375 33.6388 19.2225 34.06 19.4375C34.7069 19.7671 35.2329 20.2931 35.5625 20.94C35.7775 21.3612 35.8625 21.8062 35.9 22.2812C35.9375 22.7375 35.9375 23.2938 35.9375 23.9625V27.8125C35.9375 28.0611 35.8387 28.2996 35.6629 28.4754C35.4871 28.6512 35.2486 28.75 35 28.75C34.7514 28.75 34.5129 28.6512 34.3371 28.4754C34.1613 28.2996 34.0625 28.0611 34.0625 27.8125V24C34.0625 23.285 34.0625 22.8038 34.0312 22.4338C34.0025 22.075 33.95 21.9038 33.8925 21.7913C33.7429 21.497 33.504 21.2576 33.21 21.1075C33.0962 21.05 32.925 20.9975 32.5663 20.9688C32.1963 20.9388 31.7163 20.9375 31 20.9375H24C23.285 20.9375 22.8038 20.9375 22.4338 20.9688C22.075 20.9975 21.9038 21.05 21.7913 21.1075C21.4968 21.2574 21.2574 21.4968 21.1075 21.7913C21.05 21.9038 20.9975 22.075 20.9688 22.4338C20.9388 22.8038 20.9375 23.2837 20.9375 24V36C20.9375 36.715 20.9375 37.1963 20.9688 37.565C20.9975 37.925 21.05 38.0962 21.1075 38.2087C21.25 38.4875 21.47 38.7163 21.7425 38.8663C21.7625 38.8713 21.8067 38.8792 21.875 38.89C22.0208 38.9117 22.2192 38.9317 22.47 38.95C22.9675 38.9875 23.6075 39.0125 24.2875 39.0287C25.6437 39.0625 27.1125 39.0625 27.8125 39.0625C28.0611 39.0625 28.2996 39.1613 28.4754 39.3371C28.6512 39.5129 28.75 39.7514 28.75 40C28.75 40.2486 28.6512 40.4871 28.4754 40.6629C28.2996 40.8387 28.0611 40.9375 27.8125 40.9375H27.81C27.11 40.9375 25.6225 40.9375 24.2413 40.9037C23.6044 40.8906 22.968 40.8626 22.3325 40.82C22.0879 40.804 21.844 40.779 21.6013 40.745C21.3724 40.7184 21.1489 40.6569 20.9387 40.5625C20.2927 40.2334 19.7672 39.7083 19.4375 39.0625C19.2225 38.64 19.1375 38.195 19.1 37.72C19.0625 37.2638 19.0625 36.7075 19.0625 36.0387V23.9625C19.0625 23.2938 19.0625 22.7375 19.1 22.2812C19.1375 21.8062 19.2225 21.3612 19.4375 20.94C19.7671 20.2931 20.2931 19.7671 20.94 19.4375C21.3612 19.2225 21.8062 19.1375 22.2812 19.1C22.7375 19.0625 23.2938 19.0625 23.9625 19.0625Z" fill="white"/>
-                <path d="M32.9638 30.3125H38.2862C38.78 30.3125 39.2062 30.3125 39.5575 30.3412C39.9287 30.3712 40.2975 30.4387 40.6512 30.6187C41.1812 30.8888 41.6112 31.3188 41.8812 31.8488C42.0612 32.2025 42.1287 32.5712 42.1587 32.9425C42.1875 33.2925 42.1875 33.72 42.1875 34.2138V37.0362C42.1875 37.53 42.1875 37.9563 42.1587 38.3075C42.1394 38.6868 42.0451 39.0586 41.8812 39.4012C41.6119 39.9307 41.1817 40.3613 40.6525 40.6312C40.2975 40.8112 39.9275 40.8787 39.5575 40.9087C39.2075 40.9375 38.78 40.9375 38.2862 40.9375H32.9625C32.4688 40.9375 32.0425 40.9375 31.6912 40.9087C31.3119 40.8894 30.9402 40.7951 30.5975 40.6312C30.068 40.3619 29.6374 39.9317 29.3675 39.4025C29.2035 39.0594 29.1092 38.6873 29.09 38.3075C29.0613 37.9575 29.0612 37.53 29.0612 37.0362V34.2125C29.0612 33.7188 29.0613 33.2925 29.09 32.9412C29.1093 32.5619 29.2037 32.1902 29.3675 31.8475C29.6372 31.3178 30.0678 30.8872 30.5975 30.6175C30.9402 30.4537 31.3119 30.3593 31.6912 30.34C32.0412 30.3113 32.4688 30.3112 32.9625 30.3112M31.8438 32.2087C31.5888 32.23 31.4937 32.265 31.4475 32.2888C31.2716 32.3785 31.1285 32.5216 31.0388 32.6975C31.0138 32.745 30.98 32.8388 30.9587 33.0938L30.9563 33.1237H40.2913L40.2888 33.0938C40.2675 32.8388 40.2325 32.7437 40.2087 32.6975C40.1186 32.5214 39.9751 32.3783 39.7988 32.2888C39.7525 32.2638 39.6588 32.23 39.4038 32.2087C39.0191 32.1876 38.6339 32.1801 38.2488 32.1862H32.9988C32.4587 32.1862 32.1088 32.1863 31.8438 32.2087ZM40.3125 35.625H30.9375V37C30.9375 37.54 30.9375 37.89 30.96 38.155C30.9812 38.41 31.0162 38.505 31.04 38.55C31.1296 38.7264 31.2727 38.8699 31.4488 38.96C31.4963 38.985 31.59 39.0188 31.845 39.04C32.11 39.0613 32.46 39.0625 33 39.0625H38.25C38.79 39.0625 39.14 39.0625 39.405 39.04C39.66 39.0188 39.755 38.9837 39.8 38.96C39.9766 38.8701 40.1201 38.7266 40.21 38.55C40.235 38.5037 40.2688 38.41 40.29 38.155C40.3113 37.89 40.3125 37.54 40.3125 37V35.625ZM23.125 22.8125C22.8764 22.8125 22.6379 22.9113 22.4621 23.0871C22.2863 23.2629 22.1875 23.5014 22.1875 23.75C22.1875 23.9986 22.2863 24.2371 22.4621 24.4129C22.6379 24.5887 22.8764 24.6875 23.125 24.6875H28.125C28.3736 24.6875 28.6121 24.5887 28.7879 24.4129C28.9637 24.2371 29.0625 23.9986 29.0625 23.75C29.0625 23.5014 28.9637 23.2629 28.7879 23.0871C28.6121 22.9113 28.3736 22.8125 28.125 22.8125H23.125ZM22.1875 27.5C22.1875 27.2514 22.2863 27.0129 22.4621 26.8371C22.6379 26.6613 22.8764 26.5625 23.125 26.5625H31.875C32.1236 26.5625 32.3621 26.6613 32.5379 26.8371C32.7137 27.0129 32.8125 27.2514 32.8125 27.5C32.8125 27.7486 32.7137 27.9871 32.5379 28.1629C32.3621 28.3387 32.1236 28.4375 31.875 28.4375H23.125C22.8764 28.4375 22.6379 28.3387 22.4621 28.1629C22.2863 27.9871 22.1875 27.7486 22.1875 27.5ZM23.125 30.3125C22.8764 30.3125 22.6379 30.4113 22.4621 30.5871C22.2863 30.7629 22.1875 31.0014 22.1875 31.25C22.1875 31.4986 22.2863 31.7371 22.4621 31.9129C22.6379 32.0887 22.8764 32.1875 23.125 32.1875H27.5C27.7486 32.1875 27.9871 32.0887 28.1629 31.9129C28.3387 31.7371 28.4375 31.4986 28.4375 31.25C28.4375 31.0014 28.3387 30.7629 28.1629 30.5871C27.9871 30.4113 27.7486 30.3125 27.5 30.3125H23.125ZM22.1875 36.25C22.1875 36.0014 22.2863 35.7629 22.4621 35.5871C22.6379 35.4113 22.8764 35.3125 23.125 35.3125H25.625C25.8736 35.3125 26.1121 35.4113 26.2879 35.5871C26.4637 35.7629 26.5625 36.0014 26.5625 36.25C26.5625 36.4986 26.4637 36.7371 26.2879 36.9129C26.1121 37.0887 25.8736 37.1875 25.625 37.1875H23.125C22.8764 37.1875 22.6379 37.0887 22.4621 36.9129C22.2863 36.7371 22.1875 36.4986 22.1875 36.25Z" fill="white"/>
-              </svg>
-
+                <BlueIcon />
               </div>
             </motion.div>
-            
+
             {/* Icon 3 - Teal Question */}
-            <motion.div 
+            <motion.div
               custom={2}
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
-viewport={{ once: true }}
+              viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#006655] rounded-md flex items-center justify-center">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="10" fill="#0C6963"/>
-                <path d="M35.25 19.375C34 18.125 32.375 17.5 30.875 17.5C29.375 17.5 27.625 18.125 26.5 19.375L19.25 26.375C16.75 28.875 16.75 32.75 19.25 35.25C21.75 37.75 25.625 37.75 28.125 35.25L35.25 28.125C37.625 25.75 37.625 21.75 35.25 19.375ZM33.5 26.375L30 29.875L25.5 25.5L20 31C20 30 20.25 28.875 21.125 28.125L28.25 21C28.875 20.375 29.875 20 30.75 20C31.625 20 32.625 20.375 33.375 21C34.875 22.625 34.875 24.875 33.5 26.375ZM39.5 23.875C39.5 24.875 39.25 25.75 39 26.75C40.25 28.25 40.25 30.5 38.875 31.875L35.375 35.375L33.5 33.5L30 37C28.375 38.625 26.125 39.5 24 39.5C24.25 39.875 24.5 40.25 24.875 40.625C27.375 43.125 31.25 43.125 33.75 40.625L40.875 33.5C43.375 31 43.375 27.125 40.875 24.625C40.25 24.375 39.875 24.125 39.5 23.875Z" fill="white"/>
-              </svg>
-
+                <TealIcon />
               </div>
             </motion.div>
           </div>
         </div>
-        
+
         {/* Bottom row of icons on mobile */}
         <div className="md:hidden absolute bottom-[20%] left-0 w-full flex justify-center">
           <div className="w-[90%] flex justify-between">
             {/* Icon 4 - Green File */}
-            <motion.div 
+            <motion.div
               custom={3}
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
-            viewport={{ once: true }}
+              viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-green-600 rounded-md flex items-center justify-center">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="10" fill="#027F36"/>
-                <path d="M25 40V32.5H35V40H38.75V20H21.25V40H25ZM27.5 40H32.5V35H27.5V40ZM41.25 40H43.75V42.5H16.25V40H18.75V18.75C18.75 18.4185 18.8817 18.1005 19.1161 17.8661C19.3505 17.6317 19.6685 17.5 20 17.5H40C40.3315 17.5 40.6495 17.6317 40.8839 17.8661C41.1183 18.1005 41.25 18.4185 41.25 18.75V40ZM28.75 25V22.5H31.25V25H33.75V27.5H31.25V30H28.75V27.5H26.25V25H28.75Z" fill="white"/>
-              </svg>
-
+                <GreenIcon />
               </div>
             </motion.div>
-            
+
             {/* Icon 5 - Dark Red User */}
-            <motion.div 
+            <motion.div
               custom={4}
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
-viewport={{ once: true }}
+              viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#6E0000] rounded-md flex items-center justify-center">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="10" fill="#621616"/>
-                <path d="M30 27.5C32.7625 27.5 35 25.2625 35 22.5C35 19.7375 32.7625 17.5 30 17.5C27.2375 17.5 25 19.7375 25 22.5C25 25.2625 27.2375 27.5 30 27.5ZM30 20C31.375 20 32.5 21.125 32.5 22.5C32.5 23.875 31.375 25 30 25C28.625 25 27.5 23.875 27.5 22.5C27.5 21.125 28.625 20 30 20ZM37.9875 30.7C35.8875 29.625 33.1625 28.75 30 28.75C26.8375 28.75 24.1125 29.625 22.0125 30.7C21.4026 31.0141 20.8916 31.4912 20.5364 32.0781C20.1811 32.665 19.9955 33.3389 20 34.025V42.5H22.5V34.025C22.5 33.55 22.75 33.125 23.125 32.925C24.6375 32.1625 27.0375 31.25 30 31.25C30.95 31.25 31.8375 31.3375 32.6625 31.5L30.725 35.625H27.1875C25.2875 35.625 23.75 37.1625 23.75 39.0625C23.75 40.9625 25.2875 42.5 27.1875 42.5H37.5C38.875 42.5 40 41.375 40 40V34.025C40 32.625 39.2375 31.3375 37.9875 30.7ZM28.675 40H27.1875C26.675 40 26.25 39.575 26.25 39.0625C26.25 38.55 26.675 38.125 27.1875 38.125H29.55L28.675 40ZM37.5 40H31.4375L35.1125 32.1625C35.7875 32.4125 36.375 32.675 36.875 32.925C37.25 33.125 37.5 33.55 37.5 34.025V40Z" fill="white"/>
-              </svg>
-
+                <BrownIcon />
               </div>
             </motion.div>
-            
+
             {/* Icon 6 - Black Award */}
-            <motion.div 
+            <motion.div
               custom={5}
               initial="hidden"
               animate="visible"
               variants={iconAnimation}
-viewport={{ once: true }}
+              viewport={{ once: true }}
               className="w-[32px] h-[32px] flex items-center justify-center"
             >
               <div className="w-full h-full bg-[#1E1E1E] rounded-md flex items-center justify-center">
-              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="60" height="60" rx="10" fill="#1C1C1C"/>
-                <path d="M32.5137 16.4244C31.6406 16.442 31.0137 16.6119 30.5977 16.9166L24.8965 19.9694L21.7266 24.2813C21.0586 25.3125 21.5332 27.3047 23.6191 26.0274L25.9043 23.0156C28.8047 20.5143 34.7227 21.6621 31.916 26.6836C30.5391 29.5899 31.1836 31.0078 32.959 31.6055L33.7676 28.8867C35.168 25.7344 37.7813 25.166 37.6758 22.6231L43.957 23.0742L43.8984 16.5065L32.5137 16.4244ZM29.3438 22.4824C28.3242 22.4649 27.3223 22.8867 26.5957 23.4961L24.3047 26.5078C24.9316 27.0059 25.5645 26.7364 26.1914 26.1328C26.9297 26.5078 27.5039 25.9278 27.9727 24.7676C28.166 23.9766 28.4531 23.4199 29.3438 22.4824ZM24.6797 28.1074C24.6563 28.1074 24.627 28.1074 24.6035 28.1133C24.4102 28.1543 24.1816 28.3594 24.0293 28.8281C23.8711 29.2969 23.8359 29.9649 23.9766 30.6797C24.1172 31.3887 24.4102 31.9922 24.7383 32.3672C25.0547 32.7364 25.3477 32.8418 25.541 32.8008C25.7402 32.7656 25.9629 32.5547 26.1152 32.0918C26.2734 31.6231 26.3145 30.9492 26.1738 30.2403C26.0274 29.5254 25.7344 28.9219 25.4121 28.5528C25.1309 28.2246 24.8731 28.1074 24.6797 28.1074ZM29.5195 34.3653C29.0566 34.3711 28.4766 34.5176 27.9082 34.793C27.2578 35.1153 26.7481 35.5606 26.4727 35.9707C26.1973 36.375 26.1738 36.6797 26.2617 36.8614C26.3496 37.0371 26.6074 37.2071 27.0996 37.2305C27.5918 37.2598 28.2539 37.125 28.9043 36.8028C29.5547 36.4805 30.0645 36.041 30.3399 35.6309C30.6152 35.2266 30.6387 34.916 30.5508 34.7403C30.4629 34.5586 30.2051 34.3946 29.7129 34.3711C29.6484 34.3653 29.5899 34.3653 29.5195 34.3653ZM23.8008 39.9668C23.5254 39.9727 23.2734 40.0137 23.0508 40.0781C22.5527 40.2246 22.2656 40.4883 22.1719 40.7989C22.0723 41.1153 22.1719 41.4903 22.5059 41.8946C22.8457 42.293 23.4141 42.6739 24.1172 42.8848C24.8145 43.0957 25.4941 43.0899 25.9981 42.9375C26.502 42.791 26.7891 42.5274 26.8828 42.2168C26.9766 41.9004 26.8828 41.5254 26.543 41.1211C26.209 40.7227 25.6406 40.3418 24.9375 40.1309C24.5391 40.0137 24.1524 39.961 23.8008 39.9668Z" fill="white"/>
-              </svg>
-
+                <BlackIcon />
               </div>
             </motion.div>
           </div>
         </div>
-        
+
         {/* LARGE SCREEN ICONS - Original positions preserved for md and up */}
         {/* Clock icon - red */}
-        <motion.div 
+        <motion.div
           custom={0}
-          initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+          initial={{
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            opacity: 0,
+          }}
           whileInView={{
-            left: "15%", top: "17%", transform:"translate(0%, 0%)",
+            left: "15%",
+            top: "17%",
+            transform: "translate(0%, 0%)",
             opacity: 1,
             transition: {
-              duration: 1.2
-            }
+              duration: 1.2,
+            },
           }}
           variants={iconAnimation}
-viewport={{ once: true }}
-          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 300 },
+          }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[10%] md:top-[15%] lg:left-[15%] lg:top-[18%] xl:left-[198px] xl:top-[179px]"
         >
           <div className="w-full h-full bg-red-600 rounded-md flex items-center justify-center">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="60" rx="10" fill="#D80027"/>
-            <path d="M40 23.75C41.5625 25.8375 42.5 28.4375 42.5 31.25C42.5 38.15 36.9 43.75 30 43.75C23.1 43.75 17.5 38.15 17.5 31.25C17.5 24.35 23.1 18.75 30 18.75M30 16.25V31.25L42 22.25C39.2625 18.6125 34.9 16.25 30 16.25Z" stroke="white" stroke-width="2"/>
-          </svg>
-
+            <RedIcon />
           </div>
         </motion.div>
-        
 
-
-
-
-        
         {/* Document icon - blue */}
-        <motion.div 
+        <motion.div
           custom={1}
-          initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+          initial={{
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            opacity: 0,
+          }}
           whileInView={{
-            left: "55%", top: "10%", transform:"translate(0%, 0%)",
+            left: "55%",
+            top: "10%",
+            transform: "translate(0%, 0%)",
             opacity: 1,
             transition: {
-              duration: 1.2
-            }
+              duration: 1.2,
+            },
           }}
           variants={iconAnimation}
-viewport={{ once: true }}
-          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 300 },
+          }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:top-[5%] lg:left-[60%] xl:left-[729px] xl:top-[65px]"
         >
           <div className="w-full h-full bg-blue-600 rounded-md flex items-center justify-center">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="60" rx="10" fill="#0057B8"/>
-            <path d="M23.9625 19.0625H31.0375C31.7063 19.0625 32.2625 19.0625 32.7188 19.1C33.1938 19.1375 33.6388 19.2225 34.06 19.4375C34.7069 19.7671 35.2329 20.2931 35.5625 20.94C35.7775 21.3612 35.8625 21.8062 35.9 22.2812C35.9375 22.7375 35.9375 23.2938 35.9375 23.9625V27.8125C35.9375 28.0611 35.8387 28.2996 35.6629 28.4754C35.4871 28.6512 35.2486 28.75 35 28.75C34.7514 28.75 34.5129 28.6512 34.3371 28.4754C34.1613 28.2996 34.0625 28.0611 34.0625 27.8125V24C34.0625 23.285 34.0625 22.8038 34.0312 22.4338C34.0025 22.075 33.95 21.9038 33.8925 21.7913C33.7429 21.497 33.504 21.2576 33.21 21.1075C33.0962 21.05 32.925 20.9975 32.5663 20.9688C32.1963 20.9388 31.7163 20.9375 31 20.9375H24C23.285 20.9375 22.8038 20.9375 22.4338 20.9688C22.075 20.9975 21.9038 21.05 21.7913 21.1075C21.4968 21.2574 21.2574 21.4968 21.1075 21.7913C21.05 21.9038 20.9975 22.075 20.9688 22.4338C20.9388 22.8038 20.9375 23.2837 20.9375 24V36C20.9375 36.715 20.9375 37.1963 20.9688 37.565C20.9975 37.925 21.05 38.0962 21.1075 38.2087C21.25 38.4875 21.47 38.7163 21.7425 38.8663C21.7625 38.8713 21.8067 38.8792 21.875 38.89C22.0208 38.9117 22.2192 38.9317 22.47 38.95C22.9675 38.9875 23.6075 39.0125 24.2875 39.0287C25.6437 39.0625 27.1125 39.0625 27.8125 39.0625C28.0611 39.0625 28.2996 39.1613 28.4754 39.3371C28.6512 39.5129 28.75 39.7514 28.75 40C28.75 40.2486 28.6512 40.4871 28.4754 40.6629C28.2996 40.8387 28.0611 40.9375 27.8125 40.9375H27.81C27.11 40.9375 25.6225 40.9375 24.2413 40.9037C23.6044 40.8906 22.968 40.8626 22.3325 40.82C22.0879 40.804 21.844 40.779 21.6013 40.745C21.3724 40.7184 21.1489 40.6569 20.9387 40.5625C20.2927 40.2334 19.7672 39.7083 19.4375 39.0625C19.2225 38.64 19.1375 38.195 19.1 37.72C19.0625 37.2638 19.0625 36.7075 19.0625 36.0387V23.9625C19.0625 23.2938 19.0625 22.7375 19.1 22.2812C19.1375 21.8062 19.2225 21.3612 19.4375 20.94C19.7671 20.2931 20.2931 19.7671 20.94 19.4375C21.3612 19.2225 21.8062 19.1375 22.2812 19.1C22.7375 19.0625 23.2938 19.0625 23.9625 19.0625Z" fill="white"/>
-            <path d="M32.9638 30.3125H38.2862C38.78 30.3125 39.2062 30.3125 39.5575 30.3412C39.9287 30.3712 40.2975 30.4387 40.6512 30.6187C41.1812 30.8888 41.6112 31.3188 41.8812 31.8488C42.0612 32.2025 42.1287 32.5712 42.1587 32.9425C42.1875 33.2925 42.1875 33.72 42.1875 34.2138V37.0362C42.1875 37.53 42.1875 37.9563 42.1587 38.3075C42.1394 38.6868 42.0451 39.0586 41.8812 39.4012C41.6119 39.9307 41.1817 40.3613 40.6525 40.6312C40.2975 40.8112 39.9275 40.8787 39.5575 40.9087C39.2075 40.9375 38.78 40.9375 38.2862 40.9375H32.9625C32.4688 40.9375 32.0425 40.9375 31.6912 40.9087C31.3119 40.8894 30.9402 40.7951 30.5975 40.6312C30.068 40.3619 29.6374 39.9317 29.3675 39.4025C29.2035 39.0594 29.1092 38.6873 29.09 38.3075C29.0613 37.9575 29.0612 37.53 29.0612 37.0362V34.2125C29.0612 33.7188 29.0613 33.2925 29.09 32.9412C29.1093 32.5619 29.2037 32.1902 29.3675 31.8475C29.6372 31.3178 30.0678 30.8872 30.5975 30.6175C30.9402 30.4537 31.3119 30.3593 31.6912 30.34C32.0412 30.3113 32.4688 30.3112 32.9625 30.3112M31.8438 32.2087C31.5888 32.23 31.4937 32.265 31.4475 32.2888C31.2716 32.3785 31.1285 32.5216 31.0388 32.6975C31.0138 32.745 30.98 32.8388 30.9587 33.0938L30.9563 33.1237H40.2913L40.2888 33.0938C40.2675 32.8388 40.2325 32.7437 40.2087 32.6975C40.1186 32.5214 39.9751 32.3783 39.7988 32.2888C39.7525 32.2638 39.6588 32.23 39.4038 32.2087C39.0191 32.1876 38.6339 32.1801 38.2488 32.1862H32.9988C32.4587 32.1862 32.1088 32.1863 31.8438 32.2087ZM40.3125 35.625H30.9375V37C30.9375 37.54 30.9375 37.89 30.96 38.155C30.9812 38.41 31.0162 38.505 31.04 38.55C31.1296 38.7264 31.2727 38.8699 31.4488 38.96C31.4963 38.985 31.59 39.0188 31.845 39.04C32.11 39.0613 32.46 39.0625 33 39.0625H38.25C38.79 39.0625 39.14 39.0625 39.405 39.04C39.66 39.0188 39.755 38.9837 39.8 38.96C39.9766 38.8701 40.1201 38.7266 40.21 38.55C40.235 38.5037 40.2688 38.41 40.29 38.155C40.3113 37.89 40.3125 37.54 40.3125 37V35.625ZM23.125 22.8125C22.8764 22.8125 22.6379 22.9113 22.4621 23.0871C22.2863 23.2629 22.1875 23.5014 22.1875 23.75C22.1875 23.9986 22.2863 24.2371 22.4621 24.4129C22.6379 24.5887 22.8764 24.6875 23.125 24.6875H28.125C28.3736 24.6875 28.6121 24.5887 28.7879 24.4129C28.9637 24.2371 29.0625 23.9986 29.0625 23.75C29.0625 23.5014 28.9637 23.2629 28.7879 23.0871C28.6121 22.9113 28.3736 22.8125 28.125 22.8125H23.125ZM22.1875 27.5C22.1875 27.2514 22.2863 27.0129 22.4621 26.8371C22.6379 26.6613 22.8764 26.5625 23.125 26.5625H31.875C32.1236 26.5625 32.3621 26.6613 32.5379 26.8371C32.7137 27.0129 32.8125 27.2514 32.8125 27.5C32.8125 27.7486 32.7137 27.9871 32.5379 28.1629C32.3621 28.3387 32.1236 28.4375 31.875 28.4375H23.125C22.8764 28.4375 22.6379 28.3387 22.4621 28.1629C22.2863 27.9871 22.1875 27.7486 22.1875 27.5ZM23.125 30.3125C22.8764 30.3125 22.6379 30.4113 22.4621 30.5871C22.2863 30.7629 22.1875 31.0014 22.1875 31.25C22.1875 31.4986 22.2863 31.7371 22.4621 31.9129C22.6379 32.0887 22.8764 32.1875 23.125 32.1875H27.5C27.7486 32.1875 27.9871 32.0887 28.1629 31.9129C28.3387 31.7371 28.4375 31.4986 28.4375 31.25C28.4375 31.0014 28.3387 30.7629 28.1629 30.5871C27.9871 30.4113 27.7486 30.3125 27.5 30.3125H23.125ZM22.1875 36.25C22.1875 36.0014 22.2863 35.7629 22.4621 35.5871C22.6379 35.4113 22.8764 35.3125 23.125 35.3125H25.625C25.8736 35.3125 26.1121 35.4113 26.2879 35.5871C26.4637 35.7629 26.5625 36.0014 26.5625 36.25C26.5625 36.4986 26.4637 36.7371 26.2879 36.9129C26.1121 37.0887 25.8736 37.1875 25.625 37.1875H23.125C22.8764 37.1875 22.6379 37.0887 22.4621 36.9129C22.2863 36.7371 22.1875 36.4986 22.1875 36.25Z" fill="white"/>
-          </svg>
-
+            <BlueIcon />
           </div>
         </motion.div>
-        
+
         {/* File icon - green */}
-        <motion.div 
+        <motion.div
           custom={2}
           // initial="hidden"
-          initial={{ scale: 1, opacity: 1, left: '50%', top: '50%', transform: 'translate(-50%, -50%)' }}
+          initial={{
+            scale: 1,
+            opacity: 1,
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
           whileInView={{
-            left: "80%", top: "40%", transform:"translate(0%, 0%)",
+            left: "80%",
+            top: "40%",
+            transform: "translate(0%, 0%)",
             opacity: 1,
             transition: {
-              duration: 1.2
-            }
+              duration: 1.2,
+            },
           }}
           variants={iconAnimation}
-viewport={{ once: true }}
-          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 300 },
+          }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[10%] md:top-[40%] lg:right-[15%] xl:left-[1181px] xl:top-[430px]"
         >
           <div className="w-full h-full bg-green-600 rounded-md flex items-center justify-center">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="60" rx="10" fill="#027F36"/>
-            <path d="M25 40V32.5H35V40H38.75V20H21.25V40H25ZM27.5 40H32.5V35H27.5V40ZM41.25 40H43.75V42.5H16.25V40H18.75V18.75C18.75 18.4185 18.8817 18.1005 19.1161 17.8661C19.3505 17.6317 19.6685 17.5 20 17.5H40C40.3315 17.5 40.6495 17.6317 40.8839 17.8661C41.1183 18.1005 41.25 18.4185 41.25 18.75V40ZM28.75 25V22.5H31.25V25H33.75V27.5H31.25V30H28.75V27.5H26.25V25H28.75Z" fill="white"/>
-          </svg>
-
+            <GreenIcon />
           </div>
         </motion.div>
-        
+
         {/* User icon - dark red */}
-        <motion.div 
+        <motion.div
           custom={3}
-          initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+          initial={{
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            opacity: 0,
+          }}
           whileInView={{
-            left: "55%", top: "75%", transform:"translate(0%, 0%)",
+            left: "55%",
+            top: "75%",
+            transform: "translate(0%, 0%)",
             opacity: 1,
             transition: {
-              duration: 1.2
-            }
+              duration: 1.2,
+            },
           }}
           variants={iconAnimation}
-viewport={{ once: true }}
-          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 300 },
+          }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[55%] md:bottom-[10%] lg:left-[60%] xl:left-[730px] xl:top-[780px]"
         >
           <div className="w-full h-full bg-[#6E0000] rounded-md flex items-center justify-center">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="60" rx="10" fill="#621616"/>
-            <path d="M30 27.5C32.7625 27.5 35 25.2625 35 22.5C35 19.7375 32.7625 17.5 30 17.5C27.2375 17.5 25 19.7375 25 22.5C25 25.2625 27.2375 27.5 30 27.5ZM30 20C31.375 20 32.5 21.125 32.5 22.5C32.5 23.875 31.375 25 30 25C28.625 25 27.5 23.875 27.5 22.5C27.5 21.125 28.625 20 30 20ZM37.9875 30.7C35.8875 29.625 33.1625 28.75 30 28.75C26.8375 28.75 24.1125 29.625 22.0125 30.7C21.4026 31.0141 20.8916 31.4912 20.5364 32.0781C20.1811 32.665 19.9955 33.3389 20 34.025V42.5H22.5V34.025C22.5 33.55 22.75 33.125 23.125 32.925C24.6375 32.1625 27.0375 31.25 30 31.25C30.95 31.25 31.8375 31.3375 32.6625 31.5L30.725 35.625H27.1875C25.2875 35.625 23.75 37.1625 23.75 39.0625C23.75 40.9625 25.2875 42.5 27.1875 42.5H37.5C38.875 42.5 40 41.375 40 40V34.025C40 32.625 39.2375 31.3375 37.9875 30.7ZM28.675 40H27.1875C26.675 40 26.25 39.575 26.25 39.0625C26.25 38.55 26.675 38.125 27.1875 38.125H29.55L28.675 40ZM37.5 40H31.4375L35.1125 32.1625C35.7875 32.4125 36.375 32.675 36.875 32.925C37.25 33.125 37.5 33.55 37.5 34.025V40Z" fill="white"/>
-          </svg>
-
+            <BrownIcon />
           </div>
         </motion.div>
-        
+
         {/* Award icon - black */}
-        <motion.div 
+        <motion.div
           custom={4}
-          initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+          initial={{
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            opacity: 0,
+          }}
           whileInView={{
-            left: "20%", top: "80%", transform:"translate(0%, 0%)",
+            left: "20%",
+            top: "80%",
+            transform: "translate(0%, 0%)",
             opacity: 1,
             transition: {
-              duration: 1.2
-            }
+              duration: 1.2,
+            },
           }}
           variants={iconAnimation}
-viewport={{ once: true }}
-          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 300 },
+          }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:left-[20%] md:bottom-[10%] lg:left-[25%] xl:left-[277px] xl:top-[772px]"
         >
           <div className="w-full h-full bg-[#1E1E1E] rounded-md flex items-center justify-center">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="60" rx="10" fill="#1C1C1C"/>
-            <path d="M32.5137 16.4244C31.6406 16.442 31.0137 16.6119 30.5977 16.9166L24.8965 19.9694L21.7266 24.2813C21.0586 25.3125 21.5332 27.3047 23.6191 26.0274L25.9043 23.0156C28.8047 20.5143 34.7227 21.6621 31.916 26.6836C30.5391 29.5899 31.1836 31.0078 32.959 31.6055L33.7676 28.8867C35.168 25.7344 37.7813 25.166 37.6758 22.6231L43.957 23.0742L43.8984 16.5065L32.5137 16.4244ZM29.3438 22.4824C28.3242 22.4649 27.3223 22.8867 26.5957 23.4961L24.3047 26.5078C24.9316 27.0059 25.5645 26.7364 26.1914 26.1328C26.9297 26.5078 27.5039 25.9278 27.9727 24.7676C28.166 23.9766 28.4531 23.4199 29.3438 22.4824ZM24.6797 28.1074C24.6563 28.1074 24.627 28.1074 24.6035 28.1133C24.4102 28.1543 24.1816 28.3594 24.0293 28.8281C23.8711 29.2969 23.8359 29.9649 23.9766 30.6797C24.1172 31.3887 24.4102 31.9922 24.7383 32.3672C25.0547 32.7364 25.3477 32.8418 25.541 32.8008C25.7402 32.7656 25.9629 32.5547 26.1152 32.0918C26.2734 31.6231 26.3145 30.9492 26.1738 30.2403C26.0274 29.5254 25.7344 28.9219 25.4121 28.5528C25.1309 28.2246 24.8731 28.1074 24.6797 28.1074ZM29.5195 34.3653C29.0566 34.3711 28.4766 34.5176 27.9082 34.793C27.2578 35.1153 26.7481 35.5606 26.4727 35.9707C26.1973 36.375 26.1738 36.6797 26.2617 36.8614C26.3496 37.0371 26.6074 37.2071 27.0996 37.2305C27.5918 37.2598 28.2539 37.125 28.9043 36.8028C29.5547 36.4805 30.0645 36.041 30.3399 35.6309C30.6152 35.2266 30.6387 34.916 30.5508 34.7403C30.4629 34.5586 30.2051 34.3946 29.7129 34.3711C29.6484 34.3653 29.5899 34.3653 29.5195 34.3653ZM23.8008 39.9668C23.5254 39.9727 23.2734 40.0137 23.0508 40.0781C22.5527 40.2246 22.2656 40.4883 22.1719 40.7989C22.0723 41.1153 22.1719 41.4903 22.5059 41.8946C22.8457 42.293 23.4141 42.6739 24.1172 42.8848C24.8145 43.0957 25.4941 43.0899 25.9981 42.9375C26.502 42.791 26.7891 42.5274 26.8828 42.2168C26.9766 41.9004 26.8828 41.5254 26.543 41.1211C26.209 40.7227 25.6406 40.3418 24.9375 40.1309C24.5391 40.0137 24.1524 39.961 23.8008 39.9668Z" fill="white"/>
-          </svg>
-
+            <BlackIcon />
           </div>
         </motion.div>
-        
+
         {/* Question icon - teal */}
-        <motion.div 
+        <motion.div
           custom={5}
-          initial={{ left: "50%", top: "50%", transform:"translate(-50%, -50%)", opacity: 0 }}
+          initial={{
+            left: "50%",
+            top: "50%",
+            transform: "translate(-50%, -50%)",
+            opacity: 0,
+          }}
           whileInView={{
-            left: "75%", top: "80%", transform:"translate(0%, 0%)",
+            left: "75%",
+            top: "80%",
+            transform: "translate(0%, 0%)",
             opacity: 1,
             transition: {
-              duration: 1.2
-            }
+              duration: 1.2,
+            },
           }}
           variants={iconAnimation}
-viewport={{ once: true }}
-          whileHover={{ scale: 1.2, transition: { type: "spring", stiffness: 300 } }}
+          viewport={{ once: true }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 300 },
+          }}
           className="hidden md:block absolute md:w-[38px] md:h-[38px] xl:w-[44px] xl:h-[44px] md:right-[20%] md:top-[80%] lg:right-[15%] xl:left-[993px] xl:top-[850px]"
         >
           <div className="w-full h-full bg-[#006655] rounded-md flex items-center justify-center">
-          <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="60" height="60" rx="10" fill="#0C6963"/>
-            <path d="M35.25 19.375C34 18.125 32.375 17.5 30.875 17.5C29.375 17.5 27.625 18.125 26.5 19.375L19.25 26.375C16.75 28.875 16.75 32.75 19.25 35.25C21.75 37.75 25.625 37.75 28.125 35.25L35.25 28.125C37.625 25.75 37.625 21.75 35.25 19.375ZM33.5 26.375L30 29.875L25.5 25.5L20 31C20 30 20.25 28.875 21.125 28.125L28.25 21C28.875 20.375 29.875 20 30.75 20C31.625 20 32.625 20.375 33.375 21C34.875 22.625 34.875 24.875 33.5 26.375ZM39.5 23.875C39.5 24.875 39.25 25.75 39 26.75C40.25 28.25 40.25 30.5 38.875 31.875L35.375 35.375L33.5 33.5L30 37C28.375 38.625 26.125 39.5 24 39.5C24.25 39.875 24.5 40.25 24.875 40.625C27.375 43.125 31.25 43.125 33.75 40.625L40.875 33.5C43.375 31 43.375 27.125 40.875 24.625C40.25 24.375 39.875 24.125 39.5 23.875Z" fill="white"/>
-          </svg>
-
+            <TealIcon />
           </div>
         </motion.div>
       </div>
