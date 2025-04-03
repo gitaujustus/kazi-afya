@@ -275,13 +275,11 @@ const FAQs = () => {
           </motion.div>
           <motion.button
             whileHover={{ 
-              scale: 1.0,
               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)"
             }}
-            whileTap={{ scale: 1.0 }}
             variants={cardContentVariants}
             custom={3}
-            className="w-[171px] h-[44px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px]"
+            className="w-[171px] h-[44px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px] transition-all duration-700 ease-in-out"
           >
             <motion.div
               animate={{ 
@@ -292,7 +290,8 @@ const FAQs = () => {
                   repeatDelay: 3
                 }
               }}
-              className="group-hover:rotate-45 group-hover:transition-transform duration-300"
+              className="group-hover:rotate-47 transition-all duration-700 ease-in-out"
+
             >
               <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
             </motion.div>

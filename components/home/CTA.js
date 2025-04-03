@@ -121,12 +121,12 @@ const CTASection = () => {
               {/* Book Now button - responsive size */}
               <motion.button 
                 initial="rest"
-                whileHover="hover"
+                // whileHover="hover"
                 variants={buttonAnimation}
-                className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:bg-london-rain hover:text-white group"
+                className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out"
               >
                 <motion.div
-                  className="group-hover:rotate-45 group-hover:transition-transform duration-300"
+                  className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out"
                 >
                   <ArrowTopRightIcon width="44" height="44" />
                 </motion.div>
