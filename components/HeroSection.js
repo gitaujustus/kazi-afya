@@ -116,9 +116,11 @@ const HeroSection = () => {
           />
         </motion.div>
       </AnimatePresence>
+
       
-      <div className="absolute inset-0 z-10 top-[512px]">
-        <div className='bg-[#070734]/35 w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[15px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
+      
+      <div className="absolute  z-10 bottom-[38px]   w-full">
+        <div className='bg-[#070734]/35 w-[93%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[10px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
           <div className="text-center">
             <motion.h1 
               key={titles[currentImageIndex]}
@@ -180,6 +182,7 @@ const HeroSection = () => {
             </div>
           </button>
         </div>
+        
       </div>
     </div>
   );

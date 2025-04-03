@@ -61,11 +61,9 @@ const Benefits = () => {
 
         {/* Button with animation */}
         <motion.button
-          whileHover={{ scale: 1.0 }}
-          whileTap={{ scale: 0.95 }}
-          className="bg-wizard-white hover:bg-london-rain w-[180px] xl:w-[203px] 2xl:w-[260px] h-[40px] xl:h-[44px] 2xl:h-[56px] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white"
+          className="bg-wizard-white  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[40px] xl:h-[44px] 2xl:h-[56px] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
         >
-          <div className=" hover:rotate-47 hover:transition-transform duration-300">
+          <div className=" group-hover:rotate-47 transition-all duration-700 ease-in-out">
           <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
           </div>
           <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">Request Demo</p>

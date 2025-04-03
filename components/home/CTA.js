@@ -116,6 +116,7 @@ const CTASection = () => {
             variants={popIn}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90%] h-auto md:w-[600px] lg:w-[700px] xl:w-[756px] xl:h-[448px] bg-white rounded-[20px] md:rounded-[30px] shadow-lg p-6 md:p-8 lg:p-10 xl:p-[60px] flex flex-col items-center gap-4 md:gap-6 lg:gap-[30px] z-20"
           >
+              
             {/* Heading - responsive text size */}
             <motion.h2
               initial="hidden"
@@ -145,11 +146,11 @@ const CTASection = () => {
             {/* Book Now button - responsive size */}
             <motion.button
               initial="rest"
-              whileHover="hover"
+              // whileHover="hover"
               variants={buttonAnimation}
-              className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px] hover:bg-london-rain hover:text-white group"
+              className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out"
             >
-              <motion.div className="group-hover:rotate-45 group-hover:transition-transform duration-300">
+              <motion.div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
                 <ArrowTopRightIcon width="44" height="44" />
               </motion.div>
               <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white">
@@ -157,6 +158,7 @@ const CTASection = () => {
               </span>
             </motion.button>
           </motion.div>
+          
         </div>
 
         {/* SMALL SCREEN ICONS - Only visible on small screens */}
