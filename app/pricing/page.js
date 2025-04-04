@@ -66,15 +66,15 @@ const Pricing = () => {
     }}
   >
     <div>
-      <div className="flex flex-col sm:flex-row sm:gap-[10px] sm:items-center mb-2 sm:mb-0">
+      <div className="flex flex-col sm:flex-row gap-[12px] sm:items-center  sm:mb-0">
         <p className="font-figtree text-[18px] sm:text-[20px] md:text-[24px] text-black leading-[120%] font-500">
           Free 1-month Professional trial available
         </p>
-        <p className="font-figtree text-[12px] sm:text-[14px] leading-[120%] p-[8px] sm:p-[10px] w-[70px] sm:w-[80px] rounded-[10px] bg-london-rain text-white text-center mt-2 sm:mt-0">
+        <p className="font-figtree text-[12px] sm:text-[14px] leading-[120%] p-[8px] sm:p-[10px] w-[70px] sm:w-[80px] rounded-[10px] bg-london-rain text-white text-center mt-2 sm:mt-0 h-[29px] flex items-center justify-center">
           save 10%
         </p>
       </div>
-      <p className="font-figtree text-[14px] sm:text-[16px] text-black leading-[120%]">
+      <p className="font-figtree text-[14px] sm:text-[16px] text-black leading-[120%] ">
         Upgrade to any annually plan today and get the first 1 month free trial.
       </p>
     </div>
@@ -86,7 +86,7 @@ const Pricing = () => {
             <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
               <ArrowTopRightIcon width="44" height="44" />
             </div>
-            <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white">
+            <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white font-500">
               Switch to annually
             </span>
           </button>
@@ -95,7 +95,7 @@ const Pricing = () => {
 
   {/* Toggle button - kept aligned left */}
   <div className="flex items-center rounded-full px-2 sm:px-4 py-[30px] sm:py-[40px] md:py-[59px] w-[200px]">
-    <span className="text-xs sm:text-sm font-semibold text-gray-700 mr-2">
+    <span className="text-[20px] font-semibold text-black mr-2">
       Monthly
     </span>
     <div
@@ -114,7 +114,7 @@ const Pricing = () => {
         ></div>
       </div>
     </div>
-    <span className="text-xs sm:text-sm font-semibold text-gray-700 ml-2">
+    <span className="text-[20px] font-semibold text-black  ml-2">
       Annually
     </span>
   </div>
@@ -123,18 +123,18 @@ const Pricing = () => {
   <section className="flex flex-wrap gap-6">
     {/* Package 1: Essential Plan */}
     <div
-      className="p-[20px] sm:p-[25px] md:p-[30px] rounded-[15px] sm:rounded-[20px] flex flex-col gap-[8px] sm:gap-[10px] bg-white w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[27vw]"
+      className="p-[20px] sm:p-[25px] md:p-[30px] rounded-[15px] sm:rounded-[20px] flex flex-col gap-[8px] sm:gap-[10px] bg-white w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[27.2vw]"
       style={{
         boxShadow: "0px 0px 3.8px 0px rgba(0, 87, 184, 0.25)",
       }}
     >
       <div className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[27px] leading-[120%]">
-        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-600 text-cosmic-void">
+        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-semibold text-cosmic-void">
           Essential Plan
         </h3>
         <p className="font-figtree font-400 text-[14px] sm:text-[16px]">Small clinics or startups</p>
         <p className="font-figtree text-[20px] sm:text-[22px] md:text-[24px]">
-          <span className="text-london-rain font-800">$150</span>/ months
+          <span className="text-london-rain font-bold">$150</span>/ months
         </p>
       </div>
 
@@ -165,14 +165,14 @@ const Pricing = () => {
       }}
     >
       <div className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[27px] leading-[120%]">
-        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-600 text-cosmic-void">
+        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-semibold text-cosmic-void">
           Professional Plan
         </h3>
         <p className="font-figtree font-400 text-[14px] sm:text-[16px]">
           Mid-sized facilities or growing practices
         </p>
         <p className="font-figtree text-[20px] sm:text-[22px] md:text-[24px]">
-          <span className="text-london-rain font-800">$350</span>/ month
+          <span className="text-london-rain font-bold">$350</span>/ month
         </p>
       </div>
 
@@ -203,14 +203,14 @@ const Pricing = () => {
       }}
     >
       <div className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[27px] leading-[120%]">
-        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-600 text-cosmic-void">
+        <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-semibold text-cosmic-void">
           Enterprise Plan
         </h3>
         <p className="font-figtree font-400 text-[14px] sm:text-[16px]">
           Large hospitals or multi-facility networks
         </p>
         <p className="font-figtree text-[20px] sm:text-[22px] md:text-[24px]">
-          <span className="text-london-rain font-800">$800</span>/ month
+          <span className="text-london-rain font-bold">$800</span>/ month
         </p>
       </div>
 

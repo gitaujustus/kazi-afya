@@ -9,7 +9,8 @@ const FeatureSection = ({ sectionData }) => {
       {/* Flex container with reverse order on medium screens and up */}
       <div className="pt-[20px] md:pt-0 flex flex-col md:flex-row-reverse    items-center   justify-between">
         {/* Image container - only visible from lg (large screens) and up */}
-        <div className="sm:hidden lg:block w-[300px] sm:w-[400px] xl:w-[432px]">
+        <div className="sm:hidden lg:block w-[300px] sm:w-[400px] xl:w-[432px] mb-5 sm:mb-0"
+        >
           <Image
             src={imageSrc}
             alt={imageAlt}
