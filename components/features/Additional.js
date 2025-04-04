@@ -6,26 +6,30 @@ const additionalFeaturesData = [
     id: 1,
     image: "/assets/Additional-1.png",
     title: "Ambulance Management",
-    description: "Offers real-time tracking of ambulance locations for efficient dispatch, coordinating emergency services to ensure timely and effective patient care."
+    description:
+      "Offers real-time tracking of ambulance locations for efficient dispatch, coordinating emergency services to ensure timely and effective patient care.",
   },
   {
     id: 2,
     image: "/assets/Additional-2.png",
     title: "Ward Allocation",
-    description: "Manages bed availability and patient assignments efficiently, optimizing resource utilization across the hospital to improve operational flow."
+    description:
+      "Manages bed availability and patient assignments efficiently, optimizing resource utilization across the hospital to improve operational flow.",
   },
   {
     id: 3,
     image: "/assets/Additional-3.png",
     title: "Patient Feedback",
-    description: "Collects valuable insights from patients to enhance service quality, fostering better engagement and communication for continuous improvement."
+    description:
+      "Collects valuable insights from patients to enhance service quality, fostering better engagement and communication for continuous improvement.",
   },
   {
     id: 4,
     image: "/assets/Additional-4.png",
     title: "Multi-Branch Support",
-    description: "Designed to manage operations across multiple healthcare facilities, ensuring consistent service delivery and seamless resource sharing."
-  }
+    description:
+      "Designed to manage operations across multiple healthcare facilities, ensuring consistent service delivery and seamless resource sharing.",
+  },
 ];
 
 const AdditionalFeatures = () => {
@@ -54,11 +58,11 @@ const AdditionalFeatures = () => {
       </div>
 
       <button className="w-full max-w-[226px] h-[47px] 2xl:max-w-[250px] 2xl:h-12 rounded-[30px] flex items-center justify-center gap-3 py-[10px] pr-[37px] bg-wizard-white hover:bg-london-rain hover:text-white font-helvetica-regular transition-all duration-500 ease-in-out group">
-  <span className="transition-transform duration-500 ease-in-out group-hover:rotate-[47deg]">
-    <ArrowTopRightIcon />
-  </span>
-  Get Started Today
-</button>
+        <span className="transition-transform duration-500 ease-in-out group-hover:rotate-[47deg]">
+          <ArrowTopRightIcon />
+        </span>
+        Get Started Today
+      </button>
     </section>
   );
 };

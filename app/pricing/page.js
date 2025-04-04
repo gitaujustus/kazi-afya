@@ -82,7 +82,7 @@ const Pricing = () => {
    
 
 <div>
-          <button className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out">
+          <button className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[46px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[9px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out">
             <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
               <ArrowTopRightIcon width="44" height="44" />
             </div>
