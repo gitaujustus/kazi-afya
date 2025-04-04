@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Arrow, RighArrow } from './Icons'; // Assuming you have a Play/Pause icon available
+import { Arrow, RighArrow } from '../Icons'; // Assuming you have a Play/Pause icon available
 
 const images = [
   '/assets/hero-image.jpg',
