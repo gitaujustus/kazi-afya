@@ -41,7 +41,7 @@ const Lab = () => {
 
     return (
         <FeatureSection
-            imageSrc="/assets/Doc.png"
+            imageSrc="/assets/Doc.webp"
             imageAlt="Doctor with a stethoscope"
             title="Laboratory & Radiology Management"
             description="The Kazi Afya platform transforms healthcare management by offering a comprehensive laboratory management system that enhances patient engagement, streamlines operations, and ensures accuracy. Its key features include:"

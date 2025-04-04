@@ -36,7 +36,7 @@ const ReportingBI = () => {
 
     return (
         <FeatureSection
-            imageSrc="/assets/ReportingBI.png"
+            imageSrc="/assets/ReportingBI.webp"
             imageAlt="Doctor with a laptop"
             title="Reporting & Business Intelligence"
             description="The Kazi Afya platform enhances healthcare management with a powerful reporting and business intelligence system, delivering actionable insights, predictive analytics, and regulatory compliance. Its key features include:"

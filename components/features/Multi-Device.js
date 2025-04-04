@@ -36,7 +36,7 @@ const MultiDevice = () => {
 
     return (
         <FeatureSection
-            imageSrc="/assets/Multi-Device.png"
+            imageSrc="/assets/Multi-Device.webp"
             imageAlt="Multi device and Cloud Based Access"
             title="Multi-Device & Cloud-Based Access"
             description="The Kazi Afya platform transforms healthcare management by offering a flexible, cloud-based system with multi-device access, ensuring connectivity, resilience, and convenience. Its key features include:"

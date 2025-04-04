@@ -5,7 +5,7 @@ export const section1Data = {
     title: "Patient Management System Features",
     description:
       "The Kazi Afya system transforms healthcare management by offering a comprehensive set of tools designed to streamline processes, enhance patient care, and improve provider coordination. Its key features include:",
-    imageSrc: "/assets/features/sect1.png",
+    imageSrc: "/assets/features/sect1.webp",
     imageAlt: "features",
     featuresRow1: [
       {
@@ -48,7 +48,7 @@ export const section1Data = {
     title: "Appointment Scheduling & Telemedicine",
     description:
       "The Kazi Afya platform enhances healthcare management by integrating robust appointment scheduling and telemedicine capabilities, designed to improve efficiency, access, and patient satisfaction. This includes:",
-    imageSrc: "/assets/features/sect2.png",
+    imageSrc: "/assets/features/sect2.webp",
     imageAlt: "appointment scheduling",
     featuresRow1: [
       {
@@ -91,7 +91,7 @@ export const section1Data = {
     title: "Billing & Payments",
     description:
       "The Kazi Afya platform revolutionizes healthcare management by incorporating an advanced billing and payment system that enhances efficiency, accuracy, and patient satisfaction. Its key features include:",
-    imageSrc: "/assets/features/sect3.png", 
+    imageSrc: "/assets/features/sect3.webp", 
     imageAlt: "billing and payments",
     featuresRow1: [
       {
@@ -134,7 +134,7 @@ export const section1Data = {
     title: "Inventory & Pharmacy Management",
     description:
       "The Kazi Afya platform revolutionizes healthcare management with an advanced inventory and pharmacy management system designed to optimize efficiency, ensure patient safety, and maintain seamless operations. Its key features include:",
-    imageSrc: "/assets/features/sect4.png", 
+    imageSrc: "/assets/features/sect4.webp", 
     imageAlt: "inventory and pharmacy management",
     featuresRow1: [
       {
@@ -177,7 +177,7 @@ export const section7Data = {
     title: "Staff, Payroll & HR Management",
     description:
       "The Kazi Afya platform enhances healthcare management with a powerful reporting and business intelligence system, delivering actionable insights, predictive analytics, and regulatory compliance. Its key features include:",
-    imageSrc: "/assets/features/sect7.png", 
+    imageSrc: "/assets/features/sect7.webp", 
     imageAlt: "staff payroll and hr management",
     featuresRow1: [
       {

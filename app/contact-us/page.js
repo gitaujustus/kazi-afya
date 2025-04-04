@@ -9,7 +9,7 @@ const Contacts = () => {
         {/* image */}
         {/* <div className="bg-blue-leviathan w-full h-[30vh] md:h-auto md:w-1/3 lg:w-full hidden lg:block">
             <Image 
-                src="/assets/contacts.jpg" 
+                src="/assets/contacts.webp" 
                 width={1000} 
                 height={5200} 
                 alt="contacts" 
