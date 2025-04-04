@@ -1,5 +1,5 @@
 "use client";
-import HeroSection from "@/components/HeroSection";
+import HeroSection from "@/components/home/HeroSection";
 import Benefits from "@/components/home/Benefits";
 import CTASection from "@/components/home/CTA";
 import FAQs from "@/components/home/Questions";
