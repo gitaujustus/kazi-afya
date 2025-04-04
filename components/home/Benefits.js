@@ -40,7 +40,7 @@ const Benefits = () => {
       {/* Left side - Image */}
       <motion.div variants={fadeIn} className="w-full md:w-1/2 flex justify-center md:justify-start">
         <Image
-          src="/assets/home/Benefits.png"
+          src="/assets/home/Benefits.webp"
           alt="Benefits"
           width={1000}
           height={1000}

@@ -259,7 +259,7 @@ const backgroundVariants = {
             custom={0}
           >
             <Image
-              src="/assets/home/Profile-Sect-5.png"
+              src="/assets/home/Profile-Sect-5.webp"
               alt="Profile Photo"
               width={2000}
               height={2000}

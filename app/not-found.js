@@ -8,7 +8,7 @@ const NotFound = () => {
             <Navbar />
             <div className="flex flex-col items-center justify-center flex-grow space-y-6 text-center px-4 mb-4">
                 <Image 
-                    src="/assets/404.jpg"
+                    src="/assets/404.webp"
                     alt="404"   
                     width={1920}
                     height={1080}

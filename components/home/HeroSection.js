@@ -5,11 +5,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Arrow, RighArrow } from '../Icons'; // Assuming you have a Play/Pause icon available
 
 const images = [
-  '/assets/home/hero-image1.png',
-  '/assets/home/hero-image2.png',
-  '/assets/home/hero-image3.png',
-  '/assets/home/hero-image4.png',
-  '/assets/home/hero-image5.png',
+  '/assets/home/hero-image1.webp',
+  '/assets/home/hero-image2.webp',
+  '/assets/home/hero-image3.webp',
+  '/assets/home/hero-image4.webp',
+  '/assets/home/hero-image5.webp',
 ];
 
 const titles = [
