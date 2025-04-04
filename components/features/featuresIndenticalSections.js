@@ -3,7 +3,6 @@ import Image from "next/image";
 
 const FeatureSection = ({ sectionData }) => {
   const { title, description, imageSrc, imageAlt, featuresRow1, featuresRow2 } = sectionData;
-
   return (
     <section>
       {/* Flex container with reverse order on medium screens and up */}

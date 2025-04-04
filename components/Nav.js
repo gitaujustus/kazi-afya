@@ -6,6 +6,7 @@ import { LogoIcon, OutlineHomeIcon } from './Icons';
 import { useState, useEffect, useRef } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const MotionLink = motion(Link);
 
@@ -64,10 +65,11 @@ const Navbar = () => {
     <div className="flex items-center justify-between bg-blue-leviathan text-white w-[90vw] rounded-[25px] px-4 py-2 2xl:py-4 2xl:px-10   mx-auto mt-5 absolute left-[50%] transform -translate-x-[50%] z-20 font-inter">
       {/* Logo */}
       <div className="flex items-center justify-between gap-1 md:gap-2 2xl:gap-4">
-        <LogoIcon className="text-red_shimmer" />
+        {/* <LogoIcon className="text-red_shimmer" /> */}
+        {/* logo as image */}
+        <Image src="/assets/Kazi Afya Reverse Logo.svg" alt="logo" height={500} width={1500} className=" h-6 md:h-7 lg:h-8 2xl:h-12  " />
 
-
-        <span className="lg:text-small 2xl:text-[2.0rem]">KaziAfya</span>
+        {/* <span className="lg:text-small 2xl:text-[2.0rem]">KaziAfya</span> */}
       </div>
 
       {/* Mobile Menu Button */}
