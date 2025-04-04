@@ -66,7 +66,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center justify-between gap-1 md:gap-2 2xl:gap-4">
         {/* <LogoIcon className="text-red_shimmer" /> */}
-        {/* logo as image */}
+        {/* logo as image */ }
         <img src="/assets/Kazi Afya Reverse Logo.svg" alt="logo" className=" h-6 md:h-7 lg:h-8 2xl:h-12  " />
 
         {/* <span className="lg:text-small 2xl:text-[2.0rem]">KaziAfya</span> */}
