@@ -14,7 +14,7 @@ export const FeatureCard = ({ icon: Icon, title, description }) => {
       <p className="font-figtree font-medium text-base sm:text-lg xl:text-[18px] leading-tight xl:leading-[120%] text-london-rain">
         {title}
       </p>
-      <p className="text-cosmic-void leading-normal text-sm sm:text-base xl:text-[16px] xl:leading-[24px]">
+      <p className="text-cosmic-void leading-normal text-sm sm:text-base xl:text-[16px] xl:leading-[24px] font-figtree">
         {description}
       </p>
     </div>

@@ -1,4 +1,3 @@
-// components/features/FeatureSection.jsx
 import { FeatureCard, FeatureCardRow2 } from "@/components/features/featuresCard";
 import Image from "next/image";
 
@@ -8,7 +7,7 @@ const FeatureSection = ({ sectionData }) => {
   return (
     <section>
       {/* Flex container with reverse order on medium screens and up */}
-      <div className="pt-[20px] md:pt-0 flex flex-col md:flex-row-reverse gap-6 md:gap-8 lg:gap-10 xl:gap-[50px] items-center ">
+      <div className="pt-[20px] md:pt-0 flex flex-col md:flex-row-reverse    items-center   justify-between">
         {/* Image container - only visible from lg (large screens) and up */}
         <div className="sm:hidden lg:block w-[300px] sm:w-[400px] xl:w-[432px]">
           <Image
@@ -16,7 +15,7 @@ const FeatureSection = ({ sectionData }) => {
             alt={imageAlt}
             width={1024}
             height={1024}
-            className="w-full h-auto"
+            className="w-full h-auto "
           />
         </div>
 
@@ -25,7 +24,7 @@ const FeatureSection = ({ sectionData }) => {
           <h1 className="font-helvetica-bold leading-tight text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[56px] text-london-rain  ">
             {title}
           </h1>
-          <p className="pt-4 sm:pt-6 md:pt-8 xl:pt-[40px] text-cosmic-void font-figtree text-base sm:text-lg">
+          <p className="pt-4 sm:pt-6 md:pt-8 xl:pt-[40px] text-cosmic-void font-figtree text-base text-[18px] sm:text-[20px]">
             {description}
           </p>
 
