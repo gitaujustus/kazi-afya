@@ -53,12 +53,12 @@ const AdditionalFeatures = () => {
         ))}
       </div>
 
-      <button className="w-full max-w-[226px] h-[44px] 2xl:max-w-[250px] 2xl:h-12 rounded-[30px] flex items-center justify-center gap-3 py-2 px-4 bg-wizard-white font-helvetica-regular">
-        <span>
-          <ArrowTopRightIcon />
-        </span>{" "}
-        Get Started Today
-      </button>
+      <button className="w-full max-w-[226px] h-[47px] 2xl:max-w-[250px] 2xl:h-12 rounded-[30px] flex items-center justify-center gap-3 py-[10px] pr-[37px] bg-wizard-white hover:bg-london-rain hover:text-white font-helvetica-regular transition-all duration-500 ease-in-out group">
+  <span className="transition-transform duration-500 ease-in-out group-hover:rotate-[47deg]">
+    <ArrowTopRightIcon />
+  </span>
+  Get Started Today
+</button>
     </section>
   );
 };

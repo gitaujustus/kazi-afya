@@ -23,7 +23,7 @@ const FeatureSection = ({
 
     const ContentColumn = () => (
         <div className="w-full md:w-1/2 flex flex-col mt-8 md:mt-0 relative z-0">
-            <h1 className={`font-helvetica-bold font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-[120%] text-london-rain text-${imagePosition === "left" ? "right" : "left"}`}>
+            <h1 className={`font-helvetica-bold font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[64px] leading-[120%] text-london-rain text-${imagePosition === "left" ? "right" : "left"}`}>
                 {title}
             </h1>
 

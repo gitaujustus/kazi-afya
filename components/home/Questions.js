@@ -279,7 +279,7 @@ const FAQs = () => {
             }}
             variants={cardContentVariants}
             custom={3}
-            className="w-[171px] h-[44px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px] transition-all duration-700 ease-in-out"
+            className="w-[171px] h-[47px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px] transition-all duration-700 ease-in-out"
           >
             <motion.div
               animate={{ 
