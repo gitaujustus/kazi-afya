@@ -2,6 +2,9 @@ import FeatureSection from "@/components/features/featuresIndenticalSections";
 import React from "react";
 import { section1Data, section2Data, section3Data, section4Data, section7Data } from "@/components/features/featuresData";
 import Lab from "@/components/features/Lab";
+import ReportingBI from "@/components/features/ReportingBI";
+import MultiDevice from "@/components/features/Multi-Device";
+import AdditionalFeatures from "@/components/features/Additional";
 const Features = () => {
   return (
     <main>
@@ -25,13 +28,26 @@ const Features = () => {
       </section>
 
       {/* Other Sections */}
+
+      {/* Section 5  */}
       <Lab />
 
+      {/* Section 6  */}
+      <ReportingBI />
 
-      {/* Section 7: Staff, Payroll & HR Management*/}
-      <section className="px-4 pb-[65px] sm:px-8 md:px-12 lg:px-16 xl:px-[70px] pt-20 sm:pt-24 md:pt-32 lg:pt-40 xl:pt-[117px] min-h-screen">
+        {/* Section 7: Staff, Payroll & HR Management*/}
+        <section className="px-4 pb-[65px] sm:px-8 md:px-12 lg:px-16 xl:px-[70px] pt-20 sm:pt-24 md:pt-32 lg:pt-40 xl:pt-[117px] min-h-screen">
           <FeatureSection sectionData={section7Data} />
       </section>
+
+      {/* Section 8  */}
+      <MultiDevice />
+
+      {/* Section 9  */}
+      <AdditionalFeatures />
+
+
+    
 
     </main>
   );

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Figtree } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 // HelveticaNeue Fonts
 const helveticaRegular = localFont({
@@ -103,6 +104,7 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
