@@ -144,7 +144,7 @@ const ContactForm = () => {
                     ))}
                     </select>
                     <div className="absolute inset-y-0 right-5   flex items-center pointer-events-none">
-                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="16" height="9" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 2.0001L16.5 0.600098L9 8.0001L1.5 0.600098L0 2.0001L9 11.0001L18 2.0001Z" fill="#879BB4"/>
                         </svg>
                     </div>
@@ -162,7 +162,7 @@ const ContactForm = () => {
                     ))}
                         </select>
                         <div className="absolute inset-y-0 right-5   flex items-center pointer-events-none">
-                        <svg width="18" height="11" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="16" height="9" viewBox="0 0 18 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 2.0001L16.5 0.600098L9 8.0001L1.5 0.600098L0 2.0001L9 11.0001L18 2.0001Z" fill="#879BB4"/>
                         </svg>
                     </div>
