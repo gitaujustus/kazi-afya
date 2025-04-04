@@ -65,12 +65,12 @@ const Pricing = () => {
       boxShadow: "0px 0px 3.8px 0px rgba(0, 87, 184, 0.25)",
     }}
   >
-    <div>
+    <div className="flex flex-col gap-[12px]">
       <div className="flex flex-col sm:flex-row gap-[12px] sm:items-center  sm:mb-0">
-        <p className="font-figtree text-[18px] sm:text-[20px] md:text-[24px] text-black leading-[120%] font-500">
+        <p className="font-figtree text-[18px] sm:text-[20px] md:text-[24px] text-black leading-[120%] font-500 h-[29px]">
           Free 1-month Professional trial available
         </p>
-        <p className="font-figtree text-[12px] sm:text-[14px] leading-[120%] p-[8px] sm:p-[10px] w-[70px] sm:w-[80px] rounded-[10px] bg-london-rain text-white text-center mt-2 sm:mt-0 h-[29px] flex items-center justify-center">
+        <p className="font-figtree text-[12px] sm:text-[14px] leading-[120%] p-[8px] sm:p-[10px] w-[70px] sm:w-[80px] rounded-[10px] bg-london-rain text-white text-center my-4 sm:my-0 h-[29px] flex items-center justify-center ">
           save 10%
         </p>
       </div>
@@ -82,7 +82,7 @@ const Pricing = () => {
    
 
 <div>
-          <button className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out">
+          <button className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[46px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[9px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out">
             <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
               <ArrowTopRightIcon width="44" height="44" />
             </div>
@@ -104,7 +104,7 @@ const Pricing = () => {
     >
       <div
         className={`w-10 sm:w-11 h-5 sm:h-6 rounded-full transition-colors duration-300 ${
-          isToggled ? "bg-gray-200" : "bg-blue-500"
+          isToggled ? "bg-blue-500" : "bg-blue-500"
         }`}
       >
         <div
@@ -120,7 +120,7 @@ const Pricing = () => {
   </div>
 
   {/* Pricing - Using flex layout with custom wrapping */}
-  <section className="flex flex-wrap gap-6">
+  <section className="flex flex-wrap gap-6 justify-between">
     {/* Package 1: Essential Plan */}
     <div
       className="p-[20px] sm:p-[25px] md:p-[30px] rounded-[15px] sm:rounded-[20px] flex flex-col gap-[8px] sm:gap-[10px] bg-white w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[27.2vw]"

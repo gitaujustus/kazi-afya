@@ -7,8 +7,7 @@ const Contacts = () => {
     return ( 
     <main className="flex flex-col md:flex-row">
         {/* image */}
-        <div className="bg-blue-leviathan w-full h-[30vh] md:h-auto md:w-1/3 lg:w-full hidden lg:block">
-            {/* overlay */}
+        {/* <div className="bg-blue-leviathan w-full h-[30vh] md:h-auto md:w-1/3 lg:w-full hidden lg:block">
             <Image 
                 src="/assets/contacts.jpg" 
                 width={1000} 
@@ -16,7 +15,7 @@ const Contacts = () => {
                 alt="contacts" 
                 className="object-cover opacity-40 w-full h-full"
             />
-        </div>
+        </div> */}
 
         {/* locations */}
         <div className="pt-[80px] pb-[65px] sm:pt-[100px] md:pt-[150px] xl:pt-[207px] px-[20px] sm:px-[30px] md:px-[42px] xl:px-[56px] gap-[10px] w-full md:min-w-[37vw] bg-wizard-white">
