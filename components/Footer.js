@@ -28,10 +28,10 @@ const Footer = () => {
                 <div className="flex flex-col">
                     <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl">Solutions</h3>
                     <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
-                        <li className="leading-tight">Home</li>
-                        <li className="leading-tight">About</li>
-                        <li className="leading-tight">Services</li>
-                        <li className="leading-tight">Contact</li>
+                        <li className="leading-tight"><a href="">Home</a></li>
+                        <li className="leading-tight"><a href="">About</a></li>
+                        <li className="leading-tight"><a href="">Services</a></li>
+                        <li className="leading-tight"><a href="">Contact</a></li>
                     </ul>
                 </div>
 
