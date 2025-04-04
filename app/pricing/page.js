@@ -2,6 +2,7 @@
 import { TickIcon } from "@/components/Icons";
 import { ArrowTopRightIcon } from "@/icons";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const essentialPlanIncluded = [
   "Patient Management System (access for up to 5 healthcare providers)",
@@ -49,6 +50,21 @@ const enterprisePlanIncluded = [
   "Patient Wellness App",
 ];
 
+// Variants for the background flow effect
+const backgroundVariants = {
+  initial: {
+    width: '0%',
+  },
+  hover: {
+    width: '100%',
+    transition: {
+      duration: 0.5, 
+      ease: 'easeInOut',
+    },
+  },
+};
+
+
 const Pricing = () => {
   const [isToggled, setIsToggled] = useState(false);
 
@@ -82,14 +98,25 @@ const Pricing = () => {
    
 
 <div>
-          <button className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[46px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[9px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out">
+<motion.button
+            className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[46px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[9px] md:py-[10px]  hover:text-white group transition-all duration-700 ease-in-out relative overflow-hidden"
+            initial="initial"
+            whileHover="hover"
+          >
+            {/* Background layer for the flow effect */}
+            <motion.div
+              className="absolute inset-0 bg-london-rain z-0 rounded-[30px]" // Match the button's rounded corners
+              variants={backgroundVariants}
+              style={{ transformOrigin: 'left' }}
+            />
             <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
               <ArrowTopRightIcon width="44" height="44" />
             </div>
-            <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white font-500">
+            <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white font-500">
               Switch to annually
             </span>
-          </button>
+          </motion.button>
+
         </div>
   </section>
 

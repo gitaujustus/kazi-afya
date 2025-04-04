@@ -24,30 +24,28 @@ const CTASection = () => {
     },
   };
 
-  const buttonAnimation = {
-    rest: {
-      scale: 1,
-      boxShadow: "0px 0px 0px rgba(0,0,0,0)",
+ // Variants for the background flow effect
+const backgroundVariants = {
+  initial: {
+    width: '0%',
+  },
+  hover: {
+    width: '100%',
+    transition: {
+      duration: 0.5, 
+      ease: 'easeInOut',
     },
-    hover: {
-      scale: 1.05,
-      boxShadow: "0px 4px 8px rgba(0,0,0,0.1)",
-      transition: {
-        type: "spring",
-        stiffness: 400,
-        damping: 10,
-      },
-    },
-  };
+  },
+};
 
   // Modified icon animation with slower timing
   const iconAnimation = {
     hidden: { scale: 0.3, opacity: 0, zIndex: 0 },
     visible: (index) => {
       const positions = [
-        { left: "15%", top: "17%" },  // Red Clock
+        { left: "17%", top: "18%" },  // Red Clock
         { left: "55%", top: "10%" },  // Blue Document
-        { left: "80%", top: "40%" },  // Green File
+        { left: "87%", top: "40%" },  // Green File
         { left: "55%", top: "75%" },  // Dark Red User
         { left: "20%", top: "80%" },  // Black Award
         { left: "75%", top: "80%" },  // Teal Question
@@ -142,15 +140,19 @@ const CTASection = () => {
 
             {/* Book Now button - responsive size */}
             <motion.button
-              initial="rest"
-              whileHover="hover"
-              variants={buttonAnimation}
-              className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px] hover:bg-london-rain hover:text-white group transition-all duration-700 ease-in-out"
+              className="bg-wizard-white relative flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:text-white group transition-all duration-700 ease-in-out overflow-hidden"
+            initial="initial"
+            whileHover="hover"
             >
-              <motion.div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
+              <motion.div
+              className="absolute inset-0 bg-london-rain z-0 rounded-[30px]" // Match the button's rounded corners
+              variants={backgroundVariants}
+              style={{ transformOrigin: 'left' }}
+            />
+              <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
                 <ArrowTopRightIcon width="44" height="44" />
-              </motion.div>
-              <span className="text-[14px] md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white">
+              </div>
+              <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white transform transition-all duration-700 ease-in-out">
                 Book Now
               </span>
             </motion.button>

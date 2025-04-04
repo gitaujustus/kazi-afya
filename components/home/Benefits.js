@@ -17,6 +17,19 @@ const Benefits = () => {
     { id: 5, title: "Secure & Compliant:", description: "Protect patient data with Kenyan Data Protection Act compliance." },
   ];
 
+
+  const backgroundVariants = {
+    initial: {
+      width: '0%',
+    },
+    hover: {
+      width: '100%',
+      transition: {
+        duration: 0.5, 
+        ease: 'easeInOut',
+      },
+    },
+  };
   return (
     <motion.section
       initial="hidden"
@@ -61,12 +74,19 @@ const Benefits = () => {
 
         {/* Button with animation */}
         <motion.button
-          className="bg-wizard-white  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[43px] xl:h-[45px] 2xl:h-[58px] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
+          className="bg-wizard-white relative overflow-hidden  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[43px] xl:h-[45px] 2xl:h-[58px] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
+          initial="initial"
+            whileHover="hover"
         >
+          <motion.div
+    className="absolute inset-0 bg-london-rain z-0 rounded-[30px]"
+    variants={backgroundVariants} // Assumed to be defined at the top
+    style={{ transformOrigin: 'left' }}
+  />
           <div className=" group-hover:rotate-47 transition-all duration-700 ease-in-out">
           <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
           </div>
-          <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">Request Demo</p>
+          <p className="text-sm md:text-base z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">Request Demo</p>
         </motion.button>
       </motion.div>
     </motion.section>

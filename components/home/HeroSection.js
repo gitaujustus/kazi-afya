@@ -80,7 +80,7 @@ const HeroSection = () => {
   };
 
   return (
-    <div className="relative min-h-[900px] lg:min-h-[1024px] w-full overflow-hidden">
+    <div className="relative min-h-[900px] lg:min-h-[1024px] w-full overflow-hidden bg-[#070734]">
       <AnimatePresence initial={false} custom={direction}>
         <motion.div
           key={currentImageIndex}
@@ -105,21 +105,19 @@ const HeroSection = () => {
               prevImage();
             }
           }}
-          className="absolute inset-0"
+          className="absolute inset-0 w-full h-full"
         >
           <Image
             src={images[currentImageIndex]}
             alt={`Hero image ${currentImageIndex + 1}`}
             fill
-            className="object-cover"
+            className="object-cover w-full h-full"
             priority
           />
         </motion.div>
       </AnimatePresence>
 
-      
-      
-      <div className="absolute  z-10 bottom-[38px]   w-full">
+      <div className="absolute z-10 bottom-[38px] w-full">
         <div className='bg-[#070734]/35 w-[93%] sm:w-[90%] md:w-[90%] lg:w-[90%] xl:w-[89vw] 2xl:w-[85vw] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] mx-auto backdrop-blur-[35.5px] py-[20px] sm:py-[30px] md:py-[40px] xl:py-[50px] px-[10px] sm:px-[25px] md:px-[35px] xl:px-[45px]'>
           <div className="text-center">
             <motion.h1 
@@ -170,19 +168,16 @@ const HeroSection = () => {
           >
             <div className="scale-75 xl:scale-100">
               {isPlaying ? (
-                // You might want to replace this with a proper Pause icon
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
                   <rect x="6" y="4" width="4" height="16" />
                   <rect x="14" y="4" width="4" height="16" />
                 </svg>
               ) : (
-                // Using RightArrow as Play icon, replace with proper Play icon if available
                 <RighArrow />
               )}
             </div>
           </button>
         </div>
-        
       </div>
     </div>
   );

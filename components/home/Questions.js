@@ -157,6 +157,20 @@ const FAQs = () => {
     }
   };
 
+   // Variants for the background flow effect
+const backgroundVariants = {
+  initial: {
+    width: '0%',
+  },
+  hover: {
+    width: '100%',
+    transition: {
+      duration: 0.5, 
+      ease: 'easeInOut',
+    },
+  },
+};
+
   return (
     <motion.section 
       ref={ref}
