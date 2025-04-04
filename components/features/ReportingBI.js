@@ -42,7 +42,7 @@ const ReportingBI = () => {
             description="The Kazi Afya platform enhances healthcare management with a powerful reporting and business intelligence system, delivering actionable insights, predictive analytics, and regulatory compliance. Its key features include:"
             content={content}
             imagePosition="right"
-            className="relative"
+            className="relative flex flex-col-reverse"
         />
     );
 }

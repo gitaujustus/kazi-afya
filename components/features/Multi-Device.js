@@ -42,7 +42,7 @@ const MultiDevice = () => {
             description="The Kazi Afya platform transforms healthcare management by offering a flexible, cloud-based system with multi-device access, ensuring connectivity, resilience, and convenience. Its key features include:"
             content={content}
             imagePosition="right"
-            className="relative"
+            className="relative flex flex-col-reverse"
         />
     );
 }

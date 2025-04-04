@@ -23,12 +23,12 @@ const FeatureSection = ({
 
     const ContentColumn = () => (
         <div className="w-full md:w-1/2 flex flex-col mt-8 md:mt-0 relative z-0">
-            <h1 className={`font-helvetica-bold font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[56px] leading-[120%] text-london-rain ${imagePosition === "left" ? "text-right" : "text-left"}`}>
+            <h1 className={`font-helvetica-bold font-bold text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[56px] leading-[120%] text-london-rain ${imagePosition === "left" ? "text-left md:text-right" : "text-left"}`}>
                 {title}
             </h1>
 
             <div className="pt-4 sm:pt-6 md:pt-8 lg:pt-10 xl:pt-[42px] pb-4 sm:pb-6 md:pb-8 lg:pb-10 xl:pb-[36px]">
-                <p className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[20px] text-cosmic-void font-figtree font-medium ${imagePosition === "left" ? "text-right" : "text-left"}`}>
+                <p className={`text-base sm:text-lg md:text-xl lg:text-2xl xl:text-[20px] text-cosmic-void font-figtree font-medium ${imagePosition === "left" ? "text-left md:text-right" : "text-left"}`}>
                     {description}
                 </p>
             </div>
