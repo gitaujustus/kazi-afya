@@ -296,14 +296,6 @@ const backgroundVariants = {
             className="w-[171px] h-[47px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px] transition-all duration-700 ease-in-out"
           >
             <motion.div
-              animate={{ 
-                rotate: [0, 10, -10, 10, 0],
-                transition: { 
-                  duration: 1.5, 
-                  repeat: Infinity, 
-                  repeatDelay: 3
-                }
-              }}
               className="group-hover:rotate-47 transition-all duration-700 ease-in-out"
 
             >
