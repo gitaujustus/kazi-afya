@@ -57,8 +57,8 @@ const Navbar = () => {
   ];
 
   const authItems = [
-    { href: '/sign_in', label: 'Login', className: 'border border-white px-4 py-1 rounded-[50px] text-center' },
-    { href: '/sign_up', label: 'Get Started', className: 'bg-blue-leviathan text-red_reign px-4 py-1 rounded-[50px] text-center' },
+    { href: 'https://kazipos.co.ke/login', label: 'Login', className: 'border border-white px-4 py-1 rounded-[50px] text-center' },
+    { href: 'https://kazipos.co.ke/business/register', label: 'Get Started', className: 'bg-blue-leviathan text-red_reign px-4 py-1 rounded-[50px] text-center' },
   ];
 
   return (
@@ -102,7 +102,7 @@ const Navbar = () => {
       {/* Desktop Auth Buttons */}
       <div className="hidden md:flex items-center justify-between gap-4">
         <MotionLink
-          href="/sign_in"
+          href="https://kazipos.co.ke/login"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
           className="border border-white py-1 2xl:py-2  rounded-[50px] text-tiny 2xl:text-[1.8rem] w-32 2xl:w-38 text-center"
@@ -110,7 +110,7 @@ const Navbar = () => {
           Login
         </MotionLink>
         <MotionLink
-          href="/sign_up"
+          href="https://kazipos.co.ke/business/register"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.6 }}
           className="text-blue-leviathan bg-white py-1 2xl:py-2  rounded-[50px] text-nowrap text-tiny w-32 2xl:text-[1.8rem]   2xl:w-48 text-center"

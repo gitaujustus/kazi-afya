@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Arrow, RighArrow } from '../Icons'; // Assuming you have a Play/Pause icon available
+import { Arrow, RighArrow } from '../Icons'; 
 
 const images = [
   '/assets/home/hero-image1.webp',
@@ -11,6 +11,8 @@ const images = [
   '/assets/home/hero-image4.webp',
   '/assets/home/hero-image5.webp',
 ];
+
+
 
 const titles = [
   "Powering Hospitals, Empowering Care",
