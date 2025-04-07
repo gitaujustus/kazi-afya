@@ -1,25 +1,29 @@
 import LabCard from "./LabCard";
-import { FileIcon, RunIcon, ReportingIcon, TestTrackingIcon } from "../../icons";
+import { ResourceIcon,
+    SearchResualtIcon,
+    ClipboardIcon,
+    LabIcon
+     } from "../Icons";
 import FeatureSection from "../shared/FeatureSection";
 
 const labData = [
     {
-        icon: FileIcon,
+        icon: ResourceIcon,
         title: "Patient Result Access",
         description: "Provides secure online access to diagnostic reports, coupled with timely notifications, to improve patient engagement and convenience."
     },
     {
-        icon: RunIcon,
+        icon: SearchResualtIcon,
         title: "Resource Scheduling",
         description: "Optimizes the scheduling of laboratory and radiology equipment, effectively managing appointments for MRI, CT scans, and X-rays to maximize efficiency."
     },
     {
-        icon: ReportingIcon,
+        icon: ClipboardIcon,
         title: "Automated Reporting",
         description: "Generates digital reports to reduce errors and improve accuracy, seamlessly integrating with doctors for easy access to patient results."
     },
     {
-        icon: TestTrackingIcon,
+        icon: LabIcon,
         title: "Lab Test Tracking",
         description: "Configures alerts for low stock levels, automating supplier requests to guarantee timely restocking and continuity of supply."
     }

@@ -1,20 +1,20 @@
 import LabCard from "./LabCard";
-import { FileIcon, RunIcon, ReportingIcon, TestTrackingIcon } from "../../icons";
 import FeatureSection from "../shared/FeatureSection";
+import { CloudOfflineIcon ,NetworkIcon, Clock2Icon} from "../Icons";
 
 const labData = [
     {
-        icon: FileIcon,
+        icon: Clock2Icon,
         title: "Anytime Access",
         description: "Provides secure access to the system from any device—desktops, tablets, or smartphones—allowing convenient data retrieval from anywhere with an internet connection."
     },
     {
-        icon: RunIcon,
+        icon: NetworkIcon,
         title: "Offline Functionality",
         description: "Enables uninterrupted work in low-connectivity environments, with automatic data syncing once the connection is restored, ensuring no information is lost."
     },
     {
-        icon: ReportingIcon,
+        icon: CloudOfflineIcon,
         title: "Third-Party Integration",
         description: "Seamlessly connects with government health databases, insurance firms, and financial platforms, facilitating smooth data exchange and boosting operational efficiency across systems."
     }

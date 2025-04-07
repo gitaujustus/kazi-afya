@@ -1,20 +1,21 @@
 import LabCard from "./LabCard";
-import { FileIcon, RunIcon, ReportingIcon, TestTrackingIcon } from "../../icons";
+import { DashboardIcon,
+    AiIcon, ClipboardIcon  } from"../Icons";
 import FeatureSection from "../shared/FeatureSection";
 
 const labData = [
     {
-        icon: FileIcon,
+        icon: DashboardIcon,
         title: "Custom Dashboards:",
         description: "Monitors key performance indicators in real-time, with tailored dashboards displaying relevant metrics for different departments to support informed decision-making."
     },
     {
-        icon: RunIcon,
+        icon: AiIcon,
         title: "AI Analytics",
         description: "Leverages artificial intelligence to predict patient trends and seasonal diseases, while generating financial forecasts to guide strategic planning and resource allocation."
     },
     {
-        icon: ReportingIcon,
+        icon: ClipboardIcon,
         title: "Compliance Reporting",
         description: "Produces detailed reports to meet regulatory requirements, ensuring adherence to data privacy regulations through automated audits for seamless compliance."
     }
