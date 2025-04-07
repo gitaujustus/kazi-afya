@@ -288,23 +288,22 @@ const backgroundVariants = {
             </p>
           </motion.div>
           <motion.button
-            whileHover={{ 
-              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)"
-            }}
-            variants={cardContentVariants}
-            custom={3}
-            className="w-[171px] h-[47px] rounded-[30px] bg-wizard-white hover:bg-london-rain hover:text-white group pr-[37px] py-[10px] flex justify-between items-center gap-[15px] transition-all duration-700 ease-in-out"
-          >
-            <motion.div
-              className="group-hover:rotate-47 transition-all duration-700 ease-in-out"
-
-            >
-              <ArrowTopRightIcon className="w-11 h-11" />
-            </motion.div>
-            <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular text-london-rain group-hover:text-white">
-              Book Now
-            </p>
-          </motion.button>
+                        className="bg-wizard-white relative flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:text-white group transition-all duration-700 ease-in-out overflow-hidden"
+                      initial="initial"
+                      whileHover="hover"
+                      >
+                        <motion.div
+                        className="absolute inset-0 bg-london-rain z-0 rounded-[30px]" // Match the button's rounded corners
+                        variants={backgroundVariants}
+                        style={{ transformOrigin: 'left' }}
+                      />
+                        <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
+                          <ArrowTopRightIcon className="w-10 h-10 sm:w-11 sm:h-11" />
+                        </div>
+                        <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white transform transition-all duration-700 ease-in-out">
+                          Book Now
+                        </span>
+                      </motion.button>
         </motion.div>
       </div>
     </motion.section>
