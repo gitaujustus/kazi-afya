@@ -25,8 +25,7 @@ export const ArrowTopRightIcon = ({
 }) => {
   return (
     <svg
-      width="44"
-      height="44"
+     className= {className}
       viewBox="0 0 44 44"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

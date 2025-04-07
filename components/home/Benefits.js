@@ -74,7 +74,7 @@ const Benefits = () => {
 
         {/* Button with animation */}
         <motion.button
-          className="bg-wizard-white relative overflow-hidden  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[43px] xl:h-[45px] 2xl:h-[58px] rounded-[20px] sm:rounded-[25px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
+          className="bg-wizard-white relative  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[45px] xl:h-[45px] 2xl:h-[56px] xl:ml-8 rounded-[23px] sm:rounded-[26px] xl:rounded-[32px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
           initial="initial"
             whileHover="hover"
         >
@@ -84,7 +84,7 @@ const Benefits = () => {
     style={{ transformOrigin: 'left' }}
   />
           <div className=" group-hover:rotate-47 transition-all duration-700 ease-in-out">
-          <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
+          <ArrowTopRightIcon className="w-11 h-11  2xl:w-14 2xl:h-14" />
           </div>
           <p className="text-sm md:text-base z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">Request Demo</p>
         </motion.button>

@@ -150,7 +150,7 @@ const backgroundVariants = {
               style={{ transformOrigin: 'left' }}
             />
               <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
-                <ArrowTopRightIcon width="44" height="44" />
+                <ArrowTopRightIcon className="w-10 h-10 sm:w-11 sm:h-11" />
               </div>
               <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white transform transition-all duration-700 ease-in-out">
                 Book Now

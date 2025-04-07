@@ -299,7 +299,7 @@ const backgroundVariants = {
               className="group-hover:rotate-47 transition-all duration-700 ease-in-out"
 
             >
-              <ArrowTopRightIcon className="w-4 h-4 md:w-6 md:h-6 2xl:w-8 2xl:h-8" />
+              <ArrowTopRightIcon className="w-11 h-11" />
             </motion.div>
             <p className="text-sm md:text-base xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular text-london-rain group-hover:text-white">
               Book Now
