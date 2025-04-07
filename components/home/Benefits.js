@@ -23,7 +23,7 @@ const Benefits = () => {
       width: '0%',
     },
     hover: {
-      width: '100%',
+      width: '95%',
       transition: {
         duration: 0.5, 
         ease: 'easeInOut',
@@ -74,12 +74,12 @@ const Benefits = () => {
 
         {/* Button with animation */}
         <motion.button
-          className="bg-wizard-white relative  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[45px] xl:h-[45px] 2xl:h-[56px] xl:ml-8 rounded-[23px] sm:rounded-[26px] xl:rounded-[32px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
+          className="bg-wizard-white relative  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[44px] xl:h-[44px] 2xl:h-[56px] xl:ml-8 rounded-[23px] sm:rounded-[24px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
           initial="initial"
             whileHover="hover"
         >
           <motion.div
-    className="absolute inset-0 bg-london-rain z-0 rounded-[30px]"
+    className="absolute inset-0 left-4 bg-london-rain z-0 rounded-full"
     variants={backgroundVariants} // Assumed to be defined at the top
     style={{ transformOrigin: 'left' }}
   />
