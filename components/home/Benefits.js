@@ -23,7 +23,7 @@ const Benefits = () => {
       width: '0%',
     },
     hover: {
-      width: '95%',
+      width: '90%',
       transition: {
         duration: 0.5, 
         ease: 'easeInOut',
@@ -79,7 +79,7 @@ const Benefits = () => {
             whileHover="hover"
         >
           <motion.div
-    className="absolute inset-0 left-4 bg-london-rain z-0 rounded-full"
+    className="absolute left-3.5 inset-0 bg-london-rain z-0 rounded-full"
     variants={backgroundVariants} // Assumed to be defined at the top
     style={{ transformOrigin: 'left' }}
   />
