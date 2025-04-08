@@ -3,6 +3,16 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Arrow, RighArrow } from '../Icons'; 
+import Link from 'next/link';
+
+// const images = [
+//   '/assets/home/new-hero-image3.jpg',
+//   '/assets/home/new-hero-image1.jpg',
+//   '/assets/home/new-hero-image2.jpg',
+//   '/assets/home/new-hero-image3.jpg',
+//   '/assets/home/new-hero-image3.jpg',
+
+// ];
 
 const images = [
   '/assets/home/hero-image1.webp',
@@ -104,7 +114,13 @@ const HeroSection = () => {
               const nextIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
               handleImageChange(nextIndex);
             } else if (swipe > swipeConfidenceThreshold) {
-              prevImage();
+               <svg className=" w-[20px] h-[20px] md:w-[24px] md:h-[24px] 2xl:w-[45px] 2xl:h-[50px] "  viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M24.9654 13.9373H20.5C16.5994 13.9373 13.4375 17.0993 13.4375 20.9998V25.4651C19.5937 25.0086 24.5089 20.0934 24.9654 13.9373Z" fill="#FEE0DA"/>
+  <path d="M11.5631 25.4651V20.9998C11.5631 17.0993 8.40105 13.9373 4.50053 13.9373H0.0351562C0.491615 20.0934 5.40684 25.0086 11.5631 25.4651Z" fill="#FEE0DA"/>
+  <path d="M24.9654 12.0623C24.5089 5.90611 19.5937 0.990883 13.4375 0.534424V4.99979C13.4375 8.90031 16.5994 12.0623 20.5 12.0623H24.9654Z" fill="#FEE0DA"/>
+  <path d="M11.5631 0.534424C5.40684 0.990883 0.491615 5.90611 0.0351562 12.0623H4.50053C8.40105 12.0623 11.5631 8.90031 11.5631 4.99979V0.534424Z" fill="#FEE0DA"/>
+  <path d="M8.48828 12.9998C10.2211 12.134 11.6333 10.7218 12.499 8.98901C13.3648 10.7218 14.777 12.134 16.5098 12.9998C14.777 13.8656 13.3648 15.2778 12.499 17.0106C11.6333 15.2778 10.2211 13.8656 8.48828 12.9998Z" fill="#FEE0DA"/>
+  </svg>
             }
           }}
           className="absolute inset-0 w-full h-full"
@@ -113,7 +129,7 @@ const HeroSection = () => {
             src={images[currentImageIndex]}
             alt={`Hero image ${currentImageIndex + 1}`}
             fill
-            className="object-cover w-full h-full"
+            className=" object-cover w-full h-full"
             priority
           />
         </motion.div>
@@ -140,9 +156,12 @@ const HeroSection = () => {
             >
               {descriptions[currentImageIndex]}
             </motion.p>
+            <Link href="/features" >
             <button className='flex items-center gap-[5px] sm:gap-[8px] xl:gap-[10px] mx-auto text-white text-[14px] sm:text-[16px] xl:text-[18px] 2xl:text-[20px]'>
               <Arrow/> <span>learn more</span>
             </button>
+            </Link>
+          
           </div>
         </div>
 

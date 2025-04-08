@@ -4,12 +4,11 @@ import Link from 'next/link'
 
 const Footer = () => {
     return ( 
-        <footer className="px-4 sm:px-8 md:px-16 lg:px-16 xl:px-20 2xl:px-24 py-8 md:py-10 lg:py-12 2xl:py-16 flex flex-col gap-8 md:gap-12 lg:gap-16 font-figtree text-sm sm:text-base bg-wizard-white text-cosmic-void">
-
+        <footer className="px-4 sm:px-8 md:px-[40px] xl:px-[68px] 2xl:px-[74px] py-8 md:py-10 lg:py-12 2xl:py-16 flex flex-col gap-8 md:gap-12 lg:gap-16 font-figtree text-sm sm:text-base bg-wizard-white text-cosmic-void">
             {/* Top div */}
-            <div className="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16 xl:gap-24 2xl:gap-32">
+            <div className="flex flex-col  md:flex-row gap-[38.6px] md:gap-[58px] lg:gap-[77px] xl:gap-[116px] 2xl:gap-[154.6px]">
                 {/* Part one */}
-                <div className="flex flex-col gap-6 w-full md:w-2/5 lg:w-1/3">
+                <div className="flex items-center text-center justify-center md:text-left  md:justify-start  flex-col gap-6 w-full md:w-2/5 lg:w-[472px]">
                     <div>
                         <Image 
                             src="/assets/Kazi Afya Logo.svg" 
@@ -20,17 +19,18 @@ const Footer = () => {
                         />
                     </div>
 
-                    <p className="text-sm sm:text-base lg:text-lg 2xl:text-xl">
+                    <p className="text-sm sm:text-base lg:text-[16px] 2xl:text-xl">
                         Kazi Afya is the leading hospital management system designed to streamline operations for healthcare providers, ensuring seamless patient management, billing, and reporting—all in one secure, cloud-based platform.
                     </p>
                 </div>
 
-                {/* Part two */}
+              <div className="flex  justify-around md:justify-start gap-16 xl:gap-24 2xl:gap-32">
+                      {/* Part two */}
             <div className="flex flex-col">
                 <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl">
                     Solutions
                 </h3>
-                <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+                <ul className="flex flex-col gap-2 sm:gap-[8px] xl:gap-[10px] ">
                     <li>
                         <Link href="/features" className="leading-tight group relative">
                             Inpatient
@@ -64,7 +64,7 @@ const Footer = () => {
                         <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl text-nowrap">
                             Quick Links
                         </h3>
-                        <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+                        <ul className="flex flex-col gap-2 sm:gap-[8px] xl:gap-[10px]">
                             <li>
                                 <Link href="/" className="leading-tight group relative">
                                     Home
@@ -92,24 +92,25 @@ const Footer = () => {
                         </ul>
                     </div>
 
+              </div>
                 
 
                 {/* Part three */}
-                <div className="flex flex-col">
+                <div className="flex flex-col  mx-auto md:mx-0">
                     <div>
-                        <h3 className="font-semibold pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl">Reach Us</h3>
+                        <h3 className="font-semibold pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl text-center md:text-left">Reach Us</h3>
                         <p className="text-sm sm:text-base lg:text-lg">39 Jimkan House, Woodvale Grove</p>
                         <p className="text-sm sm:text-base lg:text-lg">Westlands - Nairobi</p>
                     </div>
-                    <div className="mt-4 sm:mt-5 lg:mt-6 2xl:mt-8">
+                    <div className="mt-2 2xl:mt-5">
                         <p className="text-sm sm:text-base lg:text-lg">Phone: +254 113 306358, +254 113 305897</p>
-                        <p className="text-sm sm:text-base lg:text-lg">Email: info@hillganinnovations.co.ke</p>
+                        <p className="text-sm sm:text-base lg:text-lg">Email: info@kaziafya.co.ke</p>
                     </div>
                 </div>
             </div>
 
             {/* Bottom Div */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-[34px] lg:gap-[64px] justify-center items-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-[34px] lg:gap-[64px] justify-center items-center font-figtree ">
             <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-start">
                 <p>
                     <a href="#" className="leading-tight text-sm sm:text-base group relative">
