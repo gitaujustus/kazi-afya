@@ -216,7 +216,7 @@ const ContactForm = () => {
                     <button 
                         type="submit"
                         disabled={isSubmitting}
-                        className="py-[8px] sm:py-[9px] xl:py-[10px] px-[20px] sm:px-[25px] xl:px-[30px] bg-london-rain w-[120px] sm:w-[132px] text-white text-[14px] sm:text-[15px] xl:text-[16px] font-helvetica-regular rounded-[30px] flex gap-[10px] items-center justify-center disabled:bg-blue-leviathan disabled:cursor-not-allowed"
+                        className="py-[8px] sm:py-[9px] xl:py-[10px] px-[20px] sm:px-[25px] xl:px-[30px] bg-london-rain hover:bg-cosmic-void transition-all duration-700 ease-in-out w-[120px] sm:w-[132px] text-white text-[14px] sm:text-[15px] xl:text-[16px] font-helvetica-regular rounded-[30px] flex gap-[10px] items-center justify-center disabled:bg-blue-leviathan disabled:cursor-not-allowed"
                     >
                         <span>{isSubmitting ? "Sending..." : "Send"}</span> 
                         {!isSubmitting && <SendIcon />}
