@@ -110,38 +110,16 @@ const Pricing = () => {
         </div>
 
         <div>
-          {/* <motion.button
-            className="bg-wizard-white flex items-center gap-[10px] md:gap-[15px] w-[200px] md:w-[229px] h-[46px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[9px] md:py-[10px] hover:text-white group transition-all duration-700 ease-in-out relative overflow-hidden"
-            initial="initial"
-            whileHover="hover"
-          >
-            <motion.div
-              className="absolute inset-0 bg-london-rain z-0 rounded-[30px]"
-              variants={backgroundVariants}
-              style={{ transformOrigin: 'left' }}
-            />
-            <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
-              <ArrowTopRightIcon className="w-11 h-11" />
-            </div>
-            <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white font-500">
-              Switch to annually
-            </span>
-          </motion.button> */}
            <motion.button
           className="bg-london-rain relative mx-auto w-[160px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[46px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[100px] xl:px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
           initial="initial"
           whileHover="hover"
         >
-          {/* <motion.div
-            className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
-            variants={backgroundVariants} // Assumed to be defined at the top
-            style={{ transformOrigin: "left" }}
-          /> */}
+          
           <p className="text-md md:text-lg z-10 text-sm md:text-md xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
             Switch to Annually
           </p>
           <div className=" group-hover:">
-            {/* <ArrowRight className="w-4 h-4 " /> */}
             <WhiteArrowRight className="w-3 h-3 sm:w-4 sm:h-4 relative z-10" />
           </div>
         </motion.button>

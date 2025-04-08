@@ -25,8 +25,8 @@ const Contacts = () => {
                     <span><Locations/></span> 
                     <span className="text-[18px] sm:text-[20px] md:text-[22px] xl:text-[24px] font-helvetica-semibold text-cosmic-void">Kenya</span>
                 </p>
-                <p className="font-helvetica-regular text-[16px] sm:text-[18px] xl:text-[20px] text-blue-leviathan">39 Woodvale Grove, Westlands - Nairobi</p>
-                <p className="font-helvetica-regular text-[16px] sm:text-[18px] xl:text-[20px] text-blue-leviathan">Jimkan House</p>
+            <p className="font-helvetica-regular text-[16px] sm:text-[18px] xl:text-[20px] text-blue-leviathan">Jimkan House</p>
+                <p className="font-helvetica-regular text-[16px] sm:text-[18px] xl:text-[20px] text-blue-leviathan">39 Woodvale Grove, Westlands</p>
                 <p className="font-helvetica-regular text-[16px] sm:text-[18px] xl:text-[20px] text-blue-leviathan">Nairobi, Kenya</p>
             </div>
 
