@@ -259,7 +259,7 @@ const backgroundVariants = {
             custom={0}
           >
             <Image
-              src="/assets/home/Avator.png"
+              src="/assets/home/Avator-Afya.png"
               alt="Profile Photo"
               width={2000}
               height={2000}
