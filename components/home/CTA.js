@@ -1,6 +1,16 @@
 "use client";
 import React from "react";
-import { ArrowRight, WhiteArrowRight, ArrowTopRightIcon, BlackIcon, BlueIcon, BrownIcon, GreenIcon, RedIcon, TealIcon } from "@/icons";
+import {
+  ArrowRight,
+  WhiteArrowRight,
+  ArrowTopRightIcon,
+  BlackIcon,
+  BlueIcon,
+  BrownIcon,
+  GreenIcon,
+  RedIcon,
+  TealIcon,
+} from "@/icons";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -25,31 +35,31 @@ const CTASection = () => {
     },
   };
 
- // Variants for the background flow effect
-const backgroundVariants = {
-  initial: {
-    width: '0%',
-  },
-  hover: {
-    width: '100%',
-    transition: {
-      duration: 0.5, 
-      ease: 'easeInOut',
+  // Variants for the background flow effect
+  const backgroundVariants = {
+    initial: {
+      width: "0%",
     },
-  },
-};
+    hover: {
+      width: "100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   // Modified icon animation with slower timing
   const iconAnimation = {
     hidden: { scale: 0.3, opacity: 0, zIndex: 0 },
     visible: (index) => {
       const positions = [
-        { left: "17%", top: "18%" },  // Red Clock
-        { left: "55%", top: "10%" },  // Blue Document
-        { left: "87%", top: "40%" },  // Green File
-        { left: "55%", top: "75%" },  // Dark Red User
-        { left: "20%", top: "80%" },  // Black Award
-        { left: "75%", top: "80%" },  // Teal Question
+        { left: "17%", top: "18%" }, // Red Clock
+        { left: "55%", top: "10%" }, // Blue Document
+        { left: "87%", top: "40%" }, // Green File
+        { left: "55%", top: "75%" }, // Dark Red User
+        { left: "20%", top: "80%" }, // Black Award
+        { left: "75%", top: "80%" }, // Teal Question
       ];
 
       const position = positions[index] || { left: "50%", top: "50%" };
@@ -65,7 +75,7 @@ const backgroundVariants = {
           stiffness: 80,
           damping: 20,
           mass: 1.5,
-          delay: 0.7 + (index * 0.2),
+          delay: 0.7 + index * 0.2,
           duration: 2.5,
         },
       };
@@ -85,7 +95,7 @@ const backgroundVariants = {
           stiffness: 80,
           damping: 20,
           mass: 1.5,
-          delay: 0.7 + (index * 0.2),
+          delay: 0.7 + index * 0.2,
           duration: 2.5,
         },
       };
@@ -105,7 +115,7 @@ const backgroundVariants = {
             variants={fadeIn}
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] md:w-[700px] md:h-[700px] xl:w-[800px] xl:h-[800px] rounded-full bg-[radial-gradient(circle,#0031CB_0%,#F2F4F5_70%)]"
           />
-          
+
           {/* White card container - responsive with preserved original size on xl */}
           <motion.div
             initial="hidden"
@@ -141,15 +151,10 @@ const backgroundVariants = {
 
             <Link href="/contact-us">
           <motion.button
-                    className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
+                    className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
                     initial="initial"
                     whileHover="hover"
                   >
-                    {/* <motion.div
-                      className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
-                      variants={backgroundVariants} // Assumed to be defined at the top
-                      style={{ transformOrigin: "left" }}
-                    /> */}
                     <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
                       Book Now
                     </p>

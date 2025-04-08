@@ -57,30 +57,14 @@ const AdditionalFeatures = () => {
         ))}
       </div>
 
-      {/* <button className="w-full max-w-[226px] h-[47px] 2xl:max-w-[250px] 2xl:h-12 rounded-[30px] flex items-center justify-center gap-3 py-[10px] pr-[37px] bg-wizard-white hover:bg-london-rain hover:text-white font-helvetica-regular transition-all duration-500 ease-in-out group">
-        <span className="transition-transform duration-500 ease-in-out group-hover:rotate-[47deg]">
-          <ArrowTopRightIcon className="w-11 h-11"  />
-        </span>
-        Get Started Today
-      </button> */}
-       <button
-          className="bg-london-rain  relative mx-auto w-[160px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[100px] xl:px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61]   transition-all duration-700 ease-in-out "
-          // initial="initial"
-          // whileHover="hover"
-        >
-          {/* <div
-            className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
-            variants={backgroundVariants} // Assumed to be defined at the top
-            style={{ transformOrigin: "left" }}
-          /> */}
-          <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
-            Get Started Today
-          </p>
-          <div className=" group-hover:">
-            {/* <ArrowRight className="w-4 h-4 hidden group-hover:block" /> */}
-            <WhiteArrowRight className="w-4 h-4 relative z-10 " />
-          </div>
-        </button>
+      <button className="bg-london-rain  relative mx-auto w-[160px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[100px] xl:px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61]   transition-all duration-700 ease-in-out ">
+        <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
+          Get Started Today
+        </p>
+        <div className=" group-hover:">
+          <WhiteArrowRight className="w-4 h-4 relative z-10 " />
+        </div>
+      </button>
     </section>
   );
 };

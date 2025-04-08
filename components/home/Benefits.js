@@ -1,5 +1,10 @@
 "use client";
-import { ArrowRight, ArrowTopRightIcon, HeartIcon, WhiteArrowRight } from "@/icons";
+import {
+  ArrowRight,
+  ArrowTopRightIcon,
+  HeartIcon,
+  WhiteArrowRight,
+} from "@/icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
