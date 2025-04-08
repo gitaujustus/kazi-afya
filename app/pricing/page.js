@@ -206,7 +206,7 @@ const Pricing = () => {
                 <p className="flex-shrink-0">
                   <TickIcon className="w-[16px] h-[16px] sm:w-auto sm:h-auto" />
                 </p>
-                <p className="font-figtree text-[14px] sm:text-[16px] font-400 leading-[120%] text-cosmic-void">
+                <p className="font-figtree text-[14px] sm:text-[16px] font-400 leading-[28px] text-cosmic-void">
                   {feature}
                 </p>
               </div>
@@ -246,7 +246,7 @@ const Pricing = () => {
                 <p className="flex-shrink-0">
                   <TickIcon className="w-[16px] h-[16px] sm:w-auto sm:h-auto" />
                 </p>
-                <p className="font-figtree text-[14px] sm:text-[16px] font-400 leading-[120%] text-cosmic-void">
+                <p className="font-figtree text-[14px] sm:text-[16px] font-400 leading-[28px] text-cosmic-void">
                   {feature}
                 </p>
               </div>
@@ -286,7 +286,7 @@ const Pricing = () => {
                 <p className="flex-shrink-0">
                   <TickIcon className="w-[16px] h-[16px] sm:w-auto sm:h-auto" />
                 </p>
-                <p className="font-figtree text-[14px] sm:text-[16px] font-400 leading-[120%] text-cosmic-void">
+                <p className="font-figtree text-[14px] sm:text-[16px] font-400 leading-[28px] text-cosmic-void">
                   {feature}
                 </p>
               </div>
