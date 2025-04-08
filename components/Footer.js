@@ -26,15 +26,73 @@ const Footer = () => {
                 </div>
 
                 {/* Part two */}
-                <div className="flex flex-col">
-                    <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl">Solutions</h3>
-                    <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
-                        <Link className="leading-tight" href="/">Home</Link>
-                        <Link className="leading-tight" href="/about">About</Link>
-                        <Link className="leading-tight" href="/services ">Services</Link>
-                        <Link className="leading-tight" href="/contact-us">Contact</Link>
-                    </ul>
-                </div>
+            <div className="flex flex-col">
+                <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl">
+                    Solutions
+                </h3>
+                <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+                    <li>
+                        <Link href="/features" className="leading-tight group relative">
+                            Inpatient
+                            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/features" className="leading-tight group relative">
+                            Outpatient
+                            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/features" className="leading-tight group relative">
+                            Billing
+                            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/features" className="leading-tight group relative">
+                            Pharmacy
+                            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+
+
+                {/* Part three */}
+                    <div className="flex flex-col">
+                        <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl text-nowrap">
+                            Quick Links
+                        </h3>
+                        <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+                            <li>
+                                <Link href="/" className="leading-tight group relative">
+                                    Home
+                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/features" className="leading-tight group relative">
+                                    Features
+                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/pricing" className="leading-tight group relative">
+                                    Pricing
+                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact-us" className="leading-tight group relative">
+                                    Contact
+                                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                
 
                 {/* Part three */}
                 <div className="flex flex-col">
@@ -51,12 +109,22 @@ const Footer = () => {
             </div>
 
             {/* Bottom Div */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 justify-between items-center">
-                <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-start">
-                    <p><a href="#" className="leading-tight text-sm sm:text-base">Privacy Policy</a></p>
-                    <p><a href="#" className="leading-tight text-sm sm:text-base">Terms & Conditions</a></p>
-                </div>
-                
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-[34px] lg:gap-[64px] justify-center items-center">
+            <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-start">
+                <p>
+                    <a href="#" className="leading-tight text-sm sm:text-base group relative">
+                        Privacy Policy
+                        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </p>
+                <p>
+                    <a href="#" className="leading-tight text-sm sm:text-base group relative">
+                        Terms & Conditions
+                        <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-cosmic-void transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+                </p>
+            </div>
+
                 <p className="leading-tight text-sm sm:text-base order-3 sm:order-none">&copy;2025 Kazi Afya. All rights reserved</p>
 
                 <div className="flex gap-4 sm:gap-6 justify-center items-center">
