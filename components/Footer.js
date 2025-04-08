@@ -29,12 +29,24 @@ const Footer = () => {
                 <div className="flex flex-col">
                     <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl">Solutions</h3>
                     <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
+                        <Link className="leading-tight" href="/features">Inpatient</Link>
+                        <Link className="leading-tight" href="/features">Outpatient</Link>
+                        <Link className="leading-tight" href="/features">Billing</Link>
+                        <Link className="leading-tight" href="/features">Pharmacy</Link>
+                    </ul>
+                </div>
+
+                {/* Part three */}
+                <div className="flex flex-col">
+                    <h3 className="font-semibold text-cosmic-void pb-2 text-base sm:text-lg lg:text-xl 2xl:text-2xl text-nowrap">Quick Links</h3>
+                    <ul className="flex flex-col gap-2 sm:gap-3 lg:gap-4">
                         <Link className="leading-tight" href="/">Home</Link>
                         <Link className="leading-tight" href="/about">About</Link>
                         <Link className="leading-tight" href="/services ">Services</Link>
                         <Link className="leading-tight" href="/contact-us">Contact</Link>
                     </ul>
                 </div>
+                
 
                 {/* Part three */}
                 <div className="flex flex-col">

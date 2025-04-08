@@ -303,7 +303,7 @@ const backgroundVariants = {
                         <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white transform transition-all duration-700 ease-in-out">
                           Book Now
                         </span>
-                      </motion.button>
+          </motion.button>
         </motion.div>
       </div>
     </motion.section>

@@ -27,12 +27,12 @@ export default function Home() {
           <div className="relative text-center">
             <h2 className="text-[40px] sm:text-[50px] md:text-[75px] lg:text-[110px] xl:text-[140px] 2xl:text-[160px] font-helvetica-bold font-700 leading-[120%]">
               <span className="block text-sky-blue mb-6 sm:mb-3 md:mb-4">
-                Critical thinkers
+              All-in-One HMS
               </span>
               <span className="block text-blue-leviathan mb-6 sm:mb-3 md:mb-4">
-                Analysts
+              Built for Kenya
               </span>
-              <span className="block text-private-jet">Weavers</span>
+              <span className="block text-private-jet">Secure & Smart</span>
             </h2>
           </div>
         </motion.div>
