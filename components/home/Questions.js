@@ -2,7 +2,12 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { ArrowRight, WhiteArrowRight, ArrowTopRightIcon } from "@/icons";
-import { motion, AnimatePresence, useAnimation, useInView } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useAnimation,
+  useInView,
+} from "framer-motion";
 
 import { ChevronDownIcon, ChevronUpIcon } from "@/icons";
 
@@ -14,7 +19,7 @@ const FAQs = () => {
   const cardRef = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
   const isCardInView = useInView(cardRef, { once: true, amount: 0.1 });
-  
+
   useEffect(() => {
     if (isInView) {
       controls.start("visible");
@@ -37,142 +42,164 @@ const FAQs = () => {
       answer:
         "Hospitals, clinics, medical centers, and healthcare providers of all sizes can benefit from Kazi Afya.",
     },
-    { question: "What features does Kazi Afya offer?", answer: "It offers a range of features that can help hospitals, clinics, and healthcare providers streamline their operations and improve patient care. Some of the key features include patient management, scheduling, billing, and reporting." },
+    {
+      question: "What features does Kazi Afya offer?",
+      answer:
+        "It offers a range of features that can help hospitals, clinics, and healthcare providers streamline their operations and improve patient care. Some of the key features include patient management, scheduling, billing, and reporting.",
+    },
     {
       question: "Can Kazi Afya integrate with existing hospital systems?",
-      answer: "Yes, Kazi Afya can integrate with existing hospital systems. We offer seamless integration with existing systems, ensuring a smooth transition and efficient workflow.",
+      answer:
+        "Yes, Kazi Afya can integrate with existing hospital systems. We offer seamless integration with existing systems, ensuring a smooth transition and efficient workflow.",
     },
-    { question: "Is Kazi Afya cloud-based or on-premise?", answer: "Kazi Afya is a cloud-based system, which means it is accessible from anywhere with an internet connection. This allows for easy access to patient data and streamlined workflows." },
-    { question: "Is Kazi Afya secure?", answer: "Yes, Kazi Afya is secure. We use industry-standard encryption and security measures to protect your data. Additionally, we regularly update our system to ensure the highest level of security." },
+    {
+      question: "Is Kazi Afya cloud-based or on-premise?",
+      answer:
+        "Kazi Afya is a cloud-based system, which means it is accessible from anywhere with an internet connection. This allows for easy access to patient data and streamlined workflows.",
+    },
+    {
+      question: "Is Kazi Afya secure?",
+      answer:
+        "Yes, Kazi Afya is secure. We use industry-standard encryption and security measures to protect your data. Additionally, we regularly update our system to ensure the highest level of security.",
+    },
     {
       question: "Does Kazi Afya comply with healthcare regulations?",
-      answer: "Yes, Kazi Afya complies with healthcare regulations. We are HIPAA compliant and follow all relevant regulations to ensure the privacy and security of patient data.",
+      answer:
+        "Yes, Kazi Afya complies with healthcare regulations. We are HIPAA compliant and follow all relevant regulations to ensure the privacy and security of patient data.",
     },
-    { question: "How much does Kazi Afya cost?", answer: "Kazi Afya is a subscription-based system. The cost depends on the size of your hospital and the features you need. We offer a free trial to help you evaluate the system before committing to a subscription." },
-    { question: "Do you offer training for hospital staff?", answer: "Yes, we offer training for hospital staff. We provide comprehensive training to ensure that you get the most out of Kazi Afya." },
+    {
+      question: "How much does Kazi Afya cost?",
+      answer:
+        "Kazi Afya is a subscription-based system. The cost depends on the size of your hospital and the features you need. We offer a free trial to help you evaluate the system before committing to a subscription.",
+    },
+    {
+      question: "Do you offer training for hospital staff?",
+      answer:
+        "Yes, we offer training for hospital staff. We provide comprehensive training to ensure that you get the most out of Kazi Afya.",
+    },
   ];
 
   // Section container animation
   const sectionVariants = {
     hidden: { opacity: 0 },
-    visible: { 
+    visible: {
       opacity: 1,
-      transition: { 
+      transition: {
         when: "beforeChildren",
         staggerChildren: 0.2,
-        duration: 0.8
-      }
-    }
+        duration: 0.8,
+      },
+    },
   };
 
   // Heading animation variants
   const headingVariants = {
     hidden: { opacity: 0, y: -30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
-      transition: { 
-        duration: 0.7, 
-        ease: "easeOut" 
-      }
-    }
+      transition: {
+        duration: 0.7,
+        ease: "easeOut",
+      },
+    },
   };
 
   // Card animation variants
   const cardVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
       x: 50,
-      scale: 0.95
+      scale: 0.95,
     },
-    visible: { 
+    visible: {
       opacity: 1,
       x: 0,
       scale: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
+        ease: "easeOut",
+      },
     },
     hover: {
       scale: 1.02,
       boxShadow: "0px 5px 15px rgba(0,0,0,0.1)",
-      transition: { duration: 0.3, ease: "easeInOut" }
-    }
+      transition: { duration: 0.3, ease: "easeInOut" },
+    },
   };
 
   // Card content variants
   const cardContentVariants = {
-    hidden: { 
+    hidden: {
       opacity: 0,
-      y: 20
+      y: 20,
     },
-    visible: { 
+    visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.5,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   // FAQ item variants
   const faqItemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: custom => ({
+    visible: (custom) => ({
       opacity: 1,
       y: 0,
-      transition: { 
+      transition: {
         delay: custom * 0.1,
         duration: 0.5,
-        ease: "easeOut"
-      }
-    })
+        ease: "easeOut",
+      },
+    }),
   };
 
   // Animated chevron (arrow) for FAQ items
   const ChevronVariants = {
     open: { opacity: 1, transition: { duration: 0.2 } },
-    closed: { opacity: 1, transition: { duration: 0.2 } }
+    closed: { opacity: 1, transition: { duration: 0.2 } },
   };
 
   // Answer content animation
   const answerVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       height: 0,
       transition: {
         duration: 0.3,
-        ease: "easeInOut"
-      }
+        ease: "easeInOut",
+      },
     },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       height: "auto",
       transition: {
         duration: 0.4,
-        ease: "easeInOut"
-      }
-    }
+        ease: "easeInOut",
+      },
+    },
   };
 
-   // Variants for the background flow effect
-const backgroundVariants = {
-  initial: {
-    width: '0%',
-  },
-  hover: {
-    width: '100%',
-    transition: {
-      duration: 0.5, 
-      ease: 'easeInOut',
+  // Variants for the background flow effect
+  const backgroundVariants = {
+    initial: {
+      width: "0%",
     },
-  },
-};
+    hover: {
+      width: "100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
-    <motion.section 
+    <motion.section
       ref={ref}
       className="bg-white w-full flex flex-col px-4 sm:px-6 md:px-12 lg:px-16 xl:px-[75px] py-10 sm:py-16 md:py-20 xl:py-[92px] gap-8 sm:gap-12 md:gap-16 xl:gap-[92px]"
       variants={sectionVariants}
@@ -187,22 +214,19 @@ const backgroundVariants = {
       </div>
 
       {/* Heading */}
-      <motion.h1 
+      <motion.h1
         className="font-helvetica-semibold text-center text-3xl sm:text-4xl md:text-5xl xl:text-[48px] text-cosmic-void"
         variants={headingVariants}
       >
         Your Questions, <br />{" "}
-        <motion.span 
-          className="text-london-rain"
-          variants={headingVariants}
-        >
+        <motion.span className="text-london-rain" variants={headingVariants}>
           Answered
         </motion.span>
       </motion.h1>
 
       <div className="w-full flex flex-col lg:flex-row lg:justify-between lg:gap-8 xl:gap-[218px]">
         {/* Left column - FAQs */}
-        <motion.div 
+        <motion.div
           className="flex flex-col justify-between w-full lg:w-3/5 xl:w-[604px] 2xl:w-[700px]"
           variants={faqItemVariants}
         >
@@ -224,7 +248,11 @@ const backgroundVariants = {
                     variants={ChevronVariants}
                     animate={openIndex === index ? "open" : "closed"}
                   >
-                    {openIndex === index ? <ChevronUpIcon /> : <ChevronDownIcon />}
+                    {openIndex === index ? (
+                      <ChevronUpIcon />
+                    ) : (
+                      <ChevronDownIcon />
+                    )}
                   </motion.span>
                 </motion.button>
                 <AnimatePresence>
@@ -254,10 +282,7 @@ const backgroundVariants = {
           // whileHover="hover"
           className="w-full mt-10 lg:mt-0 lg:w-2/5 xl:w-[468px] bg-[#F2F4F5] rounded-[20px] flex flex-col items-center gap-3 sm:gap-[14px] px-4 sm:px-[21px] py-6 sm:py-[30px]"
         >
-          <motion.div
-            variants={cardContentVariants}
-            custom={0}
-          >
+          <motion.div variants={cardContentVariants} custom={0}>
             <Image
               src="/assets/home/Avator-Afya.png"
               alt="Profile Photo"
@@ -266,7 +291,7 @@ const backgroundVariants = {
               className="w-16 h-16 sm:w-[80px] sm:h-[80px] rounded-full m-2 sm:m-[10px]"
             />
           </motion.div>
-          <motion.div 
+          <motion.div
             className="w-full sm:w-[211px]"
             variants={cardContentVariants}
             custom={1}
@@ -276,52 +301,29 @@ const backgroundVariants = {
               Discovery Call
             </h1>
           </motion.div>
-          <motion.div 
+          <motion.div
             className="w-full sm:w-[406px] p-2 sm:p-[10px] gap-2 sm:gap-[10px]"
             variants={cardContentVariants}
             custom={2}
           >
             <p className="font-figtree text-sm sm:text-base xl:text-[16px] text-center">
-              Let&aposs optimize your hospital operations with Kazi Afya. Call to
-              explore how our HMS can streamline workflows, enhance patient
+              Let&aposs optimize your hospital operations with Kazi Afya. Call
+              to explore how our HMS can streamline workflows, enhance patient
               care, and drive efficiency for your health institution.
             </p>
           </motion.div>
-          {/* <motion.button
-                        className="bg-wizard-white relative flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:text-white group transition-all duration-700 ease-in-out overflow-hidden"
-                      initial="initial"
-                      whileHover="hover"
-                      >
-                        <motion.div
-                        className="absolute inset-0 bg-london-rain z-0 rounded-[30px]" // Match the button's rounded corners
-                        variants={backgroundVariants}
-                        style={{ transformOrigin: 'left' }}
-                      />
-                        <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
-                          <ArrowTopRightIcon className="w-10 h-10 sm:w-11 sm:h-11" />
-                        </div>
-                        <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white transform transition-all duration-700 ease-in-out">
-                          Book Now
-                        </span>
-                      </motion.button> */}
-                       <motion.button
-          className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
-          initial="initial"
-          whileHover="hover"
-        >
-          {/* <motion.div
-            className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
-            variants={backgroundVariants} // Assumed to be defined at the top
-            style={{ transformOrigin: "left" }}
-          /> */}
-          <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
-            Book Now
-          </p>
-          <div className=" group-hover:">
-            {/* <ArrowRight className="w-4 h-4 block group-hover:hidden" /> */}
-            <WhiteArrowRight className="w-4 h-4 relative z-10" />
-          </div>
-        </motion.button>
+          <motion.button
+            className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
+            initial="initial"
+            whileHover="hover"
+          >
+            <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
+              Book Now
+            </p>
+            <div className=" group-hover:">
+              <WhiteArrowRight className="w-4 h-4 relative z-10" />
+            </div>
+          </motion.button>
         </motion.div>
       </div>
     </motion.section>

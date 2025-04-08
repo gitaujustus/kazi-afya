@@ -52,13 +52,13 @@ const enterprisePlanIncluded = [
 
 const backgroundVariants = {
   initial: {
-    width: '0%',
+    width: "0%",
   },
   hover: {
-    width: '100%',
+    width: "100%",
     transition: {
-      duration: 0.5, 
-      ease: 'easeInOut',
+      duration: 0.5,
+      ease: "easeInOut",
     },
   },
 };
@@ -83,7 +83,7 @@ const Pricing = () => {
     enterprise: {
       monthly: 800,
       annual: Math.round(800 * 12 * 0.9), // $8640/year
-    }
+    },
   };
 
   return (
@@ -105,24 +105,24 @@ const Pricing = () => {
             </p>
           </div>
           <p className="font-figtree text-[14px] sm:text-[16px] text-black leading-[120%] ">
-            Upgrade to any annually plan today and get the first 1 month free trial.
+            Upgrade to any annually plan today and get the first 1 month free
+            trial.
           </p>
         </div>
 
         <div>
-           <motion.button
-          className="bg-london-rain relative mx-auto w-[160px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[46px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[100px] xl:px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
-          initial="initial"
-          whileHover="hover"
-        >
-          
-          <p className="text-md md:text-lg z-10 text-sm md:text-md xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
-            Switch to Annually
-          </p>
-          <div className=" group-hover:">
-            <WhiteArrowRight className="w-3 h-3 sm:w-4 sm:h-4 relative z-10" />
-          </div>
-        </motion.button>
+          <motion.button
+            className="bg-london-rain relative mx-auto w-[160px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[46px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[100px] xl:px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
+            initial="initial"
+            whileHover="hover"
+          >
+            <p className="text-md md:text-lg z-10 text-sm md:text-md xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
+              Switch to Annually
+            </p>
+            <div className=" group-hover:">
+              <WhiteArrowRight className="w-3 h-3 sm:w-4 sm:h-4 relative z-10" />
+            </div>
+          </motion.button>
         </div>
       </section>
 
@@ -165,13 +165,18 @@ const Pricing = () => {
             <h3 className="text-[20px] sm:text-[22px] md:text-[24px] font-figtree font-semibold text-cosmic-void">
               Essential Plan
             </h3>
-            <p className="font-figtree font-400 text-[14px] sm:text-[16px]">Small clinics or startups</p>
+            <p className="font-figtree font-400 text-[14px] sm:text-[16px]">
+              Small clinics or startups
+            </p>
             <p className="font-figtree text-[20px] sm:text-[22px] md:text-[24px]">
-            <span className="text-london-rain font-bold">
-              ${isToggled ? plans.essential.annual.toLocaleString() : plans.essential.monthly}
-            </span>
-            /{isToggled ? " year" : " month"}
-          </p>
+              <span className="text-london-rain font-bold">
+                $
+                {isToggled
+                  ? plans.essential.annual.toLocaleString()
+                  : plans.essential.monthly}
+              </span>
+              /{isToggled ? " year" : " month"}
+            </p>
           </div>
 
           <button className="my-[15px] sm:my-[20px] md:my-[29px] px-[30px] sm:px-[40px] md:px-[50px] py-[10px] rounded-[8px] sm:rounded-[10px] bg-london-rain text-white font-figtree font-400 text-[14px] sm:text-[16px] leading-[120%] hover:bg-white hover:text-london-rain border-2 border-london-rain transition-all duration-700 ease-in-out">
@@ -180,7 +185,10 @@ const Pricing = () => {
 
           <div className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[27px]">
             {essentialPlanIncluded.map((feature, index) => (
-              <div key={index} className="flex gap-[8px] sm:gap-[10px] max-w-full sm:max-w-[90%] md:max-w-[80%]">
+              <div
+                key={index}
+                className="flex gap-[8px] sm:gap-[10px] max-w-full sm:max-w-[90%] md:max-w-[80%]"
+              >
                 <p className="flex-shrink-0">
                   <TickIcon className="w-[16px] h-[16px] sm:w-auto sm:h-auto" />
                 </p>
@@ -208,7 +216,10 @@ const Pricing = () => {
             </p>
             <p className="font-figtree text-[20px] sm:text-[22px] md:text-[24px]">
               <span className="text-london-rain font-bold">
-                ${isToggled ? plans.professional.annual.toLocaleString() : plans.professional.monthly}
+                $
+                {isToggled
+                  ? plans.professional.annual.toLocaleString()
+                  : plans.professional.monthly}
               </span>
               /{isToggled ? " year" : " month"}
             </p>
@@ -220,7 +231,10 @@ const Pricing = () => {
 
           <div className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[27px]">
             {professionalPlanIncluded.map((feature, index) => (
-              <div key={index} className="flex gap-[8px] sm:gap-[10px] max-w-full sm:max-w-[90%] md:max-w-[80%]">
+              <div
+                key={index}
+                className="flex gap-[8px] sm:gap-[10px] max-w-full sm:max-w-[90%] md:max-w-[80%]"
+              >
                 <p className="flex-shrink-0">
                   <TickIcon className="w-[16px] h-[16px] sm:w-auto sm:h-auto" />
                 </p>
@@ -248,7 +262,10 @@ const Pricing = () => {
             </p>
             <p className="font-figtree text-[20px] sm:text-[22px] md:text-[24px]">
               <span className="text-london-rain font-bold">
-                ${isToggled ? plans.enterprise.annual.toLocaleString() : plans.enterprise.monthly}
+                $
+                {isToggled
+                  ? plans.enterprise.annual.toLocaleString()
+                  : plans.enterprise.monthly}
               </span>
               /{isToggled ? " year" : " month"}
             </p>
@@ -260,7 +277,10 @@ const Pricing = () => {
 
           <div className="flex flex-col gap-[15px] sm:gap-[20px] md:gap-[27px]">
             {enterprisePlanIncluded.map((feature, index) => (
-              <div key={index} className="flex gap-[8px] sm:gap-[10px] max-w-full sm:max-w-[90%] md:max-w-[80%]">
+              <div
+                key={index}
+                className="flex gap-[8px] sm:gap-[10px] max-w-full sm:max-w-[90%] md:max-w-[80%]"
+              >
                 <p className="flex-shrink-0">
                   <TickIcon className="w-[16px] h-[16px] sm:w-auto sm:h-auto" />
                 </p>

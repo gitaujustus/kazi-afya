@@ -1,5 +1,10 @@
 "use client";
-import { ArrowRight, ArrowTopRightIcon, HeartIcon, WhiteArrowRight } from "@/icons";
+import {
+  ArrowRight,
+  ArrowTopRightIcon,
+  HeartIcon,
+  WhiteArrowRight,
+} from "@/icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -114,11 +119,6 @@ const Benefits = () => {
           initial="initial"
           whileHover="hover"
         >
-          {/* <motion.div
-            className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
-            variants={backgroundVariants} // Assumed to be defined at the top
-            style={{ transformOrigin: "left" }}
-          /> */}
           <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular  ">
             Book Now
           </p>
