@@ -420,3 +420,29 @@ export const Logo = (width = "", height = "", className = "") => {
     </svg>
   );
 };
+
+export const ArrowRight = ({
+  className = ""
+}) => {
+  return (
+    <svg className={className} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.59538 0.799826H12.1413V10.3458M11.4784 1.46274L1.79988 11.1413" stroke="#0057B8" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="square"/>
+</svg>
+
+    
+  );
+};
+
+
+export const WhiteArrowRight = (
+  {
+    className = ""
+  }
+) => {
+  return (
+    <svg className={className} viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2.62473 0.799826H12.1707V10.3458M11.5078 1.46274L1.82924 11.1413" stroke="white" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="square"/>
+    </svg>
+    
+  )
+}
