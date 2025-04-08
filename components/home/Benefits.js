@@ -7,6 +7,7 @@ import {
 } from "@/icons";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -114,19 +115,28 @@ const Benefits = () => {
         </motion.div>
 
         {/* Button with animation */}
+        <Link href="/contact-us">
         <motion.button
           className="bg-wizard-white relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-london-rain hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
           initial="initial"
           whileHover="hover"
         >
-          <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular  ">
-            Book Now
+          {/* <motion.div
+            className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
+            variants={backgroundVariants} // Assumed to be defined at the top
+            style={{ transformOrigin: "left" }}
+          /> */}
+        <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular">
+                  Book Now
           </p>
+     
+          
           <div className=" group-hover:">
             <ArrowRight className="w-4 h-4 block group-hover:hidden" />
             <WhiteArrowRight className="w-4 h-4 relative z-10 hidden group-hover:block" />
           </div>
         </motion.button>
+        </Link>
       </motion.div>
     </motion.section>
   );

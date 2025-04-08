@@ -10,6 +10,7 @@ import {
 } from "framer-motion";
 
 import { ChevronDownIcon, ChevronUpIcon } from "@/icons";
+import Link from "next/link";
 
 const FAQs = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -312,18 +313,43 @@ const FAQs = () => {
               care, and drive efficiency for your health institution.
             </p>
           </motion.div>
-          <motion.button
-            className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
-            initial="initial"
-            whileHover="hover"
-          >
-            <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
-              Book Now
-            </p>
-            <div className=" group-hover:">
-              <WhiteArrowRight className="w-4 h-4 relative z-10" />
-            </div>
-          </motion.button>
+          {/* <motion.button
+                        className="bg-wizard-white relative flex items-center gap-[10px] md:gap-[15px] w-[150px] md:w-[171px] h-[40px] md:h-[44px] rounded-[30px] pr-[30px] md:pr-[37px] py-[8px] md:py-[10px]  hover:text-white group transition-all duration-700 ease-in-out overflow-hidden"
+                      initial="initial"
+                      whileHover="hover"
+                      >
+                        <motion.div
+                        className="absolute inset-0 bg-london-rain z-0 rounded-[30px]" // Match the button's rounded corners
+                        variants={backgroundVariants}
+                        style={{ transformOrigin: 'left' }}
+                      />
+                        <div className="group-hover:rotate-47 group-transition-all duration-700 ease-in-out">
+                          <ArrowTopRightIcon className="w-10 h-10 sm:w-11 sm:h-11" />
+                        </div>
+                        <span className="text-[14px] z-10 md:text-[16px] text-london-rain font-helvetica-regular text-nowrap group-hover:text-white transform transition-all duration-700 ease-in-out">
+                          Book Now
+                        </span>
+                      </motion.button> */}
+                      <Link href="/contact-us">
+                       <motion.button
+          className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
+          initial="initial"
+          whileHover="hover"
+        >
+          {/* <motion.div
+            className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
+            variants={backgroundVariants} // Assumed to be defined at the top
+            style={{ transformOrigin: "left" }}
+          /> */}
+          <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
+            Book Now
+          </p>
+          <div className=" group-hover:">
+            {/* <ArrowRight className="w-4 h-4 block group-hover:hidden" /> */}
+            <WhiteArrowRight className="w-4 h-4 relative z-10" />
+          </div>
+        </motion.button>
+        </Link>
         </motion.div>
       </div>
     </motion.section>

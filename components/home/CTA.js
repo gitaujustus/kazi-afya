@@ -12,6 +12,7 @@ import {
   TealIcon,
 } from "@/icons";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const CTASection = () => {
   // Animation variants
@@ -148,18 +149,21 @@ const CTASection = () => {
               system.
             </motion.p>
 
-            <motion.button
-              className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px]  h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
-              initial="initial"
-              whileHover="hover"
-            >
-              <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
-                Book Now
-              </p>
-              <div className=" group-hover:">
-                <WhiteArrowRight className="w-4 h-4 relative z-10" />
-              </div>
-            </motion.button>
+            <Link href="/contact-us">
+          <motion.button
+                    className="bg-london-rain relative mx-auto w-[180px] md:w-[200px] xl:w-[300px] 2xl:w-[280px] h-[48px] md:h-[54px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] px-[82px] py-[8px] xl:py-[10px] 2xl:py-[14px] flex items-center justify-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular text-white hover:text-white group hover:bg-[#022c61] transition-all duration-700 ease-in-out "
+                    initial="initial"
+                    whileHover="hover"
+                  >
+                    <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">
+                      Book Now
+                    </p>
+                    <div className=" group-hover:">
+                      {/* <ArrowRight className="w-4 h-4 block group-hover:hidden" /> */}
+                      <WhiteArrowRight className="w-4 h-4 relative z-10" />
+                    </div>
+                  </motion.button>
+            </Link>
           </motion.div>
         </div>
 
