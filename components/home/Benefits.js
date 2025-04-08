@@ -68,7 +68,7 @@ const Benefits = () => {
           alt="Benefits"
           width={1000}
           height={1000}
-          className="w-[90%] sm:w-[80%] md:w-[450px] lg:w-[500px] xl:w-[533px] 2xl:w-[710px] h-auto aspect-[533/840] xl:h-[840px] 2xl:h-[900px] object-cover rounded-tl-[30px] sm:rounded-tl-[40px] md:rounded-tl-[60px] xl:rounded-tl-[100px] 2xl:rounded-tl-[120px] rounded-br-[30px] sm:rounded-br-[40px] md:rounded-br-[60px] xl:rounded-br-[0px]"
+          className="w-full md:w-[450px] lg:w-[500px] xl:w-[533px] 2xl:w-[710px] h-auto aspect-[533/840] xl:h-[840px] 2xl:h-[900px] object-cover rounded-tl-[30px] sm:rounded-tl-[40px] md:rounded-tl-[60px] xl:rounded-tl-[100px] 2xl:rounded-tl-[120px] rounded-br-[30px] sm:rounded-br-[40px] md:rounded-br-[60px] xl:rounded-br-[0px]"
         />
       </motion.div>
 

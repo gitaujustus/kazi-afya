@@ -4,28 +4,28 @@ import AdditionalCard from "./AdditionalCard";
 const additionalFeaturesData = [
   {
     id: 1,
-    image: "/assets/Additional-1.webp",
+    image: "/assets/features/Ambulance.jpg",
     title: "Ambulance Management",
     description:
       "Offers real-time tracking of ambulance locations for efficient dispatch, coordinating emergency services to ensure timely and effective patient care.",
   },
   {
     id: 2,
-    image: "/assets/Additional-2.webp",
+    image: "/assets/features/Ward.jpg",
     title: "Ward Allocation",
     description:
       "Manages bed availability and patient assignments efficiently, optimizing resource utilization across the hospital to improve operational flow.",
   },
   {
     id: 3,
-    image: "/assets/Additional-3.webp",
+    image: "/assets/features/Feedback-Patient.jpg",
     title: "Patient Feedback",
     description:
       "Collects valuable insights from patients to enhance service quality, fostering better engagement and communication for continuous improvement.",
   },
   {
     id: 4,
-    image: "/assets/Additional-4.webp",
+    image: "/assets/features/Hospital-Reception.jpg",
     title: "Multi-Branch Support",
     description:
       "Designed to manage operations across multiple healthcare facilities, ensuring consistent service delivery and seamless resource sharing.",
