@@ -15,11 +15,11 @@ import Link from 'next/link';
 // ];
 
 const images = [
-  '/assets/home/hero-image1.webp',
-  '/assets/home/hero-image2.webp',
-  '/assets/home/hero-image3.webp',
-  '/assets/home/hero-image4.webp',
-  '/assets/home/hero-image5.webp',
+  '/assets/home/hero-image-new1.png',
+  '/assets/home/hero-image-new2.png',
+  '/assets/home/hero-image-new3.png',
+  '/assets/home/hero-image-new4.png',
+  '/assets/home/hero-image-new5.png',
 ];
 
 
