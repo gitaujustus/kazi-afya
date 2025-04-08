@@ -49,14 +49,14 @@ const Benefits = () => {
       </motion.div>
 
       {/* Right Side - Text and Icons */}
-      <motion.div variants={fadeIn} className="w-full md:w-1/2 lg:w-[600px] xl:w-[676px] 2xl:w-[900px] h-auto xl:h-[766px] 2xl:h-[820px] flex flex-col gap-6 md:gap-8 xl:gap-[33px] 2xl:gap-[40px] mt-8 md:mt-0">
+      <motion.div variants={fadeIn} className="w-full md:w-1/2 lg:w-[600px] xl:w-[676px] 2xl:w-[900px] h-auto flex flex-col gap-6 md:gap-8 xl:gap-[33px] 2xl:gap-[40px] mt-8 md:mt-0">
         {/* Heading */}
         <motion.h1 variants={fadeIn} className="text-white text-3xl sm:text-4xl lg:text-[48px] 2xl:text-[64px] font-helvetica-bold">
           Benefits of Kazi Afya
         </motion.h1>
 
         {/* List Container */}
-        <motion.div variants={fadeIn} className="w-full h-auto xl:h-[591px] 2xl:h-[640px] flex flex-col gap-3 md:gap-4 xl:gap-[15px] 2xl:gap-[20px]">
+        <motion.div variants={fadeIn} className="w-full h-auto xl:h-[520px] 2xl:h-[640px] flex flex-col gap-3 md:gap-4 xl:gap-[15px] 2xl:gap-[20px]">
           {listItems.map((item) => (
             <motion.div key={item.id} variants={fadeIn} className="flex gap-3 xl:gap-[10px] 2xl:gap-[16px] p-2 xl:p-[10px] 2xl:p-[14px]">
               <HeartIcon className="w-6 h-6 md:w-7 md:h-7 xl:w-[30px] xl:h-[30px] 2xl:w-[40px] 2xl:h-[40px]" />
@@ -74,19 +74,19 @@ const Benefits = () => {
 
         {/* Button with animation */}
         <motion.button
-          className="bg-wizard-white relative  w-[180px] xl:w-[203px] 2xl:w-[260px] h-[44px] xl:h-[44px] 2xl:h-[56px] xl:ml-8 rounded-[23px] sm:rounded-[24px] xl:rounded-[30px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
+          className="bg-wizard-white relative mx-auto w-[180px] md:w-[200px] xl:w-[203px] 2xl:w-[280px] h-[48px] md:h-[56px] 2xl:h-[72px] rounded-[36px] 2xl:rounded-[40px] pr-[25px] sm:pr-[30px] xl:pr-[37px] 2xl:pr-[45px] py-[8px] xl:py-[10px] 2xl:py-[14px] 2xl:my-20 flex items-center gap-3 xl:gap-[15px] 2xl:gap-[20px] font-helvetica-regular hover:text-white group hover:bg-london-rain transition-all duration-700 ease-in-out "
           initial="initial"
             whileHover="hover"
         >
           <motion.div
-    className="absolute left-3.5 inset-0 bg-london-rain z-0 rounded-full"
+    className="absolute left-5 inset-0 bg-london-rain z-0 rounded-full"
     variants={backgroundVariants} // Assumed to be defined at the top
     style={{ transformOrigin: 'left' }}
   />
           <div className=" group-hover:rotate-47 transition-all duration-700 ease-in-out">
-          <ArrowTopRightIcon className="w-11 h-11  2xl:w-14 2xl:h-14" />
+          <ArrowTopRightIcon className="w-12 h-12 md:w-14 md:h-14 2xl:w-18 2xl:h-18 " />
           </div>
-          <p className="text-sm md:text-base z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">Request Demo</p>
+          <p className="text-md md:text-lg z-10 xl:text-[16px] 2xl:text-[20px] text-nowrap font-helvetica-regular ">Request Demo</p>
         </motion.button>
       </motion.div>
     </motion.section>
