@@ -156,8 +156,8 @@ const HeroSection = () => {
             >
               {descriptions[currentImageIndex]}
             </motion.p>
-            <Link href="/features" >
-            <button className='flex items-center gap-[5px] sm:gap-[8px] xl:gap-[10px] mx-auto text-white text-[14px] sm:text-[16px] xl:text-[18px] 2xl:text-[20px]'>
+            <Link href="/features"  >
+            <button className='flex items-center cursor-pointer  gap-[5px] sm:gap-[8px] xl:gap-[10px] mx-auto text-white text-[14px] sm:text-[16px] xl:text-[18px] 2xl:text-[20px]'>
               <Arrow/> <span>learn more</span>
             </button>
             </Link>
