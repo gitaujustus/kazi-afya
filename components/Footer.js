@@ -172,6 +172,23 @@ const Footer = () => {
           </p>
         </div>
       </div>
+
+        {/* extreme bottom div */}
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-[34px] lg:gap-[64px] justify-center items-center font-inter ">
+        <p className="text-sm sm:text-base lg:text-[16px] 2xl:text-xl leading-[24px] text-baragon_brown font-normal ">
+          Powered by {" "}
+          <Link
+            href="https://hillganinnovations.com"
+            target="_blank"
+            className="font-semibold text-red_republic group relative "
+            >
+              Hillgan Innovations
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+        </p>
+
+
+      </div>
     </footer>
   );
 };

@@ -300,6 +300,7 @@
 
 // export default Pricing;
 
+
 "use client";
 import { TickIcon } from "@/components/Icons";
 import { ArrowTopRightIcon, ArrowRight, WhiteArrowRight } from "@/icons";
@@ -416,14 +417,14 @@ const Pricing = () => {
     flipping: {
       rotateY: 90,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
     flipped: {
       rotateY: 0,
       transition: {
-        duration: 0.3,
+        duration: 0.4,
         ease: "easeInOut",
       },
     },
